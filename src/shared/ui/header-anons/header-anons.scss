@@ -1,0 +1,26 @@
+@import '../../../app/scss/mixins';
+@import '../../../app/scss/colors';
+
+.header-anons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0 96px;
+  padding: 73px 175px;
+  &__left {
+    flex-basis: 440px;
+    &-title {
+      @include title-3;
+      color: $light-1;
+    }
+    &-subtitle {
+      @include title-6;
+      color: $orange;
+      margin-top: 20px;
+    }
+  }
+  &__right {
+    flex-basis: 440px;
+    color: $light-1;
+  }
+}

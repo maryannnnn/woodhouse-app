@@ -1,0 +1,12 @@
+@import '../../../app/scss/mixins';
+
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 300px;
+  &__mobile {
+    @include title-8;
+  }
+}

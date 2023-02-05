@@ -1,0 +1,60 @@
+@import '../../app/scss/mixins';
+@import '../../app/scss/colors';
+
+.header {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  margin-bottom: -100px;
+  &:before {
+    content: '';
+    background-image: url("../../app/assets/images/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -2;
+    top: -100px;
+  }
+  &:after {
+    content: '';
+    background: $light-5;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+  }
+
+  &__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 92px;
+    &-title {
+      @include title-1;
+    }
+    &-subtitle {
+      @include title-6;
+      color: $light-1;
+      background-color: $orange;
+      border: 1px;
+      padding: 6px 16px;
+      width: 414px;
+      height: 32px;
+    }
+    &-text {
+      color: $light-1;
+      background: rgba(32, 35, 40, 0.9);
+      border-radius: 0px 10px;
+      padding: 15px 22px;
+      width: 414px;
+      height: 126px;
+
+    }
+  }
+}

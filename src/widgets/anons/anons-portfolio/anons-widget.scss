@@ -1,0 +1,15 @@
+@import '../../../app/scss/colors';
+
+.anons-widget {
+  position: relative;
+  width: 100vw;
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $dark-1;
+    width: 100vw;
+    height: 350px;
+    top: 0;
+    z-index: -1;
+  }
+}

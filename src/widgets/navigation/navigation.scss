@@ -1,0 +1,52 @@
+@import '../../app/scss/mixins';
+
+.navbar {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 33px 0;
+  }
+
+  &__logo {
+    &-link {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &-img {
+      width: 25px;
+      height: 25px;
+    }
+    &-title {
+      @include title-3;
+      color: $dark-3;
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @include font-menu-1;
+  }
+
+  &__menu {
+
+    &-item {
+      padding: 7px 15px;
+      @include back-1;
+    }
+    &-link {
+     @include link-1;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    gap: 12px;
+  }
+}

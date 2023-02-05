@@ -1,0 +1,37 @@
+@import '../../app/scss/mixins';
+@import '../../app/scss/colors';
+
+.trust {
+  height: 249px;
+  width: 100vw;
+  background-color: $dark-1;
+  color: $light-1;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 19px;
+    margin-top: 54px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    width: 741px;
+    &--title {
+      @include title-4;
+    }
+    &--elements {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      @include title-7;
+    }
+  }
+  &__contact {
+    width: 360px;
+  }
+
+
+}

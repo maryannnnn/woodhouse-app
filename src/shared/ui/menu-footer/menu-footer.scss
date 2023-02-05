@@ -1,0 +1,24 @@
+@import '../../../app/scss/mixins';
+@import '../../../app/scss/colors';
+
+.menu-footer {
+  width: 300px;
+  &__title {
+    @include title-4;
+    padding-bottom: 15px;
+  }
+  &__elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0 10px;
+    &-link {
+      color: $light-1;
+      &:hover {
+        color: $grey-3;
+      }
+    }
+  }
+
+
+}

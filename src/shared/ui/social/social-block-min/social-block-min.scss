@@ -1,0 +1,9 @@
+@import '../../../../app/scss/mixins';
+@import '../../../../app/scss/colors';
+
+.social-block-min {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px 15px;
+  gap: 12px;
+}
