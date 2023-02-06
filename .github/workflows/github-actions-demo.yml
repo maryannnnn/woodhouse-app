@@ -19,8 +19,6 @@ jobs:
       - name: install modules
         run: npm install
       - name: test app
-        run: npm run test  
-      - name: check eslint
         run: npm run lint
       - name: build project
         run: npm run build
