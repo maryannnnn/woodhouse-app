@@ -22,11 +22,12 @@ jobs:
         run: npm run lint
       # Setup key
       - run: set -eu
-      - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.ID_RSA }}" > "$HOME/.ssh/id_rsa"
-      - run: chmod 600 "$HOME/.ssh/id_rsa"
+      - run: mkdir ~/.ssh
+      - run: chmod 0700 ~/.ssh
+      - run: echo "${{ secrets.ID_RSAGIT }}" > ~/.ssh/id_rsagit
+      - run: chmod 644 ~/.ssh/id_rsagit
       # Build
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: rsync -e "ssh -p 2022 -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" --archive --compress --delete . root@95.217.167.13:/home/marian/woodhose-app
+      - run: rsync -avz -e "ssh -p 22 -i ~/.ssh/id_rsagit -o StrictHostKeyChecking=no UserKnownHostsFile=/dev/null" --progress root@95.217.167.13:/home/marian/woodhose-app
