@@ -22,12 +22,12 @@ jobs:
         run: npm run lint
       # Setup key
       - run: set -eu
-      - run: mkdir ~/.ssh
-      - run: chmod 0700 ~/.ssh
-      - run: echo "${{ secrets.ID_RSAGIT }}" > ~/.ssh/id_rsagit
-      - run: chmod 644 ~/.ssh/id_rsagit
+      - run: mkdir "$HOME/.ssh"
+      - run: chmod 0700 "$HOME/.ssh"
+      - run: echo "$" > "$HOME/.ssh/id_rsagit"
+      - run: chmod 064 "$HOME/.ssh/id_rsagit"
       # Build
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: rsync -avz -e "ssh -p 22 -i ~/.ssh/id_rsagit -o StrictHostKeyChecking=no  -o UserKnownHostsFile=/dev/null" --progress root@95.217.167.13:/home/marian/woodhose-app
+      - run: rsync -avz -e "ssh -p 22 -i $HOME/.ssh/id_rsagit -o StrictHostKeyChecking=no  -o UserKnownHostsFile=/dev/null" --progress root@95.217.167.13:/home/marian/woodhose-app
