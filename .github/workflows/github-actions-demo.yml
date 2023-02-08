@@ -26,7 +26,6 @@ jobs:
       - run: chmod 0700 ~/.ssh
       - run: echo "${{ secrets.ID_RSADEPLOY }}" > ~/.ssh/id_rsadeploy
       - run: chmod 0644 ~/.ssh/id_rsadeploy
-      - run: ssh-add ~/.ssh/id_rsadeploy
       - run: ssh -i ~/.ssh/id_rsadeploy -p 22 root@95.217.167.13 uptime
       # Build
       - run: npm ci
