@@ -26,7 +26,6 @@ jobs:
       - run: chmod 0700 "$HOME/.ssh"
       - run: echo "${{ secrets.ID_RSAGIT }}" > "$HOME/.ssh/id_rsagit"
       - run: chmod 0644 "$HOME/.ssh/id_rsagit"
-      - run: service sshd restart
       - run: ssh -i $HOME/.ssh/id_rsagit -p 22 root@95.217.167.13
       # Build
       - run: npm ci
