@@ -33,5 +33,5 @@ jobs:
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/marian/woodhose-app/
+      - run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/marian/woodhose-app/
 
