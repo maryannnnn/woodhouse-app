@@ -17,9 +17,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        run: npm install
+      - run: npm install
       - name: test app
-        run: npm run lint
+      - run: npm run lint
       # Install SSH Key
       - name: Install SSH Key
       - uses: shimataro/ssh-key-action@v2
@@ -33,5 +33,5 @@ jobs:
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/marian/woodhose-app/
+      - run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/marian/woodhose-app/
 
