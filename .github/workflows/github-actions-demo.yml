@@ -20,23 +20,17 @@ jobs:
         run: npm install
       - name: test app
         run: npm run lint
-# Deploy
-      - run: mkdir -p ~/.ssh/
-      - run: echo "$1" > ~/.ssh/private.key
-      - run: chmod 600 ~/.ssh/private.key
-      - run: echo "$2" > ~/.ssh/known_hosts
-# Deploy
-      - run: echo "ssh-keygen"
-      - run: ssh-keygen -y -e -f ~/.ssh/private.key
-      - run: echo "ssh-keyscan"
-      - run: ssh-keyscan <IP>
-# Deploy
-      - run: ssh -i ~/.ssh/private.key -tt <USER>@<IP> "echo test > testfile1"
-      - run: echo "known hosts"
-      - run: cat ~/.ssh/known_hosts
-      - run: wc -m ~/.ssh/known_hosts
+    # Deploy
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }} 
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+          - name: Adding Known Hosts
+          - run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
       # Build
       - run: npm ci
       - run: npm run build
       # Deploy
+      - run: run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/marian/woodhose-app
 
