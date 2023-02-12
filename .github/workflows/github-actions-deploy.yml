@@ -27,9 +27,14 @@ jobs:
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }} 
           known_hosts: unnecessary
-        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-        ssh -p 22 -i ~/.ssh/key root@95.217.167.13:/home/marian/woodhose-app/
-    #    rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progres root@95.217.167.13:/home/marian/woodhose-app/
+      
+      - name: Adding Known Hosts
+        run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
+
+      - name: Deploy with rsync
+        run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}
+      #  run: ssh -p 22 -i ~/.ssh/key root@95.217.167.13:/home/marian/woodhose-app/
+      #  rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progres root@95.217.167.13:/home/marian/woodhose-app/
 
 
 
