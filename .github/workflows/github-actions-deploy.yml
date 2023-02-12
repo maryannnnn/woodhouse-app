@@ -28,7 +28,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }} 
           known_hosts: unnecessary
       - name: Install SSH Id_rsa
-      - run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > "/home/runner/.ssh/id_rsa"  
+        run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa  
       - name: Adding chmod
         run: chmod 600 ~/.ssh/id_rsa
       - name: Adding Known Hosts
