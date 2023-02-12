@@ -1,7 +1,9 @@
 name: GitHub Actions
 on:
+  push:
+    branches: [ maryan ]
   pull_request:
-    branches: [ main ]
+    branches: [ maryan ]
 jobs:
   init:
     runs-on: ubuntu-latest
@@ -20,14 +22,5 @@ jobs:
         run: npm run build
       - name: lint code
         run: npm run lint
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }} 
-          known_hosts: unnecessary
-      - name: Adding Known Hosts
-        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-        run: rsync -avz root@95.217.167.13:/home/marian/woodhose-app/
-
 
 
