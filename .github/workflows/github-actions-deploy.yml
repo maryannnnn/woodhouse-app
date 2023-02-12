@@ -30,6 +30,7 @@ jobs:
           known_hosts: unnecessary
 
       - run: chmod 600 ~/.ssh/id_rsa
+      - run: cat ~/.ssh/id_rsa
       - name: Adding Known Hosts
         run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
 
