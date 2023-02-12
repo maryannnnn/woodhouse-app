@@ -31,4 +31,5 @@ jobs:
         run: chmod 600 ~/.ssh/id_rsa
       - name: Adding Known Hosts
         run: ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
+      - name: Deploy with rsync
+        run: rsync -avz ./ root@95.217.167.13:/home/marian/woodhouse-app/
