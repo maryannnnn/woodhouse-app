@@ -22,17 +22,5 @@ jobs:
         run: npm run build
       - name: lint code
         run: npm run lint
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }} 
-          known_hosts: unnecessary
-      - name: Adding Known Hosts
-     -  run: ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-     # - name: Deploy with rsync
-       # run: rsync -avz ./ root@95.217.167.13:/home/marian/woodhouse-app/
-        #run: rsync -avz -e "ssh -p 22 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" root@95.217.167.13:/home/marian/woodhouse-app/
-
-
 
 
