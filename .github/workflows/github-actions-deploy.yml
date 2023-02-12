@@ -29,10 +29,12 @@ jobs:
           name: id_rsa # optional
           known_hosts: unnecessary
 
-      - run: chmod 600 /home/runner/.ssh/id_rsa
+      - run: chmod 777 /home/runner/.ssh/id_rsa
       - run: cat /home/runner/.ssh/id_rsa
+      run: chmod 777 /home/runner/.ssh/known_hosts
       - name: Adding Known Hosts
-        run: ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+     -  run: ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - run: cat /home/runner/.ssh/known_hosts
 
       - name: Deploy with rsync
         run: rsync -avz ./ root@95.217.167.13:/home/marian/woodhouse-app/
