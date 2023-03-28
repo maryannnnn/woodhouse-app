@@ -5,7 +5,6 @@ import Trust from "../../widgets/trust/Trust";
 import About from "../../widgets/about/About";
 import Partner from "../../widgets/partners/Partner";
 import AnonsWidget from "../../widgets/anons/anons-portfolio/AnonsWidget";
-import { headerInfo } from "../../app/db/headerStore";
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { portfolioListAction } from '../../entities/portfolio/actions/portfolioActions';
