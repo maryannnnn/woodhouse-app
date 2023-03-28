@@ -3,7 +3,6 @@ import ContactCheckout from "../../shared/ui/contact-checkout/ContactCheckout";
 
 const Trust = () => {
 
-
     return (
         <div className="trust">
             <div className="container">

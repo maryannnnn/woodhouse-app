@@ -5,7 +5,8 @@ const BodyAnons = (props) => {
 
     return (
         <div className="body-anons">
-            {props.body.filter(element => (element.id < props.colomn))
+          
+            {props.body.filter(element => (element.id < props.column))
                 .map(element =>
                 <div key={element.id}>
                     <PortfolioElement element={element} />
