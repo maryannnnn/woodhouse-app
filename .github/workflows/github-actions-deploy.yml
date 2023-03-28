@@ -6,7 +6,7 @@ on:
     branches: [ maryan ]
 jobs:
   init:
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 18.x ]
