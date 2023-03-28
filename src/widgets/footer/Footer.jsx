@@ -4,7 +4,7 @@ import Logo from "../../app/assets/images/logo-2.png";
 import ContactCheckout from "../../shared/ui/contact-checkout/ContactCheckout";
 import SocialBlock from "../../shared/ui/social/social-block/SocialBlock";
 import MenuFooter from "../../shared/ui/menu-footer/MenuFooter";
-import {menuService, menuTop} from "../../app/store/menuStore";
+import {menuService, menuTop} from "../../app/db/menuStore";
 
 const Footer = () => {
     return (
