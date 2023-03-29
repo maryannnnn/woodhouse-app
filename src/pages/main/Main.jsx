@@ -6,7 +6,7 @@ import About from "../../widgets/about/About";
 import Partner from "../../widgets/partners/Partner";
 import AnonsWidget from "../../widgets/anons/anons-portfolio/AnonsWidget";
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+//import { Link, useParams } from 'react-router-dom';
 import { portfolioListAction } from '../../entities/portfolio/actions/portfolioActions';
 import { headerListAction } from '../../shared/ui/header-anons/actions/headerActions';
 import { findObjectBiId } from '../../app/utilities/service'

@@ -1,7 +1,7 @@
 import './header.scss'
 import Button from "../../shared/ui/btn/Button";
 
-const Header = ({ headerMain }) => {
+const Header = ( props ) => {
 
     const clickHandlerDesign = () => {
 
@@ -12,15 +12,15 @@ const Header = ({ headerMain }) => {
             <div className="container">
                 <div className="header__inner">
                     <div className="header__info">
-              <h1 className="header__info-title">{headerMain.title}</h1>
+              <h1 className="header__info-title">{props.headerMain.title}</h1>
                         <Button
                             type="submit"
                             className="button-1"
                             onClick={clickHandlerDesign}
-                            name={headerMain.subtitle}
+                            name={props.headerMain.subtitle}
                         />
                         <p className="header__info-text">
-                            {headerMain.text}
+                            {props.headerMain.text}
                         </p>
                     </div>
                 </div>
