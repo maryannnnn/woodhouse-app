@@ -24,7 +24,7 @@
     "eject": "react-scripts eject",
     "lint": "npx eslint ./src",
     "test": "jest",
-    "server": "json-server -w ./src/app/db/db.json -p 4200 -d 100"
+    "server": "json-server -w ./src/app/db/db.json -p 4200 -d 400"
   },
   "eslintConfig": {
     "extends": [

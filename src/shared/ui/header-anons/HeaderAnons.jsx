@@ -1,6 +1,9 @@
 import './header-anons.scss'
 
 const HeaderAnons = ({header}) => {
+
+    
+
     return(
         <div className="header-anons">
             <div className="header-anons__left">

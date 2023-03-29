@@ -25,24 +25,6 @@
     }
   }
 
-  &__menu-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    @include font-menu-1;
-  }
-
-  &__menu {
-
-    &-item {
-      padding: 7px 15px;
-      @include back-1;
-    }
-    &-link {
-     @include link-1;
-    }
-  }
-
   &__social {
     display: flex;
     justify-content: space-between;

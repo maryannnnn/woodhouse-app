@@ -12,18 +12,18 @@ import Company from "../pages/company/Company";
 const App = () => {
   return (
     <div className="wrapper">
-        <BrowserRouter>
-            <Navigation />
-            <Routes>
-                <Route path="/" element={<Main />} />
-                <Route path="/portfolio: slug" element={<Portfolio />} />
-                <Route path="/service: slug" element={<Service />} />
-                <Route path="/post: slug" element={<Post />} />
-                <Route path="/company" element={<Company />} />
-                <Route path="/blog" element={<Blog />} />
-            </Routes>
-            <Footer />
-        </BrowserRouter>
+      <BrowserRouter>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/portfolio: slug" element={<Portfolio />} />
+          <Route path="/service: slug" element={<Service />} />
+          <Route path="/post: slug" element={<Post />} />
+          <Route path="/company" element={<Company />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

@@ -3,8 +3,8 @@ import {NavLink} from "react-router-dom";
 import Logo from "../../app/assets/images/logo-2.png";
 import ContactCheckout from "../../shared/ui/contact-checkout/ContactCheckout";
 import SocialBlock from "../../shared/ui/social/social-block/SocialBlock";
-import MenuFooter from "../../shared/ui/menu-footer/MenuFooter";
-import {menuService, menuTop} from "../../app/db/menuStore";
+import MenuFooterService from "../../shared/ui/menu/menu-footer-service/MenuFooterService";
+import MenuFooterMain from "../../shared/ui/menu/menu-footer-main/MenuFooterMain";
 
 const Footer = () => {
     return (
@@ -23,8 +23,8 @@ const Footer = () => {
                             WoodHouse © 2022
                         </div>
                     </div>
-                    <MenuFooter menu={menuTop} count={5} />
-                    <MenuFooter menu={menuService} count={5}/>
+                    <MenuFooterMain />
+                    <MenuFooterService />
                     <SocialBlock/>
                 </div>
             </div>
