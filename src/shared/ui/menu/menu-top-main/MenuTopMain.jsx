@@ -1,32 +1,28 @@
 import './menu-top-main.scss'
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from "react-router-dom";
-import { menuListAction } from '../actions/menuActions';
+import { MessageBox, LoadingBox } from '../../box/boxes'
 
-const MenuTopMain = () => {
-  const dispatch = useDispatch()
+const MenuTopMain = (props) => {
 
-  useEffect(() => {
-    dispatch(menuListAction())
-  }, [dispatch])
-
-  const menuList = useSelector(state => state.menuListReducer)
-  const { isLoadingMenu, errorMenu, menus } = menuList
+  const menus = props.menuListDto.array;
+  const isLoading = props.menuListDto.isLoading;
+  const error = props.menuListDto.error;
 
   return (
     <ul className="menu">
-        {menus.filter(item => (item.menuId === 0))
-          .map(item =>
-            <li className="menu-item">
+      {console.log("menus", ...menus)}
+      {isLoading && <LoadingBox></LoadingBox>}
+      {error && <MessageBox variant="errorVariant">{error}</MessageBox>}
+      {menus.filter(item => (item.menuId === 0))
+        .sort((a, b) => a.order - b.order)
+        .map(item =>
+          <li className="menu-item" key={item.id}>
             <NavLink
               className="menu-link"
               to={item.url}
-              key={item.id}
             >{item.name}</NavLink>
-            </li>
-          )
-        }
+          </li>
+        )}
     </ul>
   )
 }

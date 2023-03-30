@@ -1,4 +1,6 @@
-
 export const findObjectBiId = (objects, id) => {
-  return objects.find(obj => obj.id === id)
+
+  const filteredObjects = objects.filter(obj => obj.id === id);
+  return filteredObjects.length ? filteredObjects[0] : null;
+
 }
