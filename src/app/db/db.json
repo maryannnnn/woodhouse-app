@@ -215,5 +215,79 @@
         "subtitle": "Best works",
         "text": "The development and implementation of beautiful wood interiors has never been so accessible. Interiors made of wood of various species will make your home cozy and warm, delighting you and your guests."
     }
+  ],
+
+  "menu": [
+    {
+      "id": 0,
+      "name": "Home",
+      "url": "/",
+      "menuId": 0,
+      "order": 0
+    },
+    {
+      "id": 1,
+      "name": "Portfolio",
+      "url": "/portfolio",
+      "menuId": 0,
+      "order": 1
+    },
+    {
+      "id": 2,
+      "name": "Service",
+      "url": "/service",
+      "menuId": 0,
+      "order": 2
+    },
+    {
+      "id": 3,
+      "name": "Blog",
+      "url": "/blog",
+      "menuId": 0,
+      "order": 3
+    },
+    {
+      "id": 4,
+      "name": "Contact",
+      "url": "/contact",
+      "menuId": 0,
+      "order": 4
+    },
+    {
+      "id": 0,
+      "name": "Design",
+      "url": "/design",
+      "menuId": 1,
+      "order": 0
+    },
+    {
+      "id": 1,
+      "name": "Development",
+      "url": "/development",
+      "menuId": 1,
+      "order": 1
+    },
+    {
+      "id": 2,
+      "name": "Delivery",
+      "url": "/delivery",
+      "menuId": 1,
+      "order": 2
+    },
+    {
+      "id": 3,
+      "name": "Renovation",
+      "url": "/renovation",
+      "menuId": 1,
+      "order": 3
+    },
+    {
+      "id": 4,
+      "name": "Master",
+      "url": "/master",
+      "menuId": 1,
+      "order": 4
+    }
   ]
+
 }

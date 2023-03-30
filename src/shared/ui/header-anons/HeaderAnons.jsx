@@ -1,20 +1,30 @@
 import './header-anons.scss'
+import { MessageBox, LoadingBox } from '../box/boxes'
 
-const HeaderAnons = ({header}) => {
+const HeaderAnons = (props) => {
 
-    
+  const headers = props.headerListDto.array;
+  const isLoading = props.headerListDto.isLoading;
+  const error = props.headerListDto.error;
 
-    return(
-        <div className="header-anons">
+  return (
+    <>
+      {isLoading && <LoadingBox></LoadingBox>}
+      {error && <MessageBox variant="errorVariant">{error}</MessageBox>}
+      {headers.filter(item => item.id === 1)
+        .map(item => (
+          <div className="header-anons" key={item.id}>
             <div className="header-anons__left">
-               <h2 className="header-anons__left-title">{header.title}</h2>
-               <div className="header-anons__left-subtitle">{header.subtitle}</div>
+              <h2 className="header-anons__left-title">{item.title}</h2>
+              <div className="header-anons__left-subtitle">{item.subtitle}</div>
             </div>
             <p className="header-anons__right">
-                {header.text}
+            {item.text}
             </p>
-        </div>
-    )
+          </div>
+      ))}
+    </>
+  )
 }
 
 export default HeaderAnons;

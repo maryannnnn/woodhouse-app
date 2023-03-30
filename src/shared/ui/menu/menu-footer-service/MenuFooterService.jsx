@@ -1,24 +1,21 @@
 import './menu-footer-service.scss'
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from "react-router-dom";
-import { menuListAction } from '../actions/menuActions';
+import { MessageBox, LoadingBox } from '../../box/boxes'
 
-const MenuFooterService = () => {
-  const dispatch = useDispatch()
+const MenuFooterService = (props) => {
 
-  useEffect(() => {
-    dispatch(menuListAction())
-  }, [dispatch])
-
-  const menuList = useSelector(state => state.menuListReducer)
-  const { isLoadingMenu, errorMenu, menus } = menuList
+  const menus = props.menuListDto.array;
+  const isLoading = props.menuListDto.isLoading;
+  const error = props.menuListDto.error;
 
   return (
     <div className="menu-footer">
       <h3 className="menu-footer__title">Service</h3>
       <div className="menu-footer__elements">
-        {menus.filter(item => (item.menuId === 1))
+        {isLoading && <LoadingBox></LoadingBox>}
+        {error && <MessageBox variant="errorVariant">{error}</MessageBox>}
+        {menus.filter(item => item.menuId === 1)
+          .sort((a, b) => a.order - b.order)
           .map(item =>
             <NavLink
               className="menu-footer__elements-link"

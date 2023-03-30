@@ -1,12 +1,14 @@
 
 export class ArrayDto {
   array = [];
-  loading = false;
+  //item = {};
+  isLoading = false;
   error = '';
 
-  constructor(array, loading, error) {
+  constructor(array, isLoading, error) {
     this.array = array;
-    this.loading = loading;
+    //this.item = item;
+    this.isLoading = isLoading;
     this.error = error;
   }
 }

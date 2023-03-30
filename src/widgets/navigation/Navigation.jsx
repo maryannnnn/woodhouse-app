@@ -15,7 +15,7 @@ const Navigation = (props) => {
               <div className="navbar__logo-title">WoodHouse</div>
             </NavLink>
           </div>
-          <MenuTopMain />
+          <MenuTopMain menuListDto={props.menuListDto} />
           <SocialBlockMin />
         </div>
       </div>

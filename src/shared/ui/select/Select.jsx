@@ -8,7 +8,7 @@ const Select = (props) => {
             onChange={props.onChange}
         >
             {(props.options).map((e) => {
-                return <option value={e.value}>
+              return <option value={e.value} key={e.label}>
                     {e.label}
                 </option>
             })}
