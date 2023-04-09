@@ -14,12 +14,12 @@ const BodyAnons = () => {
   }, [dispatch])
 
   const portfolioList = useSelector(state => state.portfolioListReducer)
-  const { isLoading, error, projects } = portfolioList
+  const { isLoadingPortfolio, errorPortfolio, projects } = portfolioList
 
   return (
     <div className="body-anons">
-      {isLoading && <LoadingBox></LoadingBox>}
-      {error && <MessageBox variant="errorVariant">{error}</MessageBox>}
+      {isLoadingPortfolio && <LoadingBox></LoadingBox>}
+      {errorPortfolio && <MessageBox variant="errorVariant">{errorPortfolio}</MessageBox>}
       {console.log("projects", ...projects)}
       {projects.sort((a, b) => b.id - a.id)
       .filter(element => (element.id < 3))

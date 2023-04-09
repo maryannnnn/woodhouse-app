@@ -1,28 +1,36 @@
 import './header-anons.scss'
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { MessageBox, LoadingBox } from '../box/boxes'
+import { headerDetailsAction } from './actions/headerActions';
 
-const HeaderAnons = (props) => {
+const HeaderAnons = () => {
 
-  const headers = props.headerListDto.array;
-  const isLoading = props.headerListDto.isLoading;
-  const error = props.headerListDto.error;
+  const dispatch = useDispatch();
+
+  const headerBlockDetail = useSelector((state) => state.headerOneReducer);
+  const { isLoadingHeader, errorHeader, header } = headerBlockDetail;
+
+  const id = 1
+
+  useEffect(() => {
+    dispatch(headerDetailsAction(id));
+  }, [dispatch, id]);
 
   return (
     <>
-      {isLoading && <LoadingBox></LoadingBox>}
-      {error && <MessageBox variant="errorVariant">{error}</MessageBox>}
-      {headers.filter(item => item.id === 1)
-        .map(item => (
-          <div className="header-anons" key={item.id}>
-            <div className="header-anons__left">
-              <h2 className="header-anons__left-title">{item.title}</h2>
-              <div className="header-anons__left-subtitle">{item.subtitle}</div>
-            </div>
-            <p className="header-anons__right">
-            {item.text}
-            </p>
-          </div>
-      ))}
+      {isLoadingHeader && <LoadingBox></LoadingBox>}
+      {errorHeader && <MessageBox variant="errorVariant">{errorHeader}</MessageBox>}
+      {console.log("header 1", header)}
+      <div className="header-anons">
+        <div className="header-anons__left">
+          <h2 className="header-anons__left-title">{header.title}</h2>
+          <div className="header-anons__left-subtitle">{header.subtitle}</div>
+        </div>
+        <p className="header-anons__right">
+          {header.text}
+        </p>
+      </div>
     </>
   )
 }

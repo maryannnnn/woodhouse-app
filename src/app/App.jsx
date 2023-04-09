@@ -6,7 +6,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Main from "../pages/main/Main";
 import Footer from "../widgets/footer/Footer";
 import Navigation from "../widgets/navigation/Navigation";
-import Portfolio from "../pages/projects/Portfolio";
+import Portfolio from "../pages/portfolio/Portfolio";
+import Project from "../pages/project/Project";
 import Service from "../pages/service/Service";
 import Blog from "../pages/blog/Blog";
 import Post from "../pages/post/Post";
@@ -31,9 +32,10 @@ const App = () => {
         <Navigation menuListDto={menuListDto} />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/portfolio: id" element={<Portfolio />} />
-          <Route path="/service: id" element={<Service />} />
-          <Route path="/post: id" element={<Post />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/:id" element={<Project />} />
+          <Route path="/service/:id" element={<Service />} />
+          <Route path="/post/:id" element={<Post />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
         <Footer menuListDto={menuListDto} />

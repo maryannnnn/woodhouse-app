@@ -1,0 +1,52 @@
+@import '../../app/scss/mixins';
+@import '../../app/scss/colors';
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: $dark-1
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__title {
+    @include title-2;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    @include text-3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      &__info {
+
+      }
+    }
+
+    &-blocks {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}

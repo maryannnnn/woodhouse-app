@@ -12,13 +12,14 @@
         "previewImage": "/uploads/portfolio/preview/portfolio-preview-0.jpeg",
         "middleImage": "/uploads/portfolio/middle/portfolio-middle-0.jpeg",
         "bigImage": "/uploads/portfolio/big/portfolio-big-0.jpeg",
-        "architect": "John Smith",
-        "architectInfo": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+        "architectId": 0,
         "customer": "Individual",
         "square": "32 sq.m.",
         "time": "3 weeks",
         "price": "5000",
-        "slug": "contemporary-living-room-wood-tones"
+        "slug": "contemporary-living-room-wood-tones",
+        "address": "47-01 111th St, Queens, NY 11368, United States",
+        "breadcrumbs": "Home-Portfolio"
     },
     {
         "id": 1,
@@ -32,13 +33,14 @@
         "previewImage": "/uploads/portfolio/preview/portfolio-preview-1.jpeg",
         "middleImage": "/uploads/portfolio/middle/portfolio-middle-1.jpeg",
         "bigImage": "/uploads/portfolio/big/portfolio-big-1.jpeg",
-        "architect": "John Smith",
-        "architectInfo": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+        "architectId": 0,
         "customer": "Individual",
         "square": "32 sq.m.",
         "time": "3 weeks",
         "price": "5000",
-        "slug": "panoramic-chill-out-area"
+        "slug": "panoramic-chill-out-area",
+        "address": "47-01 111th St, Queens, NY 11368, United States",
+        "breadcrumbs": "Home-Portfolio"
     },
     {
         "id": 2,
@@ -52,13 +54,14 @@
         "previewImage": "/uploads/portfolio/preview/portfolio-preview-2.jpeg",
         "middleImage": "/uploads/portfolio/middle/portfolio-middle-2.jpeg",
         "bigImage": "/uploads/portfolio/big/portfolio-big-2.jpeg",
-        "architect": "John Smith",
-        "architectInfo": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+        "architectId": 0,
         "customer": "Individual",
         "square": "32 sq.m.",
         "time": "3 weeks",
         "price": "5000",
-        "slug": "cozy-loft-light"
+        "slug": "cozy-loft-light",
+        "address": "47-01 111th St, Queens, NY 11368, United States",
+        "breadcrumbs": "Home-Portfolio"
     },
     {
         "id": 3,
@@ -72,13 +75,14 @@
         "previewImage": "/uploads/portfolio/preview/portfolio-preview-3.jpeg",
         "middleImage": "/uploads/portfolio/middle/portfolio-middle-3.jpeg",
         "bigImage": "/uploads/portfolio/big/portfolio-big-3.jpeg",
-        "architect": "John Smith",
-        "architectInfo": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+        "architectId": 0,
         "customer": "Individual",
         "square": "32 sq.m.",
         "time": "3 weeks",
         "price": "5000",
-        "slug": "cozy-loft-light"
+        "slug": "cozy-loft-light",
+        "address": "47-01 111th St, Queens, NY 11368, United States",
+        "breadcrumbs": "Home-Portfolio"
     },
     {
         "id": 4,
@@ -92,13 +96,14 @@
         "previewImage": "/uploads/portfolio/preview/portfolio-preview-4.jpeg",
         "middleImage": "/uploads/portfolio/middle/portfolio-middle-4.jpeg",
         "bigImage": "/uploads/portfolio/big/portfolio-big-4.jpeg",
-        "architect": "John Smith",
-        "architectInfo": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+        "architectId": 0,
         "customer": "Individual",
         "square": "32 sq.m.",
         "time": "3 weeks",
         "price": "5000",
-        "slug": "cozy-loft-light"
+        "slug": "cozy-loft-light",
+        "address": "47-01 111th St, Queens, NY 11368, United States",
+        "breadcrumbs": "Home-Portfolio"
     },
     {
         "id": 5,
@@ -112,13 +117,14 @@
         "previewImage": "/uploads/portfolio/preview/portfolio-preview-5.jpeg",
         "middleImage": "/uploads/portfolio/middle/portfolio-middle-5.jpeg",
         "bigImage": "/uploads/portfolio/big/portfolio-big-5.jpeg",
-        "architect": "John Smith",
-        "architectInfo": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+        "architectId": 0,
         "customer": "Individual",
         "square": "32 sq.m.",
         "time": "3 weeks",
         "price": "5000",
-        "slug": "cozy-loft-light"
+        "slug": "cozy-loft-light",
+        "address": "47-01 111th St, Queens, NY 11368, United States",
+        "breadcrumbs": "Home-Portfolio"
     },
     {
         "id": 6,
@@ -132,13 +138,14 @@
         "previewImage": "/uploads/portfolio/preview/portfolio-preview-6.jpeg",
         "middleImage": "/uploads/portfolio/middle/portfolio-middle-6.jpeg",
         "bigImage": "/uploads/portfolio/big/portfolio-big-6.jpeg",
-        "architect": "John Smith",
-        "architectInfo": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+        "architectId": 0,
         "customer": "Individual",
         "square": "32 sq.m.",
         "time": "3 weeks",
         "price": "5000",
-        "slug": "cozy-loft-light"
+        "slug": "cozy-loft-light",
+        "address": "47-01 111th St, Queens, NY 11368, United States",
+        "breadcrumbs": "Home-Portfolio"
     },
     {
         "id": 7,
@@ -152,13 +159,14 @@
         "previewImage": "/uploads/portfolio/preview/portfolio-preview-7.jpeg",
         "middleImage": "/uploads/portfolio/middle/portfolio-middle-7.jpeg",
         "bigImage": "/uploads/portfolio/big/portfolio-big-7.jpeg",
-        "architect": "John Smith",
-        "architectInfo": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+        "architectId": 0,
         "customer": "Individual",
         "square": "32 sq.m.",
         "time": "3 weeks",
         "price": "5000",
-        "slug": "cozy-loft-light"
+        "slug": "cozy-loft-light",
+        "address": "47-01 111th St, Queens, NY 11368, United States",
+        "breadcrumbs": "Home-Portfolio"
     },
     {
         "id": 8,
@@ -172,13 +180,14 @@
         "previewImage": "/uploads/portfolio/preview/portfolio-preview-8.jpeg",
         "middleImage": "/uploads/portfolio/middle/portfolio-middle-8.jpeg",
         "bigImage": "/uploads/portfolio/big/portfolio-big-8.jpeg",
-        "architect": "John Smith",
-        "architectInfo": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+        "architectId": 0,
         "customer": "Individual",
         "square": "32 sq.m.",
         "time": "3 weeks",
         "price": "5000",
-        "slug": "cozy-loft-light"
+        "slug": "cozy-loft-light",
+        "address": "47-01 111th St, Queens, NY 11368, United States",
+        "breadcrumbs": "Home-Portfolio"
     },
     {
         "id": 9,
@@ -192,13 +201,14 @@
         "previewImage": "/uploads/portfolio/preview/portfolio-preview-9.jpeg",
         "middleImage": "/uploads/portfolio/middle/portfolio-middle-9.jpeg",
         "bigImage": "/uploads/portfolio/big/portfolio-big-9.jpeg",
-        "architect": "John Smith",
-        "architectInfo": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+        "architectId": 0,
         "customer": "Individual",
         "square": "32 sq.m.",
         "time": "3 weeks",
         "price": "5000",
-        "slug": "cozy-loft-light"
+        "slug": "cozy-loft-light",
+        "address": "47-01 111th St, Queens, NY 11368, United States",
+        "breadcrumbs": "Home-Portfolio"
     }
   ],
 
@@ -288,6 +298,46 @@
       "menuId": 1,
       "order": 4
     }
+  ],
+  "image": [
+    {
+      "id": 0,
+      "title": "John Smith",
+      "alt": "John Smith",
+      "original": "",
+      "preview": "",
+      "src": "",
+      "thumbnail": "/uploads/portfolio/architect/architect-john-smith.jpeg",
+      "width": 1,
+      "height": 1,
+      "tagsId": [ 2, 5 ],
+      "caption": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+      "typeImage": "userPhoto",
+      "pageId": 0,
+      "order": 0
+    }
+  ],
+  "user": [
+    {
+      "id": 0,
+      "name": "John",
+      "family": "Smith",
+      "nik": "John",
+      "imageId": 0,
+      "anons": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+      "info": "Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total. Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total. Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total. Graduate of Harvard University, Ph.D., professional architect. Completed more than 120 projects in total.",
+      "profession": "Professional architect",
+      "role": "architect",
+      "email": "",
+      "mobile": "",
+      "profileId": 0,
+      "projectsId": []
+    }
+  ],
+    "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
   ]
+
+
 
 }
