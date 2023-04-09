@@ -51,8 +51,6 @@ export const portfolioWidgetReducer = (state = {
         return {
           ...state,
           projects: action.payload,
-            //   pages: action.payload.pages,
-            //   page: action.payload.page,
             isLoadingPortfolio: false
         }
         case PORTFOLIO_WIDGET_FAIL:

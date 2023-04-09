@@ -8,10 +8,9 @@ const PortfolioElement = (props) => {
                 className="portfolio-element__link"
                 to={`/portfolio/${props.element.id}`}
             >
-          {console.log(props.element.previewImage)}
                 <img
                     className="portfolio-element__img"
-                    src={props.element.previewImage}
+                    src={props.element.middleImage}
                     alt={props.element.title}
                 />
             </NavLink>

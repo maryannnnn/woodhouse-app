@@ -1,4 +1,7 @@
 import {
+  imageCarouselReducer
+} from '../../entities/image/reducers/imageReducers';
+import {
   portfolioListReducer,
   portfolioWidgetReducer,
   portfolioDetailsReducer
@@ -8,7 +11,9 @@ import {
   headerZeroReducer,
   headerOneReducer
 } from '../../shared/ui/header-anons/reducers/headerReducers';
-import { menuListReducer } from '../../shared/ui/menu/reducers/menuReducers';
+import {
+  menuListReducer
+} from '../../shared/ui/menu/reducers/menuReducers';
 
 export const Reducers = {
   portfolioListReducer,
@@ -17,5 +22,6 @@ export const Reducers = {
   headerListReducer,
   headerZeroReducer,
   headerOneReducer,
-  menuListReducer
+  menuListReducer,
+  imageCarouselReducer
 }
