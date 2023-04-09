@@ -5,7 +5,10 @@ import {
   PORTFOLIO_LIST_FAIL, 
   PORTFOLIO_DETAILS_REQUEST,
   PORTFOLIO_DETAILS_SUCCESS,
-  PORTFOLIO_DETAILS_FAIL
+  PORTFOLIO_DETAILS_FAIL,
+  PORTFOLIO_WIDGET_REQUEST,
+  PORTFOLIO_WIDGET_SUCCESS,
+  PORTFOLIO_WIDGET_FAIL
 } from '../constants/portfolioConstants'
 
 export const portfolioListAction = () => async (dispatch) => {
@@ -23,6 +26,23 @@ export const portfolioListAction = () => async (dispatch) => {
     });
   }
 }
+
+export const portfolioWidgetAction = (start, end) => async (dispatch) => {
+  dispatch({ type: PORTFOLIO_WIDGET_REQUEST, payload: { start, end } });
+  try {
+    const { data } = await Axios.get(`/portfolio?_start=${start}&_end=${end}`);
+    console.log("data Portfolio Widget", data)
+    dispatch({ type: PORTFOLIO_WIDGET_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({
+      type: PORTFOLIO_WIDGET_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
 
 export const portfolioDetailsAction = (projectId) => async (dispatch) => {
   dispatch({ type: PORTFOLIO_DETAILS_REQUEST, payload: projectId });

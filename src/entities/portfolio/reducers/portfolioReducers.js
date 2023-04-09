@@ -4,7 +4,10 @@ import {
   PORTFOLIO_LIST_FAIL,
   PORTFOLIO_DETAILS_REQUEST,
   PORTFOLIO_DETAILS_SUCCESS,
-  PORTFOLIO_DETAILS_FAIL
+  PORTFOLIO_DETAILS_FAIL,
+  PORTFOLIO_WIDGET_REQUEST,
+  PORTFOLIO_WIDGET_SUCCESS,
+  PORTFOLIO_WIDGET_FAIL
 } from '../constants/portfolioConstants'
 
 export const portfolioListReducer = (state = {
@@ -26,6 +29,33 @@ export const portfolioListReducer = (state = {
             isLoadingPortfolio: false
         }
         case PORTFOLIO_LIST_FAIL:
+          return {
+            ...state, errorPortfolio: action.payload, isLoadingPortfolio: false
+          }
+          default:
+            return state
+  }
+}
+
+export const portfolioWidgetReducer = (state = {
+  projects: [],
+  isLoadingPortfolio: false,
+  errorPortfolio: ''
+}, action) => {
+  switch (action.type) {
+    case PORTFOLIO_WIDGET_REQUEST:
+      return {
+        ...state, isLoadingPortfolio: true
+      }
+      case PORTFOLIO_WIDGET_SUCCESS:
+        return {
+          ...state,
+          projects: action.payload,
+            //   pages: action.payload.pages,
+            //   page: action.payload.page,
+            isLoadingPortfolio: false
+        }
+        case PORTFOLIO_WIDGET_FAIL:
           return {
             ...state, errorPortfolio: action.payload, isLoadingPortfolio: false
           }

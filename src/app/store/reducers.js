@@ -1,4 +1,8 @@
-import { portfolioListReducer, portfolioDetailsReducer } from '../../entities/portfolio/reducers/portfolioReducers';
+import {
+  portfolioListReducer,
+  portfolioWidgetReducer,
+  portfolioDetailsReducer
+} from '../../entities/portfolio/reducers/portfolioReducers';
 import {
   headerListReducer,
   headerZeroReducer,
@@ -8,6 +12,7 @@ import { menuListReducer } from '../../shared/ui/menu/reducers/menuReducers';
 
 export const Reducers = {
   portfolioListReducer,
+  portfolioWidgetReducer,
   portfolioDetailsReducer,
   headerListReducer,
   headerZeroReducer,
