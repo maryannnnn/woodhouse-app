@@ -13,6 +13,7 @@ import GalleryCarousel from '../../shared/gallery-carousel/GalleryCarousel';
 const Project = (props) => {
   const dispatch = useDispatch();
   const { id } = useParams();
+  const typeImage = "projectPortfolio"
 
   const portfolioDetail = useSelector((state) => state.portfolioDetailsReducer);
   const { isLoadingProject, errorProject, project } = portfolioDetail;
@@ -25,14 +26,14 @@ const Project = (props) => {
     <div className="project">
       {isLoadingProject && <LoadingBox></LoadingBox>}
       {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
-      <GalleryCarousel projectId={project.Id} />
+      <GalleryCarousel pageId={id} typeImage={typeImage} />
       <div className="container">
         <div className="project__inner">
           <h1 className="project__title">{project.title}</h1>
           <div className="project__content">
             <div className="project__content-main">
               <div className="project__content-main__info">{project.anons}</div>
-              <GalleryPhoto projectId={project.Id} />
+              <GalleryPhoto imageDesignId={project.imageDesignId} />
               <div className="project__content-main__info">{project.block}</div>
               <div className="project__content-main__info">{project.text}</div>
               <GalleryImage projectId={project.Id} />
