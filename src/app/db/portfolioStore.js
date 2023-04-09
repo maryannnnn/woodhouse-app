@@ -1,12 +1,12 @@
 import {
   imageFolderPreview
-} from '../db/portfolioImagesStore'
+} from './portfolioImagesStore'
 import {
   imageFolderMiddle
-} from '../db/portfolioImagesStore'
+} from './portfolioImagesStore'
 import {
   imageFolderBig
-} from '../db/portfolioImagesStore'
+} from './portfolioImagesStore'
 
 export const portfolioInfo = [{
     id: 0,

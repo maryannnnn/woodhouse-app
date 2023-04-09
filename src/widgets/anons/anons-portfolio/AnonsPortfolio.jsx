@@ -3,12 +3,13 @@ import HeaderAnons from "../../../shared/ui/header-anons/HeaderAnons";
 import ButtonAnons from "../../../shared/ui/btn-anons/ButtonAnons";
 import AnonsBodyPortfolio from "../../../shared/ui/body-anons/AnonsBodyPortfolio";
 
-const AnonsPortfolio = (props) => {
+const AnonsPortfolio = () => {
+
   return (
     <div className="anons-widget">
       <div className="container">
         <div className="anons-widget__inner">
-          <HeaderAnons headerListDto={props.headerListDto} />
+          <HeaderAnons />
           <AnonsBodyPortfolio />
           <ButtonAnons link={"/portfolio"} />
         </div>
