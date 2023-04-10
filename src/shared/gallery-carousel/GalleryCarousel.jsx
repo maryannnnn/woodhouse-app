@@ -21,7 +21,7 @@ const GalleryCarousel = (props) => {
       {errorImage && <MessageBox variant="errorVariant">{errorImage}</MessageBox>}
       <Carousel>
         {images.map(img => (
-          <div>
+          <div key={img.id}>
             <img src={img.original} alt={img.alt} />
             <p className="legend">{img.title}</p>
           </div>
