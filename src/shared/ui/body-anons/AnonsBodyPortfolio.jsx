@@ -9,12 +9,12 @@ const BodyAnons = () => {
   // const { pageNumber = 1 } = useParams()
   const start = 0
   const end = 3
-  const typeImage = "projectPortfolio"
+  //const typeImage = "projectPortfolio"
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(imageWidgetAction(start, end, typeImage))
+    dispatch(imageWidgetAction(start, end))
   }, [dispatch])
 
   const imageWidget = useSelector(state => state.imageWidgetReducer)
