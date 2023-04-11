@@ -6,18 +6,18 @@ const PortfolioElement = (props) => {
     <div className="portfolio-element">
       <NavLink
         className="portfolio-element__link"
-        to={`/portfolio/${props.element.pageId}`}
+        to={`/portfolio/${props.element.id}`}
       >
         <img
           className="portfolio-element__img"
-          src={props.element.src}
+          src={props.element.image}
           alt={props.element.alt}
         />
       </NavLink>
       <span className="portfolio-element__category">Category: {props.element.category}</span>
       <NavLink
         className="portfolio-element__link"
-        to={`/portfolio/${props.element.pageId}`}
+        to={`/portfolio/${props.element.id}`}
       >
         <h3 className="portfolio-element__title">{props.element.title}</h3>
       </NavLink>

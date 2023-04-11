@@ -6,3 +6,5 @@ export class ArchitectDto {
     this.name = name;
     this.info = info;
   }
+
+}

@@ -1,0 +1,149 @@
+export const imageWidgetAction = (start, end) => async (dispatch) => {
+    dispatch({type: IMAGE_WIDGET_REQUEST, payload: {start, end}});
+    try {
+        const projectWidget = [];
+        const projects = await Axios.get(`/portfolio?_start=${start}&_end=${end}`)
+            .then(response => {
+                console.log("Portfolio Widget projects: ", response.data);
+                return response.data;
+            });
+
+        const imagePromises = projects.map(project => Axios.get(`/image?id=${project.imageProjectId}`));
+        const images = await Promise.all(imagePromises)
+            .then(responses => {
+                console.log("Portfolio Widget images: ", responses.map(response => response.data));
+                return responses.map(response => response.data);
+            });
+
+        projects.forEach((project, index) => {
+            const projectTmp = new infoProjectDto(project.id, project.title, project.category, images[index].src, images[index].alt);
+            projectWidget.push(projectTmp);
+        });
+
+        console.log("Portfolio Widget projectWidget: ", projectWidget);
+        dispatch({type: IMAGE_WIDGET_SUCCESS, payload: projectWidget});
+    } catch (error) {
+        dispatch({
+            type: IMAGE_WIDGET_FAIL,
+            payload:
+                error.response && error.response.data.message
+                    ? error.response.data.message
+                    : error.message,
+        });
+    }
+};
+
+
+
+export const imageWidgetAction = (start, end) => async (dispatch) => {
+    dispatch({type: IMAGE_WIDGET_REQUEST, payload: {start, end}});
+    try {
+        const projectWidget = [];
+        const projects = await Axios.get(`/portfolio?_start=${start}&_end=${end}`)
+            .then(response => {
+                console.log("Portfolio Widget projects: ", response.data);
+                return response.data;
+            });
+
+        const imagePromises = projects.map(project => Axios.get(`/image?id=${project.imageProjectId}`));
+        const imageResponses = await Promise.all(imagePromises);
+        const images = imageResponses.reduce((acc, response) => {
+            return acc.concat(response.data);
+        }, []);
+
+        projects.forEach((project, index) => {
+            const projectTmp = new infoProjectDto(project.id, project.title, project.category, images[index].src, images[index].alt);
+            projectWidget.push(projectTmp);
+        });
+
+        console.log("Portfolio Widget projectWidget: ", projectWidget);
+        dispatch({type: IMAGE_WIDGET_SUCCESS, payload: projectWidget});
+    } catch (error) {
+        dispatch({
+            type: IMAGE_WIDGET_FAIL,
+            payload:
+                error.response && error.response.data.message
+                    ? error.response.data.message
+                    : error.message,
+        });
+    }
+};
+
+export const imageWidgetAction = (start, end) => async (dispatch) => {
+    dispatch({type: IMAGE_WIDGET_REQUEST, payload: {start, end}});
+    try {
+        const projectWidget = [];
+        const projects = await Axios.get(`/portfolio?_start=${start}&_end=${end}`)
+            .then(response => {
+                console.log("Portfolio Widget projects: ", response.data);
+                return response.data;
+            });
+
+        const images = [];
+        for (let i = 0; i < projects.length; i++) {
+            const response = await Axios.get(`/image?id=${projects[i].imageProjectId}`);
+            const image = response.data;
+            images.push(...image);
+            const projectTmp = new infoProjectDto(projects[i].id, projects[i].title, projects[i].category, image.src, image.alt);
+            projectWidget.push(projectTmp);
+        }
+
+        console.log("Portfolio Widget images: ", images);
+        console.log("Portfolio Widget projectWidget: ", projectWidget);
+        dispatch({type: IMAGE_WIDGET_SUCCESS, payload: projectWidget});
+    } catch (error) {
+        dispatch({
+            type: IMAGE_WIDGET_FAIL,
+            payload:
+                error.response && error.response.data.message
+                    ? error.response.data.message
+                    : error.message,
+        });
+    }
+};
+
+
+
+В этом примере мы используем цикл for для итерации по массиву проектов и выполняем запросы на получение изображений
+ с использованием await и Axios.get(). Затем мы добавляем полученные изображения в массив images с 
+помощью оператора расширения ...image. Далее, мы используем массив images для создания объектов 
+infoProjectDto и добавления их в projectWidget.
+
+
+
+
+
+export const imageWidgetAction = (start, end) => async (dispatch) => {
+    dispatch({type: IMAGE_WIDGET_REQUEST, payload: {start, end}});
+    try {
+        const projectWidget = [];
+        const projects = await Axios.get(`/portfolio?_start=${start}&_end=${end}`)
+            .then(response => {
+                console.log("Portfolio Widget projects: ", response.data);
+                return response.data;
+            });
+
+        const images = await Axios.get(`/image?id=${projects[0].imageProjectId}&id=${projects[1].imageProjectId}&id=${projects[2].imageProjectId}`)
+            .then(response => {
+                console.log("Portfolio Widget images: ", response.data);
+                return response.data;
+            });
+        console.log("Portfolio Widget images: ", images);
+
+        projects.forEach((project, index) => {
+            const projectTmp = new infoProjectDto(project.id, project.title, project.category, images[index].src, images[index].alt);
+            projectWidget.push(projectTmp);
+        });
+
+        console.log("Portfolio Widget projectWidget: ", projectWidget);
+        dispatch({type: IMAGE_WIDGET_SUCCESS, payload: projectWidget});
+    } catch (error) {
+        dispatch({
+            type: IMAGE_WIDGET_FAIL,
+            payload:
+                error.response && error.response.data.message
+                    ? error.response.data.message
+                    : error.message,
+        });
+    }
+};
