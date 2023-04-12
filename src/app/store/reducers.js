@@ -1,5 +1,6 @@
 import {
   imageCarouselReducer,
+  imagePhotoReducer,
   imageWidgetReducer
 } from '../../entities/image/reducers/imageReducers';
 import {
@@ -25,5 +26,6 @@ export const Reducers = {
   headerOneReducer,
   menuListReducer,
   imageCarouselReducer,
+  imagePhotoReducer,
   imageWidgetReducer
 }
