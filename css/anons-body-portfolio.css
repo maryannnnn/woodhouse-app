@@ -1,0 +1,10 @@
+.body-anons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0 20px;
+}
+/*# sourceMappingURL=anons-body-portfolio.css.map */

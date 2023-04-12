@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAIG,AAAD,cAAQ,CAAC;EACP,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,MAAM;CACf;;AAGE,AAAD,kBAAM,CAAC;EACL,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,UAAU;EAC3B,WAAW,EAAE,MAAM;CACpB;;AACA,AAAD,iBAAK,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACb;;AACA,AAAD,mBAAO,CAAC;ECDV,WAAW,ECpBJ,SAAS;EDqBhB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EDDb,KAAK,EGnBF,OAAO;CHoBX;;AAGF,AAAD,eAAS,CAAC;EACR,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,OAAO,EAAE,QAAQ;EACjB,GAAG,EAAE,IAAI;CACV",
+    "sources": [
+        "../src/widgets/navigation/navigation.scss",
+        "../src/app/scss/_mixins.scss",
+        "../src/app/scss/_fonts.scss",
+        "../src/app/scss/_colors.scss"
+    ],
+    "names": [],
+    "file": "navigation.css"
+}

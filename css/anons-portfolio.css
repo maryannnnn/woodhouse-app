@@ -1,0 +1,15 @@
+.anons-widget {
+  position: relative;
+  width: 100vw;
+}
+
+.anons-widget:before {
+  position: absolute;
+  content: '';
+  background-color: #171A1A;
+  width: 100vw;
+  height: 350px;
+  top: 0;
+  z-index: -1;
+}
+/*# sourceMappingURL=anons-portfolio.css.map */

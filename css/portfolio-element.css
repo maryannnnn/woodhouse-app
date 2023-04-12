@@ -1,0 +1,54 @@
+.portfolio-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.portfolio-element:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-bottom: 1px solid #F88500;
+}
+
+.portfolio-element__img {
+  width: 300px;
+  height: auto;
+}
+
+.portfolio-element__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 125%;
+  color: #171A1A;
+  padding-top: 20px;
+}
+
+.portfolio-element__title:hover {
+  color: #989DA5;
+}
+
+.portfolio-element__category {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ff9e32;
+  padding-top: 20px;
+}
+/*# sourceMappingURL=portfolio-element.css.map */

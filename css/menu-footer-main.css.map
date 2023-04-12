@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,YAAY,CAAC;EACX,KAAK,EAAE,KAAK;CAuBb;;AArBE,AAAD,mBAAQ,CAAC;ECsBT,WAAW,EC5BJ,SAAS;ED6BhB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EDxBf,cAAc,EAAE,IAAI;CACrB;;AAEA,AAAD,sBAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,UAAU;EAC3B,GAAG,EAAE,MAAM;CASZ;;AAPE,AAAD,2BAAM,CAAC;EACL,KAAK,EGbD,OAAO;CHkBZ;;AANA,AAGC,2BAHI,AAGH,MAAM,CAAC;EACN,KAAK,EGTJ,OAAO;CHUT",
+    "sources": [
+        "../src/shared/ui/menu/menu-footer-main/menu-footer-main.scss",
+        "../src/app/scss/_mixins.scss",
+        "../src/app/scss/_fonts.scss",
+        "../src/app/scss/_colors.scss",
+        "../src/app/scss/_colors.scss"
+    ],
+    "names": [],
+    "file": "menu-footer-main.css"
+}

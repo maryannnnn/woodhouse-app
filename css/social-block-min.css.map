@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,iBAAiB,CAAC;EAChB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,UAAU;EAC3B,OAAO,EAAE,QAAQ;EACjB,GAAG,EAAE,IAAI;CACV",
+    "sources": [
+        "../src/shared/ui/social/social-block-min/social-block-min.scss",
+        "../src/app/scss/_mixins.scss",
+        "../src/app/scss/_fonts.scss",
+        "../src/app/scss/_colors.scss",
+        "../src/app/scss/_colors.scss"
+    ],
+    "names": [],
+    "file": "social-block-min.css"
+}

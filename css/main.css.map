@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;ECiIJ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;EACnB,IAAI,EAAE,QAAQ;CDnIf",
+    "sources": [
+        "../src/pages/main/main.scss",
+        "../src/app/scss/_mixins.scss",
+        "../src/app/scss/_fonts.scss",
+        "../src/app/scss/_colors.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

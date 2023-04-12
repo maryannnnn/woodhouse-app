@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAC;EACZ,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,KAAK;CAUb;;AAZD,AAGE,aAHW,AAGV,OAAO,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,EAAE;EACX,gBAAgB,ECNX,OAAO;EDOZ,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,GAAG,EAAE,CAAC;EACN,OAAO,EAAE,EAAE;CACZ",
+    "sources": [
+        "../src/widgets/anons/anons-portfolio/anons-portfolio.scss",
+        "../src/app/scss/_colors.scss"
+    ],
+    "names": [],
+    "file": "anons-portfolio.css"
+}

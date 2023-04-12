@@ -1,0 +1,24 @@
+.form-checkout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 20px;
+}
+
+.form-checkout__price {
+  color: #202328;
+}
+
+.form-checkout__title {
+  color: #202328;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+/*# sourceMappingURL=formCheckout.css.map */

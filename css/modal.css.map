@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,MAAM,CAAC;EACL,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,gBAAgB,EAAE,kBAAe;EACjC,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,CAAC;EACN,IAAI,EAAE,CAAC;EACP,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,OAAO,EAAE,CAAC;EACV,cAAc,EAAE,IAAI;CAkBrB;;AA7BD,AAYE,MAZI,AAYH,OAAO,CAAC;EACP,OAAO,EAAE,CAAC;EACV,cAAc,EAAE,GAAG;CACpB;;AACA,AAAD,eAAU,CAAC;EACT,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,IAAI;EACnB,MAAM,EAAE,GAAG,CAAC,KAAK,CGpBZ,OAAO;EHqBZ,gBAAgB,EGhBV,OAAO;EHiBb,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,QAAQ;CAKpB;;AAZA,AAQC,eARQ,AAQP,OAAO,CAAC;EACP,SAAS,EAAE,QAAQ;EACnB,UAAU,EAAE,QAAQ;CACrB",
+    "sources": [
+        "../src/shared/ui/modal/modal.scss",
+        "../src/app/scss/_mixins.scss",
+        "../src/app/scss/_fonts.scss",
+        "../src/app/scss/_colors.scss",
+        "../src/app/scss/_colors.scss"
+    ],
+    "names": [],
+    "file": "modal.css"
+}

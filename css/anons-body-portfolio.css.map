@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,GAAG,EAAC,MAAM;CACX",
+    "sources": [
+        "../src/shared/ui/body-anons/anons-body-portfolio.scss",
+        "../src/app/scss/_mixins.scss",
+        "../src/app/scss/_fonts.scss",
+        "../src/app/scss/_colors.scss",
+        "../src/app/scss/_colors.scss"
+    ],
+    "names": [],
+    "file": "anons-body-portfolio.css"
+}

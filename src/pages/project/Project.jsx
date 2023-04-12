@@ -25,6 +25,20 @@ const Project = (props) => {
 
     return (
         <div className="project">
+            <div className="top">
+                <ul className="breadcrumbs">
+                    <li className="breadcrumbs__item">
+                        <NavLink className="breadcrumbs__link" to="/" >Home -></NavLink>
+                    </li>
+                    <li className="breadcrumbs__item">
+                        <NavLink className="breadcrumbs__link" to="/portfolio" >Portfolio -></NavLink>
+                    </li>
+                    <li className="breadcrumbs__item">
+                        <span className="breadcrumbs__link">{project.title}</span>
+                    </li>
+                </ul>
+                <div className="address">Address: {project.address}</div>
+            </div>
             {isLoadingProject && <LoadingBox></LoadingBox>}
             {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
             <GalleryCarousel pageId={id} typeImage={typeImagePortfolio}/>
