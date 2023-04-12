@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,IAAI;CACV",
+    "sources": [
+        "../src/shared/block-architect/block-architect.scss"
+    ],
+    "names": [],
+    "file": "block-architect.css"
+}

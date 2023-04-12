@@ -1,0 +1,12 @@
+select {
+  border: 1px solid #171A1A;
+  background-color: transparent;
+  width: 100%;
+  padding: 3px;
+}
+
+select:focus {
+  outline: none;
+  background-color: #ffffff;
+}
+/*# sourceMappingURL=select.css.map */

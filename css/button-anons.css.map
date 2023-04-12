@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,aAAa,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,SAAS;CACnB",
+    "sources": [
+        "../src/shared/ui/btn-anons/button-anons.scss"
+    ],
+    "names": [],
+    "file": "button-anons.css"
+}

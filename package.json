@@ -22,7 +22,6 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
-    "sass": "^1.57.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -31,7 +30,7 @@
     "eject": "react-scripts eject",
     "lint": "npx eslint ./src",
     "test": "jest",
-    "server": "json-server -w ./src/app/db/db.json -p 4200 -d 400"
+    "server": "json-server -w ./src/app/db/db.json -p 4200 -d 50"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +57,8 @@
     "eslint": "^8.33.0",
     "eslint-config-react-app": "^7.0.1",
     "jest": "^27.5.1",
-    "react-test-renderer": "^18.2.0"
+    "node-sass": "^8.0.0",
+    "react-test-renderer": "^18.2.0",
+    "sass": "^1.62.0"
   }
 }

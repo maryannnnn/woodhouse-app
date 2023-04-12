@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,aAAa,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,UAAU;EAC3B,GAAG,EAAE,IAAI;EACT,KAAK,EAAE,KAAK;CAIb;;AAHE,AAAD,oBAAQ,CAAC;ECmBT,WAAW,EC5BJ,SAAS;ED6BhB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;CDrBhB",
+    "sources": [
+        "../src/shared/ui/social/social-block/socil-block.scss",
+        "../src/app/scss/_mixins.scss",
+        "../src/app/scss/_fonts.scss",
+        "../src/app/scss/_colors.scss",
+        "../src/app/scss/_colors.scss"
+    ],
+    "names": [],
+    "file": "socil-block.css"
+}

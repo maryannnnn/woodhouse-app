@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/shared/block-content-project/block-content-project.scss"
+    ],
+    "names": [],
+    "file": "block-content-project.css"
+}

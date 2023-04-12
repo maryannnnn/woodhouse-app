@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,QAAQ,CAAC;EACP,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,kBAAkB;EACpC,iBAAiB,EAAE,OAAO;EAC1B,aAAa,EAAE,GAAG;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,SAAS,EAAE,uBAAuB;CACnC;;AAED,UAAU,CAAV,IAAU;EACR,EAAE;IACA,SAAS,EAAE,cAAc",
+    "sources": [
+        "../src/shared/ui/box/boxes.scss"
+    ],
+    "names": [],
+    "file": "boxes.css"
+}

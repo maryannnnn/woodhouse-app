@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,GAAG,EAAE,IAAI;EC+ET,WAAW,ECpFJ,SAAS;EDqFhB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;CDvElB;;AATE,AAAD,UAAM,CAAC;EACL,OAAO,EAAE,QAAQ;CAElB;;AAHA,ACmHD,UDnHM,ACmHL,MAAM,CAAC;EACN,gBAAgB,EE5HX,OAAO;EF6HZ,MAAM,EAAE,CAAC;EACT,aAAa,EAAE,GAAG;CACnB;;ADlHA,AAAD,UAAM,CAAC;ECuGP,KAAK,EEhHE,OAAO;CHWb;;AAFA,ACwGD,UDxGM,ACwGL,MAAM,CAAC;EACN,KAAK,EEjHC,OAAO;CFkHd",
+    "sources": [
+        "../src/shared/ui/menu/menu-top-main/menu-top-main.scss",
+        "../src/app/scss/_mixins.scss",
+        "../src/app/scss/_fonts.scss",
+        "../src/app/scss/_colors.scss"
+    ],
+    "names": [],
+    "file": "menu-top-main.css"
+}

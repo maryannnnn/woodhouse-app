@@ -1,0 +1,44 @@
+.header-anons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0 96px;
+  padding: 73px 175px;
+}
+
+.header-anons__left {
+  -ms-flex-preferred-size: 440px;
+      flex-basis: 440px;
+}
+
+.header-anons__left-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 125%;
+  color: #ffffff;
+}
+
+.header-anons__left-subtitle {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F88500;
+  margin-top: 20px;
+}
+
+.header-anons__right {
+  -ms-flex-preferred-size: 440px;
+      flex-basis: 440px;
+  color: #ffffff;
+}
+/*# sourceMappingURL=header-anons.css.map */

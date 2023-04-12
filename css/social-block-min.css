@@ -1,0 +1,11 @@
+.social-block-min {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 5px 15px;
+  gap: 12px;
+}
+/*# sourceMappingURL=social-block-min.css.map */
