@@ -1,0 +1,62 @@
+@import '../../../app/scss/mixins';
+@import '../../../app/scss/colors';
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+
+  &__profession {
+    @include title-3;
+    color: $dark-1;
+  }
+
+  &__img {
+    width: 100px;
+    height: auto;
+    padding-top: 15px;
+  }
+
+  &__link {
+    @include title-3;
+    color: $dark-1;
+    padding-top: 10px;
+  }
+
+  &__name {
+    @include title-4;
+    color: $dark-1;
+    padding-top: 10px;
+  }
+
+  &__anons {
+    @include text-1;
+    color: $dark-1;
+    padding-top: 15px;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    &__items {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+    &__name {
+      @include title-3;
+      color: $dark-1;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    &__title {
+      @include title-4;
+      color: $dark-1;
+    }
+  }
+}

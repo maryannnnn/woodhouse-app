@@ -1,7 +1,7 @@
 import './anons-portfolio.scss'
 import HeaderAnons from "../../../shared/ui/header-anons/HeaderAnons";
 import ButtonAnons from "../../../shared/ui/btn-anons/ButtonAnons";
-import AnonsBodyPortfolio from "../../../shared/ui/body-anons/AnonsBodyPortfolio";
+import AnonsBodyPortfolio from "../../../shared/body-anons/AnonsBodyPortfolio";
 
 const AnonsPortfolio = () => {
 

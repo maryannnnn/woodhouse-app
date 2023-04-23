@@ -9,6 +9,11 @@ import {
   portfolioDetailsReducer
 } from '../../entities/portfolio/reducers/portfolioReducers';
 import {
+  userListReducer,
+  userWidgetReducer,
+  userDetailsReducer
+} from '../../entities/user/reducers/userReducers';
+import {
   headerListReducer,
   headerZeroReducer,
   headerOneReducer
@@ -21,6 +26,9 @@ export const Reducers = {
   portfolioListReducer,
   portfolioWidgetReducer,
   portfolioDetailsReducer,
+  userListReducer,
+  userWidgetReducer,
+  userDetailsReducer,
   headerListReducer,
   headerZeroReducer,
   headerOneReducer,
