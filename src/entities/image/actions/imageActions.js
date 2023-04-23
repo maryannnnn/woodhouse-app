@@ -57,7 +57,7 @@ export const imageWidgetAction = (start, end) => async (dispatch) => {
         console.log("Portfolio Widget images: ", images.data);
 
         projects.data.forEach((project, index) => {
-            const projectTmp = new infoProjectDto(project.id, project.title, project.category, images.data[index].src, images.data[index].alt);
+            const projectTmp = new infoProjectDto(project.id, project.title, project.category, images.data[index].src, images.data[index].thumbnail, images.data[index].alt);
             projectWidget.push(projectTmp);
         });
 

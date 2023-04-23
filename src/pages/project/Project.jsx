@@ -23,21 +23,29 @@ const Project = (props) => {
         dispatch(portfolioDetailsAction(id));
     }, [dispatch, id]);
 
+    // const replaceStr = (str) => {
+    //     return str.replace(/\s/g, "+");
+    // };
+    //
+    // const addressMap = `https://www.google.com/maps?q=${replaceStr(project.address)}`;
+
     return (
         <div className="project">
             <div className="top">
                 <ul className="breadcrumbs">
                     <li className="breadcrumbs__item">
-                        <NavLink className="breadcrumbs__link" to="/" >Home -></NavLink>
+                        <NavLink className="breadcrumbs__link" to="/">Home -></NavLink>
                     </li>
                     <li className="breadcrumbs__item">
-                        <NavLink className="breadcrumbs__link" to="/portfolio" >Portfolio -></NavLink>
+                        <NavLink className="breadcrumbs__link" to="/portfolio">Portfolio -></NavLink>
                     </li>
                     <li className="breadcrumbs__item">
                         <span className="breadcrumbs__link">{project.title}</span>
                     </li>
                 </ul>
-                <div className="address">Address: {project.address}</div>
+                <NavLink href="" rel="noreferrer" target="_blank">
+                    Address: {project.address}
+                </NavLink>
             </div>
             {isLoadingProject && <LoadingBox></LoadingBox>}
             {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
@@ -54,8 +62,8 @@ const Project = (props) => {
                             {/*<GalleryImage projectId={project.Id}/>*/}
                         </div>
                         <div className="project__content-blocks">
-                            <BlockArchitect architectId={project.architectId}/>
-                            <BlockContentProject projectId={project.Id}/>
+                            <BlockArchitect architectId={project.architectId} />
+                            <BlockContentProject projectId={project.id} />
                         </div>
                     </div>
                 </div>

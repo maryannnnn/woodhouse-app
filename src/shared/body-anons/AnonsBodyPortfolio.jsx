@@ -1,15 +1,13 @@
 import './anons-body-portfolio.scss'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import PortfolioElement from "../../../entities/portfolio/ui/PortfolioElement";
-import { imageWidgetAction } from '../../../entities/image/actions/imageActions';
-import { MessageBox, LoadingBox } from '../box/boxes'
+import PortfolioElement from "../../entities/portfolio/ui/PortfolioElement";
+import { imageWidgetAction } from '../../entities/image/actions/imageActions';
+import { MessageBox, LoadingBox } from '../ui/box/boxes'
 
 const BodyAnons = () => {
-  // const { pageNumber = 1 } = useParams()
   const start = 0
   const end = 3
-  //const typeImage = "projectPortfolio"
 
   const dispatch = useDispatch()
 
