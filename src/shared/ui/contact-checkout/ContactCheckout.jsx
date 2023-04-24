@@ -1,7 +1,7 @@
 import './contact-checkout.scss'
-import Button from "../../../shared/ui/btn/Button";
+import Button from "../../btn/Button";
 import FormCheckout from "../../../features/form-checkout/FormCheckout";
-import Modal from "../../../shared/ui/modal/Modal";
+import Modal from "../../modal/Modal";
 import {useState} from "react";
 
 const ContactCheckout = () => {

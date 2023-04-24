@@ -32,9 +32,21 @@ export const imageCarouselAction = (pageId, typeImage) => async (dispatch) => {
 export const imagePhotoAction = (pageId, typeImage) => async (dispatch) => {
     dispatch({type: IMAGE_PHOTO_REQUEST, payload: {pageId, typeImage}});
     try {
-        const {data} = await Axios.get(`/image?pageId=${pageId}&typeImage=${typeImage}`);
-        console.log("data Photo", data)
-        dispatch({type: IMAGE_PHOTO_SUCCESS, payload: data});
+        const Images = await Axios.get(`/image?pageId=${pageId}&typeImage=${typeImage}`);
+        console.log("data Images", Images.data)
+        const imagesSet = new Set();
+
+        Images.data.map(item => {
+            imagesSet.add({
+                title: item.title,
+                src: item.original,
+                width: item.width,
+                height: item.height
+            })
+        })
+        const myArray = [...imagesSet];
+        console.log("imagesSet", myArray)
+        dispatch({type: IMAGE_PHOTO_SUCCESS, payload: myArray});
     } catch (error) {
         dispatch({
             type: IMAGE_PHOTO_FAIL,

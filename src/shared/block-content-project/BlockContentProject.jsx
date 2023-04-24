@@ -1,12 +1,14 @@
 import './block-content-project.scss'
+import Parameter from "../../entities/parameter/ui/Parameter";
+
+
 
 const BlockContentProject = (props) => {
 
   return (
-    <div className='content'>
-
+    <div>
+      <Parameter parameterId={props.parameterId} />
     </div>
-
   )
 }
 

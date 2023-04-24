@@ -1,7 +1,7 @@
 import './header.scss'
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Button from "../../shared/ui/btn/Button";
+import Button from "../../shared/btn/Button";
 import { MessageBox, LoadingBox } from '../../shared/ui/box/boxes'
 import { headerDetailsAction } from '../../shared/ui/header-anons/actions/headerActions';
 

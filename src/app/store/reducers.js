@@ -4,6 +4,9 @@ import {
   imageWidgetReducer
 } from '../../entities/image/reducers/imageReducers';
 import {
+  parameterDetailsReducer
+} from '../../entities/parameter/reducers/parameterReducers';
+import {
   portfolioListReducer,
   portfolioWidgetReducer,
   portfolioDetailsReducer
@@ -26,6 +29,7 @@ export const Reducers = {
   portfolioListReducer,
   portfolioWidgetReducer,
   portfolioDetailsReducer,
+  parameterDetailsReducer,
   userListReducer,
   userWidgetReducer,
   userDetailsReducer,

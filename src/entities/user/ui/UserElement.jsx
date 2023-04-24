@@ -44,7 +44,7 @@ const UserElement = (props) => {
                 {Array.isArray(projects) && projects.length !== 0 ? (
                     <div className="projects__items">
                         {projects.map(item => (
-                            <NavLink className="projects__item" key={item.id} to={`/portfolio/${item.id}`}>
+                            <NavLink className="projects__link" key={item.id} to={`/portfolio/${item.id}`}>
                                 <span className="projects__title">{item.title}</span>
                             </NavLink>
                         ))

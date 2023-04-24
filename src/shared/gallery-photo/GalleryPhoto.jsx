@@ -16,18 +16,18 @@ const GalleryPhoto = (props) => {
         dispatch(imagePhotoAction(props.pageId, props.typeImage));
     }, [dispatch, props.pageId, props.typeImage]);
 
-    const generatePhoto = (images) => {
-        const photos = []
-        images.map(item => {
-            photos.push({
-                title: item.title,
-                src: item.original,
-                width: item.width,
-                height: item.height
-            })
-        })
-        return photos
-    }
+    // const generatePhoto = (photos) => {
+    //     const photos = []
+    //     images.map(item => {
+    //         photos.push({
+    //             title: item.title,
+    //             src: item.original,
+    //             width: item.width,
+    //             height: item.height
+    //         })
+    //     })
+    //     return photos
+    // }
 
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
@@ -48,15 +48,14 @@ const GalleryPhoto = (props) => {
                 <>
                     {isLoadingImage && <LoadingBox></LoadingBox>}
                     {errorImage && <MessageBox variant="errorVariant">{errorImage}</MessageBox>}
-                    <Gallery photos={generatePhoto(images)} onClick={openLightbox}/>
+                    <Gallery photos={images} onClick={openLightbox}/>
                     <ModalGateway>
                         {viewerIsOpen ? (
                             <Modal onClose={closeLightbox}>
                                 <Carousel
                                     currentIndex={currentImage}
-                                    views={generatePhoto(images).map(x => ({
+                                    views={images.map(x => ({
                                         ...x,
-                                        key: x.id,
                                         srcset: x.srcSet,
                                         caption: x.title
                                     }))}
