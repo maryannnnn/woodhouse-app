@@ -120,6 +120,13 @@
   }
 }
 
+@mixin link-2 {
+  color: $orange-2;
+  &:hover {
+    color: $grey-2;
+  }
+}
+
 @mixin back-1 {
   &:hover {
     background-color: $orange;

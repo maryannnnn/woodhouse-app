@@ -1,8 +1,8 @@
 import './formCheckout.scss'
 import {useState} from "react";
-import Button from "../../shared/ui/btn/Button";
-import Input from "../../shared/ui/input/Input";
-import Select from "../../shared/ui/select/Select";
+import Button from "../../shared/btn/Button";
+import Input from "../../shared/input/Input";
+import Select from "../../shared/select/Select";
 
 const FormCheckout = () => {
 
