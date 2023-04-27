@@ -1,7 +1,6 @@
 import {
   imageCarouselReducer,
   imagePhotoReducer,
-  imageWidgetReducer
 } from '../../entities/image/reducers/imageReducers';
 import {
   parameterDetailsReducer
@@ -39,5 +38,4 @@ export const Reducers = {
   menuListReducer,
   imageCarouselReducer,
   imagePhotoReducer,
-  imageWidgetReducer
 }

@@ -2,8 +2,8 @@ import './anons-body-portfolio.scss'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PortfolioElement from "../../entities/portfolio/ui/PortfolioElement";
-import { imageWidgetAction } from '../../entities/image/actions/imageActions';
 import { MessageBox, LoadingBox } from '../ui/box/boxes'
+import {portfolioWidgetAction} from "../../entities/portfolio/actions/portfolioActions";
 
 const BodyAnons = () => {
   const start = 0
@@ -12,18 +12,18 @@ const BodyAnons = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(imageWidgetAction(start, end))
+    dispatch(portfolioWidgetAction(start, end))
   }, [dispatch])
 
-  const imageWidget = useSelector(state => state.imageWidgetReducer)
-  const { isLoadingImage, errorImage, images } = imageWidget
+  const projectWidget = useSelector(state => state.portfolioWidgetReducer)
+  const { isLoadingProject, errorProject, projects } = projectWidget
 
   return (
     <div className="body-anons">
-      {isLoadingImage && <LoadingBox></LoadingBox>}
-      {errorImage && <MessageBox variant="errorVariant">{errorImage}</MessageBox>}
-      {console.log("images Widget", ...images)}
-      {images
+      {isLoadingProject && <LoadingBox></LoadingBox>}
+      {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
+      {console.log("Project Widget", ...projects)}
+      {projects
         .map(element =>
           <div key={element.id}>
             <PortfolioElement element={element} />

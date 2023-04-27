@@ -39,26 +39,26 @@ export const portfolioListReducer = (state = {
 
 export const portfolioWidgetReducer = (state = {
   projects: [],
-  isLoadingPortfolio: false,
-  errorPortfolio: ''
+  isLoadingProject: false,
+  errorProject: ''
 }, action) => {
   switch (action.type) {
     case PORTFOLIO_WIDGET_REQUEST:
       return {
-        ...state, isLoadingPortfolio: true
+        ...state, isLoadingProject: true
       }
-      case PORTFOLIO_WIDGET_SUCCESS:
-        return {
-          ...state,
-          projects: action.payload,
-            isLoadingPortfolio: false
-        }
-        case PORTFOLIO_WIDGET_FAIL:
-          return {
-            ...state, errorPortfolio: action.payload, isLoadingPortfolio: false
-          }
-          default:
-            return state
+    case PORTFOLIO_WIDGET_SUCCESS:
+      return {
+        ...state,
+        projects: action.payload,
+        isLoadingProject: false
+      }
+    case PORTFOLIO_WIDGET_FAIL:
+      return {
+        ...state, errorProject: action.payload, isLoadingProject: false
+      }
+    default:
+      return state
   }
 }
 

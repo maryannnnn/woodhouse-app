@@ -1,0 +1,43 @@
+@import '../../app/scss/mixins';
+@import '../../app/scss/colors';
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  &__title {
+    @include title-2;
+    padding: 0px 20px;
+    color: $dark-1;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  @include title-7;
+  &__item {
+    padding: 0px 0px;
+    color: $dark-1;
+  }
+  &__link {
+    @include link-2;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 30px;
+}
