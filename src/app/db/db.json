@@ -3,7 +3,7 @@
     {
       "id": 0,
       "title": "Contemporary living room in wood tones",
-      "category": "Living room",
+      "categoryId": 0,
       "anons": "This gallery features beautiful living rooms with hardwood floors. Living rooms shown include a variety of styles such as Mediterranean, rustic, craftsman, transitional, Spanish, Asian, modern, contemporary and traditional.",
       "block": "Solid hardwood is gorgeous and durable. Since it is milled from a single piece of wood it can be repeatedly sanded and last for decades. Engineered hardwood offers an inner core of wood with an outer layer of hardwood veneer. With an engineered hardwood, one can get the same look and beauty without all of the cost.",
       "text": "In addition engineered hardwood is more resistant to heat and moisture than solid hardwood flooring. In the picture above the rustic solid European oak wood floors gives this Mediterranean home a more relaxed country vibe. Paired with other neutral colors and a touch of turquoise as accent, this home definitely looks really relaxing. Walls are plain white, and ceiling have accent wooden beams in dark wengue finish. Furniture pieces are mostly upholstered in a light cream color, combined with dark wood stain and some touch of blues on the pillows.",
@@ -12,12 +12,15 @@
       "architectId": 0,
       "customer": "Individual",
       "address": "456 Oak Ave, Springfield, USA",
-      "parameterId": 0
+      "parameterId": 0,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "completed"
     },
     {
       "id": 1,
       "title": "Panoramic chill-out area for reading and relaxing",
-      "category": "Chill-out area",
+      "categoryId": 1,
       "anons": "This gallery features beautiful living rooms with hardwood floors. Living rooms shown include a variety of styles such as Mediterranean, rustic, craftsman, transitional, Spanish, Asian, modern, contemporary and traditional.",
       "block": "Solid hardwood is gorgeous and durable. Since it is milled from a single piece of wood it can be repeatedly sanded and last for decades. Engineered hardwood offers an inner core of wood with an outer layer of hardwood veneer. With an engineered hardwood, one can get the same look and beauty without all of the cost.",
       "text": "In addition engineered hardwood is more resistant to heat and moisture than solid hardwood flooring. In the picture above the rustic solid European oak wood floors gives this Mediterranean home a more relaxed country vibe. Paired with other neutral colors and a touch of turquoise as accent, this home definitely looks really relaxing. Walls are plain white, and ceiling have accent wooden beams in dark wengue finish. Furniture pieces are mostly upholstered in a light cream color, combined with dark wood stain and some touch of blues on the pillows.",
@@ -25,12 +28,15 @@
       "imageDesignId": 5,
       "architectId": 0,
       "address": "123 Main St, Anytown, USA",
-      "parameterId": 1
+      "parameterId": 1,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "in progress"
     },
     {
       "id": 2,
       "title": "Cozy loft in light wood tones",
-      "category": "Loft",
+      "categoryId": 2,
       "anons": "This gallery features beautiful living rooms with hardwood floors. Living rooms shown include a variety of styles such as Mediterranean, rustic, craftsman, transitional, Spanish, Asian, modern, contemporary and traditional.",
       "block": "Solid hardwood is gorgeous and durable. Since it is milled from a single piece of wood it can be repeatedly sanded and last for decades. Engineered hardwood offers an inner core of wood with an outer layer of hardwood veneer. With an engineered hardwood, one can get the same look and beauty without all of the cost.",
       "text": "In addition engineered hardwood is more resistant to heat and moisture than solid hardwood flooring. In the picture above the rustic solid European oak wood floors gives this Mediterranean home a more relaxed country vibe. Paired with other neutral colors and a touch of turquoise as accent, this home definitely looks really relaxing. Walls are plain white, and ceiling have accent wooden beams in dark wengue finish. Furniture pieces are mostly upholstered in a light cream color, combined with dark wood stain and some touch of blues on the pillows.",
@@ -38,12 +44,15 @@
       "imageDesignId": 5,
       "architectId": 1,
       "address": "10 Rue de la Paix, Paris, France",
-      "parameterId": 2
+      "parameterId": 2,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "completed"
     },
     {
       "id": 3,
       "title": "Modern Minimalism",
-      "category": "Modern",
+      "categoryId": 1,
       "anons": "A design focused on simplicity and functionality, using clean lines, neutral colors, and a lack of clutter to create a peaceful and calming environment.",
       "block": "Solid hardwood is gorgeous and durable. Since it is milled from a single piece of wood it can be repeatedly sanded and last for decades. Engineered hardwood offers an inner core of wood with an outer layer of hardwood veneer. With an engineered hardwood, one can get the same look and beauty without all of the cost.",
       "text": "In addition engineered hardwood is more resistant to heat and moisture than solid hardwood flooring. In the picture above the rustic solid European oak wood floors gives this Mediterranean home a more relaxed country vibe. Paired with other neutral colors and a touch of turquoise as accent, this home definitely looks really relaxing. Walls are plain white, and ceiling have accent wooden beams in dark wengue finish. Furniture pieces are mostly upholstered in a light cream color, combined with dark wood stain and some touch of blues on the pillows.",
@@ -51,12 +60,15 @@
       "imageDesignId": 5,
       "architectId": 1,
       "address": "22 Via Condotti, Rome, Italy",
-      "parameterId": 3
+      "parameterId": 3,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "design"
     },
     {
       "id": 4,
       "title": "Industrial Chic ",
-      "category": "Industrial",
+      "categoryId": 1,
       "anons": "A style that embraces raw and rough materials such as exposed brick, concrete, and metal, with a color palette of grays, blacks, and whites, creating a cool and edgy atmosphere.",
       "block": "Solid hardwood is gorgeous and durable. Since it is milled from a single piece of wood it can be repeatedly sanded and last for decades. Engineered hardwood offers an inner core of wood with an outer layer of hardwood veneer. With an engineered hardwood, one can get the same look and beauty without all of the cost.",
       "text": "In addition engineered hardwood is more resistant to heat and moisture than solid hardwood flooring. In the picture above the rustic solid European oak wood floors gives this Mediterranean home a more relaxed country vibe. Paired with other neutral colors and a touch of turquoise as accent, this home definitely looks really relaxing. Walls are plain white, and ceiling have accent wooden beams in dark wengue finish. Furniture pieces are mostly upholstered in a light cream color, combined with dark wood stain and some touch of blues on the pillows.",
@@ -64,12 +76,15 @@
       "imageDesignId": 5,
       "architectId": 2,
       "address": "33 Calle de Serrano, Madrid, Spain",
-      "parameterId": 4
+      "parameterId": 4,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "in progress"
     },
     {
       "id": 5,
       "title": "Rustic Charm",
-      "category": "Rustic",
+      "categoryId": 1,
       "anons": "A design inspired by the countryside, featuring natural materials such as wood, stone, and leather, and a warm color palette of browns, greens, and oranges, creating a cozy and inviting atmosphere.",
       "block": "A style that embraces raw and rough materials such as exposed brick, concrete, and metal, with a color palette of grays, blacks, and whites, creating a cool and edgy atmosphere.",
       "text": "In addition engineered hardwood is more resistant to heat and moisture than solid hardwood flooring. In the picture above the rustic solid European oak wood floors gives this Mediterranean home a more relaxed country vibe. Paired with other neutral colors and a touch of turquoise as accent, this home definitely looks really relaxing. Walls are plain white, and ceiling have accent wooden beams in dark wengue finish. Furniture pieces are mostly upholstered in a light cream color, combined with dark wood stain and some touch of blues on the pillows.",
@@ -77,24 +92,30 @@
       "imageDesignId": 5,
       "architectId": 2,
       "address": "444 Bahnhofstrasse, Zurich, Switzerland",
-      "parameterId": 5
+      "parameterId": 5,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "completed"
     },
     {
       "id": 6,
       "title": "Coastal Oasis",
-      "category": "Coastal",
+      "categoryId": 2,
       "anons": "A design inspired by the sea, with a color palette of blues, greens, and whites, and incorporating natural textures like wicker, rattan, and jute, creating a tranquil and relaxing space.",
       "text": "In addition engineered hardwood is more resistant to heat and moisture than solid hardwood flooring. In the picture above the rustic solid European oak wood floors gives this Mediterranean home a more relaxed country vibe. Paired with other neutral colors and a touch of turquoise as accent, this home definitely looks really relaxing. Walls are plain white, and ceiling have accent wooden beams in dark wengue finish. Furniture pieces are mostly upholstered in a light cream color, combined with dark wood stain and some touch of blues on the pillows.",
       "imageProjectId": 7,
       "imageDesignId": 5,
       "architectId": 3,
       "address": "455 Bond Street, London, UK",
-      "parameterId": 6
+      "parameterId": 6,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "completed"
     },
     {
       "id": 7,
       "title": "Bohemian Retreat",
-      "category": "Retreat",
+      "categoryId": 2,
       "anons": "A design characterized by vibrant colors, mixed patterns, and eclectic furnishings, inspired by a free-spirited lifestyle and promoting relaxation and creativity.",
       "block": "Solid hardwood is gorgeous and durable. Since it is milled from a single piece of wood it can be repeatedly sanded and last for decades. Engineered hardwood offers an inner core of wood with an outer layer of hardwood veneer. With an engineered hardwood, one can get the same look and beauty without all of the cost.",
       "text": "In addition engineered hardwood is more resistant to heat and moisture than solid hardwood flooring. In the picture above the rustic solid European oak wood floors gives this Mediterranean home a more relaxed country vibe. Paired with other neutral colors and a touch of turquoise as accent, this home definitely looks really relaxing. Walls are plain white, and ceiling have accent wooden beams in dark wengue finish. Furniture pieces are mostly upholstered in a light cream color, combined with dark wood stain and some touch of blues on the pillows.",
@@ -102,12 +123,15 @@
       "imageDesignId": 5,
       "architectId": 3,
       "address": "66 Kärntner Straße, Vienna, Austria",
-      "parameterId": 7
+      "parameterId": 7,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "design"
     },
     {
       "id": 8,
       "title": "Scandinavian Elegance",
-      "category": "Scandinavian",
+      "categoryId": 3,
       "anons": "A style that embraces simplicity, functionality, and natural light, using a color palette of whites, grays, and light woods to create a cozy and welcoming atmosphere.",
       "block": "Solid hardwood is gorgeous and durable. Since it is milled from a single piece of wood it can be repeatedly sanded and last for decades. Engineered hardwood offers an inner core of wood with an outer layer of hardwood veneer. With an engineered hardwood, one can get the same look and beauty without all of the cost.",
       "text": "In addition engineered hardwood is more resistant to heat and moisture than solid hardwood flooring. In the picture above the rustic solid European oak wood floors gives this Mediterranean home a more relaxed country vibe. Paired with other neutral colors and a touch of turquoise as accent, this home definitely looks really relaxing. Walls are plain white, and ceiling have accent wooden beams in dark wengue finish. Furniture pieces are mostly upholstered in a light cream color, combined with dark wood stain and some touch of blues on the pillows.",
@@ -115,12 +139,15 @@
       "imageDesignId": 5,
       "architectId": 4,
       "address": "77 Königsallee, Dusseldorf, Germany",
-      "parameterId": 8
+      "parameterId": 8,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "completed"
     },
     {
       "id": 9,
       "title": "Art Deco Glam",
-      "category": "Art",
+      "categoryId": 3,
       "anons": "A style characterized by bold geometric shapes, metallic accents, and luxurious materials such as velvet and marble, evoking a sense of opulence and sophistication.",
       "block": "Solid hardwood is gorgeous and durable. Since it is milled from a single piece of wood it can be repeatedly sanded and last for decades. Engineered hardwood offers an inner core of wood with an outer layer of hardwood veneer. With an engineered hardwood, one can get the same look and beauty without all of the cost.",
       "text": "In addition engineered hardwood is more resistant to heat and moisture than solid hardwood flooring. In the picture above the rustic solid European oak wood floors gives this Mediterranean home a more relaxed country vibe. Paired with other neutral colors and a touch of turquoise as accent, this home definitely looks really relaxing. Walls are plain white, and ceiling have accent wooden beams in dark wengue finish. Furniture pieces are mostly upholstered in a light cream color, combined with dark wood stain and some touch of blues on the pillows.",
@@ -128,12 +155,15 @@
       "imageDesignId": 5,
       "architectId": 4,
       "address": "99 Avenue Louise, Brussels, Belgium",
-      "parameterId": 9
+      "parameterId": 9,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "completed"
     },
     {
       "id": 10,
       "title": "Modern Rustic Retreat",
-      "category": "SModern",
+      "categoryId": 4,
       "anons": "This project involved transforming a traditional cabin-style home into a modern rustic retreat. ",
       "block": "The design incorporated natural materials such as wood, stone, and leather, along with sleek and contemporary furnishings. ",
       "text": "The color palette was inspired by the surrounding nature, with earthy tones and pops of green and blue. The result was a warm and inviting space that seamlessly blends modern and rustic elements.",
@@ -141,12 +171,15 @@
       "imageDesignId": 5,
       "architectId": 5,
       "address": "789 Pine St, Lakeside, USA",
-      "parameterId": 10
+      "parameterId": 10,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "completed"
     },
     {
       "id": 11,
       "title": "Bohemian Chic Bungalow",
-      "category": "Bohemian",
+      "categoryId": 4,
       "anons": "This project involved designing a bungalow-style home with a bohemian-inspired aesthetic.",
       "block": "The design featured an eclectic mix of patterns, textures, and colors, with vintage and handmade pieces throughout.",
       "text": "The color palette was bold and vibrant, with jewel tones and rich, warm hues. The result was a cozy and inviting space that perfectly captures the bohemian spirit.",
@@ -154,7 +187,10 @@
       "imageDesignId": 5,
       "architectId": 5,
       "address": "1010 Elm St, Maplewood, USA",
-      "parameterId": 11
+      "parameterId": 11,
+      "createdAt": "20.04.2023",
+      "updatedAt": "20.04.2023",
+      "status": "completed"
     }
   ],
   "parameter": [
@@ -173,7 +209,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     },
     {
       "id": 1,
@@ -190,7 +228,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     },
     {
       "id": 2,
@@ -207,7 +247,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     },
     {
       "id": 3,
@@ -224,7 +266,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     },
     {
       "id": 4,
@@ -241,7 +285,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     },
     {
       "id": 5,
@@ -258,7 +304,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     },
     {
       "id": 6,
@@ -275,7 +323,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     },
     {
       "id": 7,
@@ -292,7 +342,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     },
     {
       "id": 8,
@@ -309,7 +361,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     },
     {
       "id": 9,
@@ -326,7 +380,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     },
     {
       "id": 10,
@@ -343,7 +399,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     },
     {
       "id": 11,
@@ -360,7 +418,9 @@
       "lighting": "2700",
       "technique": "7400",
       "time": "3 weeks",
-      "price": "32800"
+      "price": "32800",
+      "startDate": "20.04.2023",
+      "endDate": "20.04.2023"
     }
   ],
   "header": [
@@ -2317,12 +2377,65 @@
       "mobile": ""
     }
   ],
-  "comments": [
+  "category": [
+    {
+      "id": 0,
+      "name": "Minimalism",
+      "description": "This interior style is characterized by clean lines, simple shapes and soothing color schemes. It often uses natural materials such as wood, leather and cotton, and furniture and accessories usually feature minimal decor and ornaments.",
+      "imageId": 0,
+      "parentId": 0,
+      "createdAt": "20.03.23",
+      "updatedAt": "20.03.23"
+    },
     {
       "id": 1,
+      "name": "Modern",
+      "description": "Modern interior style implies modern design using the latest technologies and materials. It has geometric shapes, clean lines and bright colors. This style often uses metal and glass surfaces, and furniture and accessories can be original and unpredictable.",
+      "imageId": 3,
+      "parentId": 0,
+      "createdAt": "20.03.23",
+      "updatedAt": "20.03.23"
+    },
+    {
+      "id": 2,
+      "name": "Eclectic",
+      "description": "This interior style is characterized by a combination of elements from different styles and eras. It can combine classic and modern elements, different colors and textures to create a unique and inimitable interior. In this style, you can show your individuality and creative approach to design.",
+      "imageId": 6,
+      "parentId": 0,
+      "createdAt": "20.03.23",
+      "updatedAt": "20.03.23"
+    },
+    {
+      "id": 3,
+      "name": "Scandinavian",
+      "description": "This design style originated in the Nordic countries and is characterized by simplicity, minimalism, and a focus on functionality. It often features light-colored wood, clean lines, and a neutral color palette with pops of color in the form of textiles or artwork.",
+      "imageId": 8,
+      "parentId": 0,
+      "createdAt": "20.03.23",
+      "updatedAt": "20.03.23"
+    },
+    {
+      "id": 4,
+      "name": "Industrial",
+      "description": "This style takes inspiration from urban lofts and factories, featuring raw materials such as exposed brick, concrete, and metal. It often incorporates vintage or salvaged items, such as industrial lighting or reclaimed wood, and has a rugged, unfinished feel.",
+      "imageId": 10,
+      "parentId": 0,
+      "createdAt": "20.03.23",
+      "updatedAt": "20.03.23"
+    }
+  ],
+  "comments": [
+    {
+      "id": 0,
+      "title": "title comment",
       "body": "some comment",
-      "typePage": "",
-      "postId": 1
+      "typePage": "projectPortfolio",
+      "postId": 1,
+      "userId": 1,
+      "timestamp": "20.03.2023 20.12.09",
+      "likes": 27,
+      "parentId": 0,
+      "replies": [4, 7]
     }
   ]
 }
