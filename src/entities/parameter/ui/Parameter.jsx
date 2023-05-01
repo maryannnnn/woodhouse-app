@@ -38,6 +38,18 @@ const Parameter = (props) => {
                     <dd className="parameter__value">{parameter.height}</dd>
                 </dl>
                 <dl className="parameter__items">
+                    <dt className="parameter__item">Start Date:</dt>
+                    <dd className="parameter__value">{parameter.startDate}</dd>
+                </dl>
+                <dl className="parameter__items">
+                    <dt className="parameter__item">End Date:</dt>
+                    <dd className="parameter__value">{parameter.endDate}</dd>
+                </dl>
+                <dl className="parameter__items">
+                    <dt className="parameter__item">Time:</dt>
+                    <dd className="parameter__value">{parameter.time}</dd>
+                </dl>
+                <dl className="parameter__items">
                     <dt className="parameter__item">Floor:</dt>
                     <dd className="parameter__price">{parameter.floor}$</dd>
                 </dl>
@@ -51,7 +63,7 @@ const Parameter = (props) => {
                 </dl>
                 <dl className="parameter__items">
                     <dt className="parameter__item">Furniture:</dt>
-                    <dd className="parameter__price">{parameter.plumbing}$</dd>
+                    <dd className="parameter__price">{parameter.furniture}$</dd>
                 </dl>
                 <dl className="parameter__items">
                     <dt className="parameter__item">Plumbing:</dt>
@@ -74,11 +86,7 @@ const Parameter = (props) => {
                     <dd className="parameter__price">{parameter.technique}$</dd>
                 </dl>
                 <dl className="parameter__items">
-                    <dt className="parameter__item">Time:</dt>
-                    <dd className="parameter__value">{parameter.time}</dd>
-                </dl>
-                <dl className="parameter__items">
-                    <dt className="parameter__item">Price:</dt>
+                    <dt className="parameter__item">Budget:</dt>
                     <dd className="parameter__total">{parameter.price}$</dd>
                 </dl>
 

@@ -43,7 +43,7 @@ const Project = (props) => {
                         <span className="breadcrumbs__link">{project.title}</span>
                     </li>
                 </ul>
-                <NavLink  className="breadcrumbs__link" href="" rel="noreferrer" target="_blank">
+                <NavLink className="breadcrumbs__link" href="" rel="noreferrer" target="_blank">
                     Address: {project.address}
                 </NavLink>
             </div>
@@ -53,8 +53,15 @@ const Project = (props) => {
             <div className="container">
                 <div className="project__inner">
                     <h1 className="project__title">{project.title}</h1>
-                    <div className="project__category">category:&nbsp;&nbsp;{project.category}</div>
+                    <span className="project__category">category:&nbsp;&nbsp;</span>
+                    <NavLink
+                        className="category__link"
+                        to={`/category/${project.categoryId}`}
+                    >
+                        {project.category}
+                    </NavLink>
                     <div className="project__address">address:&nbsp;&nbsp;{project.address}</div>
+                    <div className="project__address">status:&nbsp;&nbsp;{project.status}</div>
                     <div className="project__content">
                         <div className="project__content-main">
                             <div className="project__content-main__info">{project.anons}</div>
@@ -64,8 +71,8 @@ const Project = (props) => {
                             {/*<GalleryImage projectId={project.Id}/>*/}
                         </div>
                         <div className="project__content-blocks">
-                            <BlockArchitect architectId={project.architectId} />
-                            <BlockContentProject parameterId={project.parameterId} />
+                            <BlockArchitect architectId={project.architectId}/>
+                            <BlockContentProject parameterId={project.parameterId}/>
                         </div>
                     </div>
                 </div>
