@@ -1,12 +1,12 @@
 import React from "react";
 import './block-architect.scss'
-import UserElement from "../../entities/user/ui/UserElement";
+import ArchitectElement from "../../entities/architect/ui/ArchitectElement";
 
 const BlockArchitect = (props) => {
 
   return (
     <div>
-      <UserElement userId={props.architectId} />
+      <ArchitectElement userId={props.architectId} />
     </div>
   )
 }

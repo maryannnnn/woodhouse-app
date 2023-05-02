@@ -13,7 +13,9 @@ import Blog from "../pages/blog/Blog";
 import Post from "../pages/post/Post";
 import { ArrayDto } from './dto/arrayDto.js'
 import Category from "../pages/category/Category";
-import CategoryAll from "../pages/categoryall/CategoryAll";
+import CategoriesAll from "../pages/categoryall/CategoriesAll";
+import Architect from "../pages/architect/Architect";
+import ArchitectsAll from "../pages/architectsAll/ArchitectsAll";
 
 const App = () => {
 
@@ -36,8 +38,10 @@ const App = () => {
           <Route path="/" element={<Main />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:id" element={<Project />} />
-          <Route path="/category" element={<CategoryAll />} />
+          <Route path="/category" element={<CategoriesAll />} />
           <Route path="/category/:id" element={<Category />} />
+          <Route path="/architect" element={<ArchitectsAll />} />
+          <Route path="/architect/:id" element={<Architect />} />
           <Route path="/service/:id" element={<Service />} />
           <Route path="/post/:id" element={<Post />} />
           <Route path="/blog" element={<Blog />} />
