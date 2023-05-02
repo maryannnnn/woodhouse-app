@@ -34,7 +34,7 @@ const PortfolioElement = (props) => {
             </NavLink>
             <NavLink
                 className="portfolio-element__architect-link"
-                to={`/user/${props.element.architectId}`}
+                to={`/architect/${props.element.architectId}`}
             >
                 <span className="portfolio-element__architect">architect: &nbsp;{props.element.architect}</span>
             </NavLink>

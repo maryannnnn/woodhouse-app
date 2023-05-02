@@ -14,20 +14,21 @@ import {infoProjectDto} from "../../../app/dto/infoProjectDto";
 import {infoProjectBodyDto} from "../../../app/dto/infoProjectBodyDto";
 
 export const portfolioListAction = (
-    // {
-    // pageNumber = '',
-    // name = '',
-    // category = '',
-    // order = '',
-    // min = 0,
-    // max = 0,
-    // }
+    pageNumber = 1,
+    itemsPerPage = 3,
+    // // name = '',
+    // // category = '',
+    // // order = '',
+    // // min = 0,
+    // // max = 0,
+
 ) => async (dispatch) => {
     dispatch({type: PORTFOLIO_LIST_REQUEST});
     try {
-        // const projectList = [];
-        const projects = await Axios.get(`/portfolio`);
+        const projects = await Axios.get(`/portfolio?_page=${pageNumber}&_limit=${itemsPerPage}`);
         console.log("Portfolio List projects: ", projects.data);
+        const projectsAll = await Axios.get(`/portfolio`);
+        console.log("projectsAll List: ", projectsAll.data.length);
 
         const imagePromises = projects.data.map(async (project) => {
             const image = await Axios.get(`/image/${project.imageProjectId}`);
@@ -36,7 +37,7 @@ export const portfolioListAction = (
             const architectName = user.data.name + " " + user.data.family;
             console.log("Portfolio List image: ", image.data);
             console.log("Portfolio Widget categories: ", category.data);
-            console.log("Portfolio Widget user: ", user.data);
+            console.log("Portfolio Widget architect: ", user.data);
 
             return new infoProjectDto(project.id, project.title, category.data.id, category.data.name, user.data.id, architectName,
                 project.anons, image.data.src, image.data.thumbnail, image.data.alt);
@@ -45,7 +46,7 @@ export const portfolioListAction = (
         const projectList = await Promise.all(imagePromises);
 
         console.log("Portfolio projectListFull: ", projectList);
-        dispatch({type: PORTFOLIO_LIST_SUCCESS, payload: projectList});
+        dispatch({type: PORTFOLIO_LIST_SUCCESS, payload: {projects: projectList, projectsLength: projectsAll.data.length}});
     } catch (error) {
         dispatch({
             type: PORTFOLIO_LIST_FAIL,
@@ -69,7 +70,7 @@ export const portfolioWidgetAction = (start, end) => async (dispatch) => {
             const architectName = user.data.name + " " + user.data.family;
             console.log("Portfolio List image: ", image.data);
             console.log("Portfolio Widget categories: ", category.data);
-            console.log("Portfolio Widget user: ", user.data);
+            console.log("Portfolio Widget architect: ", user.data);
 
             return new infoProjectDto(project.id, project.title, category.data.id, category.data.name, user.data.id, architectName,
                 project.anons, image.data.src, image.data.thumbnail, image.data.alt);

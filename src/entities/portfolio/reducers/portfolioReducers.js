@@ -12,6 +12,7 @@ import {
 
 export const portfolioListReducer = (state = {
   projects: [],
+  projectsLength: 0,
   isLoadingPortfolio: false,
   errorPortfolio: ''
 }, action) => {
@@ -23,9 +24,9 @@ export const portfolioListReducer = (state = {
       case PORTFOLIO_LIST_SUCCESS:
         return {
           ...state,
-          projects: action.payload,
-          pages: action.payload.pages,
-          page: action.payload.page,
+          projects: action.payload.projects,
+          projectsLength: action.payload.projectsLength,
+          //   page: action.payload.page,
           isLoadingPortfolio: false
         }
         case PORTFOLIO_LIST_FAIL:

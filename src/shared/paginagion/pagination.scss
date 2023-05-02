@@ -1,0 +1,19 @@
+@import '../../app/scss/mixins';
+@import '../../app/scss/colors';
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  &__item {
+    &-active {
+      @include button-2__active;
+    }
+    &-disabled{
+      @include button-2__disabled;
+    }
+  }
+  &__link {
+    @include button-2;
+  }
+}

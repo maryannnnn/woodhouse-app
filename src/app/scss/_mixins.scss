@@ -162,3 +162,25 @@
     background-color: $orange-2;
   }
 }
+@mixin button-2 {
+  @include title-3;
+  color: $dark-1;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  &:hover {
+    color: $dark-1;
+    background-color: $orange-2;
+  }
+}
+
+@mixin button-2__active {
+  color: $dark-1;
+  background-color: $orange-2;
+  border-radius: 5px;
+}
+
+@mixin button-2__disabled {
+  color: $dark-1;
+  border-radius: 5px;
+}
