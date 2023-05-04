@@ -1,5 +1,5 @@
 export class infoProjectDto {
-    constructor(id, title, categoryId, category, architectId, architect, anons, image, thumbnail, alt) {
+    constructor(id, title, categoryId, category, architectId, architect, anons, image, thumbnail, alt, status, price) {
         this.id = id;
         this.title = title;
         this.categoryId = categoryId;
@@ -10,6 +10,8 @@ export class infoProjectDto {
         this.image = image;
         this.thumbnail = thumbnail;
         this.alt= alt;
+        this.status= status;
+        this.price= price;
     }
 }
 

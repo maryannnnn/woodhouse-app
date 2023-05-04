@@ -34,13 +34,15 @@ export const portfolioListAction = (
             const image = await Axios.get(`/image/${project.imageProjectId}`);
             const category = await Axios.get(`/category/${project.categoryId}`);
             const user = await Axios.get(`/user/${project.architectId}`);
+            const parameter= await Axios.get(`/parameter/${project.parameterId}`);
             const architectName = user.data.name + " " + user.data.family;
             console.log("Portfolio List image: ", image.data);
             console.log("Portfolio Widget categories: ", category.data);
             console.log("Portfolio Widget architect: ", user.data);
+            console.log("Portfolio Widget parameter: ", parameter.data);
 
             return new infoProjectDto(project.id, project.title, category.data.id, category.data.name, user.data.id, architectName,
-                project.anons, image.data.src, image.data.thumbnail, image.data.alt);
+                project.anons, image.data.src, image.data.thumbnail, image.data.alt, project.status, parameter.data.price);
         });
 
         const projectList = await Promise.all(imagePromises);

@@ -6,25 +6,26 @@ import {LoadingBox, MessageBox} from "../../shared/ui/box/boxes";
 import PortfolioElement from "../../entities/portfolio/ui/PortfolioElement";
 import {NavLink} from "react-router-dom";
 import Pagination from "../../shared/paginagion/Pagination";
+import FilterPortfolio from "../../shared/filter-portfolio/FilterPortfolio";
 
 const Portfolio = () => {
 
     const [pageNumber, setPageNumber] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(9);
     const [pages, setPages] = useState([]);
+    const [filter, setFilter] = useState({title: '', category: '', architect: '', price: '', status: '', items: 9})
 
     const dispatch = useDispatch()
 
     const projectList = useSelector(state => state.portfolioListReducer)
     const {isLoadingPortfolio, errorPortfolio, projects, projectsLength} = projectList
 
-    const totalPages = Math.ceil(projectsLength/ itemsPerPage);
+    const totalPages = Math.ceil(projectsLength / filter.items);
     console.log("projectsLength", projectsLength)
 
     useEffect(() => {
-        dispatch(portfolioListAction(pageNumber, itemsPerPage))
+        dispatch(portfolioListAction(pageNumber, filter.items))
         generatePages(totalPages)
-    }, [dispatch, pageNumber, itemsPerPage, totalPages])
+    }, [dispatch, pageNumber, filter.items, totalPages])
 
     const generatePages = (totalPages) => {
         const pageNumbers = [];
@@ -35,7 +36,7 @@ const Portfolio = () => {
         console.log("pageNumbers", pageNumbers)
     };
 
-        return (
+    return (
         <div className="portfolio">
             <div className="top">
                 <ul className="breadcrumbs">
@@ -53,23 +54,35 @@ const Portfolio = () => {
             <div className="container">
                 <h1 className="portfolio__title">Portfolio</h1>
                 <div className="portfolio__inner">
-                    {isLoadingPortfolio ? (
-                        <LoadingBox></LoadingBox>
-                    ) : errorPortfolio ? (
-                        <MessageBox variant="errorVariant">{errorPortfolio}</MessageBox>
-                    ) : (
-                        <>
-                            {console.log("Project List", projects)}
-                            {projects
-                                .map(element =>
-                                    <div key={element.id}>
-                                        <PortfolioElement element={element}/>
-                                    </div>
-                                )}
-                        </>
-                    )}
+                    <div className="portfolio__inner-main">
+                        {isLoadingPortfolio ? (
+                            <LoadingBox></LoadingBox>
+                        ) : errorPortfolio ? (
+                            <MessageBox variant="errorVariant">{errorPortfolio}</MessageBox>
+                        ) : (
+                            <>
+                                {console.log("Project List", projects)}
+                                {projects
+                                    .filter(item =>
+                                        item.title.toLowerCase().includes(filter.title.toLowerCase()) &&
+                                        item.category.toLowerCase().includes(filter.category.toLowerCase()) &&
+                                        item.architect.toLowerCase().includes(filter.architect.toLowerCase()) &&
+                                        (filter.status === '' || item.status === filter.status)
+                                    )
+                                    .map(element =>
+                                        <div key={element.id}>
+                                            <PortfolioElement element={element}/>
+                                        </div>
+                                    )}
+                            </>
+                        )}
+                        <Pagination totalPages={totalPages} pages={pages} currentPage={pageNumber}
+                                    setPageNumber={setPageNumber}/>
+                    </div>
+                    <div className="portfolio__inner-blocks">
+                        <FilterPortfolio filter={filter} setFilter={setFilter}/>
+                    </div>
                 </div>
-                <Pagination  totalPages={totalPages}  pages={pages} currentPage={pageNumber} setPageNumber={setPageNumber} />
             </div>
         </div>
     )

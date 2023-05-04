@@ -23,6 +23,7 @@ const PortfolioElement = (props) => {
             <NavLink
                 className="portfolio-element__link"
                 to={`/portfolio/${props.element.id}`}
+                title={props.element.title}
             >
                 <h3 className="portfolio-element__title">{title}</h3>
             </NavLink>
@@ -30,14 +31,16 @@ const PortfolioElement = (props) => {
                 className="portfolio-element__category-link"
                 to={`/category/${props.element.categoryId}`}
             >
-                <span className="portfolio-element__category">category: &nbsp;{props.element.category}</span>
+                <span className="portfolio-element__category">category&nbsp;{props.element.category}</span>
             </NavLink>
             <NavLink
                 className="portfolio-element__architect-link"
                 to={`/architect/${props.element.architectId}`}
             >
-                <span className="portfolio-element__architect">architect: &nbsp;{props.element.architect}</span>
+                <span className="portfolio-element__architect">arch&nbsp;{props.element.architect},</span>
+                <span className="portfolio-element__architect">&nbsp;status&nbsp;{props.element.status}</span>
             </NavLink>
+
             <NavLink
                 className="portfolio-element__link"
                 to={`/portfolio/${props.element.id}`}
