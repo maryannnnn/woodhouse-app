@@ -12,7 +12,9 @@ const Portfolio = () => {
 
     const [pageNumber, setPageNumber] = useState(1);
     const [pages, setPages] = useState([]);
-    const [filter, setFilter] = useState({title: '', category: '', architect: '', price: '', status: '', items: 9})
+    const [filter, setFilter] = useState({title: '', category: '', architect: '', price: [10, 40000], status: '', items: 9})
+    const [categoryArray, setCategoryArray] = useState([])
+    const [architectArray, setArchitectArray] = useState([])
 
     const dispatch = useDispatch()
 
@@ -25,6 +27,8 @@ const Portfolio = () => {
     useEffect(() => {
         dispatch(portfolioListAction(pageNumber, filter.items))
         generatePages(totalPages)
+        categoryOptions()
+        architectOptions()
     }, [dispatch, pageNumber, filter.items, totalPages])
 
     const generatePages = (totalPages) => {
@@ -34,6 +38,34 @@ const Portfolio = () => {
         }
         setPages(pageNumbers);
         console.log("pageNumbers", pageNumbers)
+    };
+
+    const categoryOptions = () => {
+        const categories = [{ value: "", label: "All" }];
+
+        projects.forEach((item) => {
+            const category = { value: item.category, label: item.category };
+            if (!categories.some((cat) => cat.value === category.value)) {
+                categories.push(category);
+            }
+        });
+
+        setCategoryArray(categories);
+        console.log("categoryArray", categoryArray);
+    };
+
+    const architectOptions = () => {
+        const architects = [{ value: "", label: "All" }];
+
+        projects.forEach((item) => {
+            const architect = { value: item.architect, label: item.architect };
+            if (!architects.some((arch) => arch.value === architect.value)) {
+                architects.push(architect);
+            }
+        });
+
+        setArchitectArray(architects);
+        console.log("categoryArray", categoryArray);
     };
 
     return (
@@ -67,7 +99,9 @@ const Portfolio = () => {
                                         item.title.toLowerCase().includes(filter.title.toLowerCase()) &&
                                         item.category.toLowerCase().includes(filter.category.toLowerCase()) &&
                                         item.architect.toLowerCase().includes(filter.architect.toLowerCase()) &&
-                                        (filter.status === '' || item.status === filter.status)
+                                        (filter.status === '' || item.status === filter.status) &&
+                                        (item.price >= filter.price[0] ) &&
+                                        (item.price <= filter.price[1] )
                                     )
                                     .map(element =>
                                         <div key={element.id}>
@@ -80,7 +114,8 @@ const Portfolio = () => {
                                     setPageNumber={setPageNumber}/>
                     </div>
                     <div className="portfolio__inner-blocks">
-                        <FilterPortfolio filter={filter} setFilter={setFilter}/>
+                        <FilterPortfolio filter={filter} setFilter={setFilter} categoryArray={categoryArray}
+                                         architectArray={architectArray} />
                     </div>
                 </div>
             </div>
