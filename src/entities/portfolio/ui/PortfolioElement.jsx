@@ -26,6 +26,7 @@ const PortfolioElement = (props) => {
                 title={props.element.title}
             >
                 <h3 className="portfolio-element__title">{title}</h3>
+                <span className="portfolio-element__budget">budget&nbsp;{props.element.price}$</span>
             </NavLink>
             <NavLink
                 className="portfolio-element__category-link"
@@ -39,6 +40,7 @@ const PortfolioElement = (props) => {
             >
                 <span className="portfolio-element__architect">arch&nbsp;{props.element.architect},</span>
                 <span className="portfolio-element__architect">&nbsp;status&nbsp;{props.element.status}</span>
+
             </NavLink>
 
             <NavLink
