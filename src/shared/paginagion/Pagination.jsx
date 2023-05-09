@@ -24,16 +24,16 @@ const Pagination = ({totalPages, pages, currentPage, setPageNumber}) => {
     return (
         <nav>
             <ul className="pagination">
-                <li className={`pagination__item-${currentPage === 1 ? 'disabled' : ''}`}>
-                    <div className="pagination__link" onClick={() => handleClick(currentPage - 1)}>
+                <li className="pagination__item" >
+                    <button className="pagination__link" disabled={currentPage === 1} onClick={() => handleClick(currentPage - 1)}>
                         prev
-                    </div>
+                    </button>
                 </li>
                 {renderPages()}
-                <li className={`pagination__item-${currentPage === totalPages ? 'disabled' : ''}`}>
-                    <div className="pagination__link" onClick={() => handleClick(currentPage + 1)}>
+                <li className="pagination__item">
+                    <button className="pagination__link"  disabled={currentPage === totalPages} onClick={() => handleClick(currentPage + 1)}>
                         next
-                    </div>
+                    </button>
                 </li>
             </ul>
         </nav>

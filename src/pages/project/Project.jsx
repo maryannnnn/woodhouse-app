@@ -61,6 +61,7 @@ const Project = (props) => {
                         {project.category}
                     </NavLink>
                     <div className="project__address">address:&nbsp;&nbsp;{project.address}</div>
+                    <div className="project__address">budget:&nbsp;&nbsp;{project.price}$</div>
                     <div className="project__address">status:&nbsp;&nbsp;{project.status}</div>
                     <div className="project__content">
                         <div className="project__content-main">

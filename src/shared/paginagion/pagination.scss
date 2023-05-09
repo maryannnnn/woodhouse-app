@@ -9,9 +9,7 @@
     &-active {
       @include button-2__active;
     }
-    &-disabled{
-      @include button-2__disabled;
-    }
+
   }
   &__link {
     @include button-2;
