@@ -12,7 +12,7 @@ const Portfolio = () => {
 
     const [pageNumber, setPageNumber] = useState(1);
     const [pages, setPages] = useState([]);
-    const [filter, setFilter] = useState({title: '', category: '', architect: '', price: [10, 40000], status: '', items: 9})
+    const [filter, setFilter] = useState({title: '', category: 0, architect: 0, price: [10, 40000], status: 'completed', items: 9})
     const [categoryArray, setCategoryArray] = useState([])
     const [architectArray, setArchitectArray] = useState([])
 
@@ -25,11 +25,11 @@ const Portfolio = () => {
     console.log("projectsLength", projectsLength)
 
     useEffect(() => {
-        dispatch(portfolioListAction(pageNumber, filter.items))
+        dispatch(portfolioListAction(pageNumber, filter.items, filter.status, filter.category, filter.architect))
         generatePages(totalPages)
         categoryOptions()
         architectOptions()
-    }, [dispatch, pageNumber, filter.items, totalPages])
+    }, [dispatch, pageNumber, filter.items, filter.status, filter.category, filter.architect, totalPages])
 
     const generatePages = (totalPages) => {
         const pageNumbers = [];
@@ -97,9 +97,6 @@ const Portfolio = () => {
                                 {projects
                                     .filter(item =>
                                         item.title.toLowerCase().includes(filter.title.toLowerCase()) &&
-                                        item.category.toLowerCase().includes(filter.category.toLowerCase()) &&
-                                        item.architect.toLowerCase().includes(filter.architect.toLowerCase()) &&
-                                        (filter.status === '' || item.status === filter.status) &&
                                         (item.price >= filter.price[0] ) &&
                                         (item.price <= filter.price[1] )
                                     )
@@ -110,13 +107,15 @@ const Portfolio = () => {
                                     )}
                             </>
                         )}
-                        <Pagination totalPages={totalPages} pages={pages} currentPage={pageNumber}
-                                    setPageNumber={setPageNumber}/>
                     </div>
                     <div className="portfolio__inner-blocks">
                         <FilterPortfolio filter={filter} setFilter={setFilter} categoryArray={categoryArray}
                                          architectArray={architectArray} />
                     </div>
+                </div>
+                <div>
+                    <Pagination totalPages={totalPages} pages={pages} currentPage={pageNumber}
+                                setPageNumber={setPageNumber}/>
                 </div>
             </div>
         </div>

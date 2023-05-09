@@ -1,6 +1,6 @@
 
 export class infoProjectBodyDto {
-    constructor(id, title, categoryId, category, architectId, parameterId, anons, block, text, address, status) {
+    constructor(id, title, categoryId, category, architectId, parameterId, anons, block, text, address, status, price) {
         this.id = id;
         this.title = title;
         this.categoryId = categoryId;
@@ -12,5 +12,6 @@ export class infoProjectBodyDto {
         this.text = text;
         this.address= address;
         this.status = status;
+        this.price= price;
     }
 }

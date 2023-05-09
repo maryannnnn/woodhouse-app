@@ -4,7 +4,7 @@ import Select from "../select/Select";
 import Slider from "rc-slider";
 import 'rc-slider/assets/index.css';
 
-const FilterPortfolio = ({filter, setFilter, categoryArray, architectArray}) => {
+const FilterPortfolio = ({filter, setFilter}) => {
 
     const changeTitleHandler = (e) => {
         setFilter({...filter, title: e.target.value});
@@ -38,6 +38,21 @@ const FilterPortfolio = ({filter, setFilter, categoryArray, architectArray}) => 
         {value: 12, label: "15"},
         {value: 12, label: "18"},
     ];
+
+    const selectOptionsCategory = [
+        {value: 100, label: "All"},
+        {value: 0, label: "Minimalism"},
+        {value: 1, label: "Modern"},
+        {value: 2, label: "Eclectic"},
+        {value: 3, label: "Scandinavian"}];
+
+    const selectOptionsArchitect = [
+        {value: 100, label: "All"},
+        {value: 0, label: "John Smith"},
+        {value: 1, label: "Adam Williams"},
+        {value: 2, label: "Emily Davis"},
+        {value: 3, label: "Jessica Kim"},
+        {value: 4, label: "Michael Johnson"}];
 
     const selectOptionsStatus = [
         {value: "", label: "All"},
@@ -84,7 +99,7 @@ const FilterPortfolio = ({filter, setFilter, categoryArray, architectArray}) => 
                     name="category"
                     value={filter.category}
                     onChange={changeCategoryHandler}
-                    options={categoryArray}
+                    options={selectOptionsCategory}
                 />
             </div>
             <div className="filter__block">
@@ -93,7 +108,7 @@ const FilterPortfolio = ({filter, setFilter, categoryArray, architectArray}) => 
                     name="architect"
                     value={filter.architect}
                     onChange={changeArchitectHandler}
-                    options={architectArray}
+                    options={selectOptionsArchitect}
                 />
             </div>
             <div className="filter__block">
