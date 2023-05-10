@@ -12,7 +12,7 @@ import {
 
 export const portfolioListReducer = (state = {
   projects: [],
-  projectsLength: 0,
+  totalPages: 0,
   isLoadingPortfolio: false,
   errorPortfolio: ''
 }, action) => {
@@ -25,7 +25,7 @@ export const portfolioListReducer = (state = {
         return {
           ...state,
           projects: action.payload.projects,
-          projectsLength: action.payload.projectsLength,
+          totalPages: action.payload.totalPages,
           //   page: action.payload.page,
           isLoadingPortfolio: false
         }

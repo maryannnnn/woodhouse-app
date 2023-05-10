@@ -11,7 +11,7 @@ const FilterPortfolio = ({filter, setFilter}) => {
     }
 
     const changeCategoryHandler = (e) => {
-        setFilter({...filter, category: e.target.value});
+        setFilter({...filter, categoryId: e.target.value});
     }
 
     const changePriceHandler = (value) => {
@@ -19,7 +19,7 @@ const FilterPortfolio = ({filter, setFilter}) => {
     }
 
     const changeArchitectHandler = (e) => {
-        setFilter({...filter, architect: e.target.value});
+        setFilter({...filter, architectId: e.target.value});
     }
 
     const changeStatusHandler = (e) => {
@@ -27,7 +27,7 @@ const FilterPortfolio = ({filter, setFilter}) => {
     }
 
     const changeItemsHandler = (e) => {
-        setFilter({...filter, items: e.target.value});
+        setFilter({...filter, itemsPerPage: e.target.value});
     }
 
     const selectOptionsItems = [
@@ -40,22 +40,22 @@ const FilterPortfolio = ({filter, setFilter}) => {
     ];
 
     const selectOptionsCategory = [
-        {value: 100, label: "All"},
-        {value: 0, label: "Minimalism"},
-        {value: 1, label: "Modern"},
-        {value: 2, label: "Eclectic"},
-        {value: 3, label: "Scandinavian"}];
+        {value: "All", label: "All"},
+        {value: "0", label: "Minimalism"},
+        {value: "1", label: "Modern"},
+        {value: "2", label: "Eclectic"},
+        {value: "3", label: "Scandinavian"}];
 
     const selectOptionsArchitect = [
-        {value: 100, label: "All"},
-        {value: 0, label: "John Smith"},
-        {value: 1, label: "Adam Williams"},
-        {value: 2, label: "Emily Davis"},
-        {value: 3, label: "Jessica Kim"},
-        {value: 4, label: "Michael Johnson"}];
+        {value: "All", label: "All"},
+        {value: "0", label: "John Smith"},
+        {value: "1", label: "Adam Williams"},
+        {value: "2", label: "Emily Davis"},
+        {value: "3", label: "Jessica Kim"},
+        {value: "4", label: "Michael Johnson"}];
 
     const selectOptionsStatus = [
-        {value: "", label: "All"},
+        {value: "All", label: "All"},
         {value: "completed", label: "completed"},
         {value: "in progress", label: "in progress"},
         {value: "design", label: "design"}];
@@ -97,7 +97,7 @@ const FilterPortfolio = ({filter, setFilter}) => {
                 <label className="filter__title">Category</label>
                 <Select
                     name="category"
-                    value={filter.category}
+                    value={filter.categoryId}
                     onChange={changeCategoryHandler}
                     options={selectOptionsCategory}
                 />
@@ -106,7 +106,7 @@ const FilterPortfolio = ({filter, setFilter}) => {
                 <label className="filter__title">Architect</label>
                 <Select
                     name="architect"
-                    value={filter.architect}
+                    value={filter.architectId}
                     onChange={changeArchitectHandler}
                     options={selectOptionsArchitect}
                 />
@@ -124,13 +124,11 @@ const FilterPortfolio = ({filter, setFilter}) => {
                 <label className="filter__title">Items</label>
                 <Select
                     name="items"
-                    value={filter.items}
+                    value={filter.itemsPerPage}
                     onChange={changeItemsHandler}
                     options={selectOptionsItems}
                 />
             </div>
-            {console.log("filter.status", filter.status)}
-            {console.log("filter.items", filter.items)}
         </form>
     )
 }
