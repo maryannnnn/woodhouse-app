@@ -13,39 +13,48 @@ import {
 import {infoProjectDto} from "../../../app/dto/infoProjectDto";
 import {infoProjectBodyDto} from "../../../app/dto/infoProjectBodyDto";
 
-export const portfolioListAction = (
-    pageNumber,
-    itemsPerPage,
-    status,
-    categoryId,
-    architectId
-    // // name = '',
-    // // order = '',
-    // // min = 0,
-    // // max = 0,
-
-) => async (dispatch) => {
+export const portfolioListAction = ({
+        pageNumber,
+        itemsPerPage,
+        status,
+        categoryId,
+        architectId
+        // // name = '',
+        // // order = '',
+        // // min = 0,
+        // // max = 0,
+    }) => async (dispatch) => {
     dispatch({type: PORTFOLIO_LIST_REQUEST});
     try {
-        let reqProjects, projectsAll
-        if(status === "") {
-            reqProjects = `/portfolio?s_page=${pageNumber}&_limit=${itemsPerPage}`
-            projectsAll = await Axios.get(`/portfolio`);
-        } else {
-            reqProjects = `/portfolio?status=${status}&categoryId=${categoryId}&architectId=${architectId}&_page=${pageNumber}&_limit=${itemsPerPage}`
-            projectsAll = await Axios.get(`/portfolio?status=${status}`);
-        }
+        console.log('TYPE OF', typeof categoryId)
+        let reqProjects, projectsAll, reqProjectsAll
+        let statusStr = "", categoryStr = "", architectStr = ""
+        if (status !== "All") {
+            statusStr = `status=${status}`
+        } else statusStr = ""
+        if (categoryId !== "All") {
+            categoryStr = `categoryId=${categoryId}`
+        } else categoryStr = ""
+        if (architectId !== "All") {
+            architectStr = `architectId=${architectId}`
+        } else architectStr = ""
+
+        reqProjects = `/portfolio?${statusStr}&${categoryStr}&${architectStr}&_page=${pageNumber}&_limit=${itemsPerPage}`
+        console.log("reqProjects", reqProjects)
+        reqProjectsAll = `/portfolio?${statusStr}&${categoryStr}&${architectStr}`
+        console.log("reqProjectsAll", reqProjectsAll)
+        projectsAll = await Axios.get(reqProjectsAll);
 
         const projects = await Axios.get(reqProjects);
-
+        const totalPages = Math.ceil(projectsAll.data.length / itemsPerPage);
         console.log("Portfolio List projects: ", projects.data);
-        console.log("projectsAll List: ", projectsAll.data.length);
+        console.log("totalPages: ", totalPages);
 
         const imagePromises = projects.data.map(async (project) => {
             const image = await Axios.get(`/image/${project.imageProjectId}`);
             const category = await Axios.get(`/category/${project.categoryId}`);
             const user = await Axios.get(`/user/${project.architectId}`);
-            const parameter= await Axios.get(`/parameter/${project.parameterId}`);
+            const parameter = await Axios.get(`/parameter/${project.parameterId}`);
             const architectName = user.data.name + " " + user.data.family;
             console.log("Portfolio List image: ", image.data);
             console.log("Portfolio List categories: ", category.data);
@@ -59,7 +68,7 @@ export const portfolioListAction = (
         const projectList = await Promise.all(imagePromises);
 
         console.log("Portfolio projectListFull: ", projectList);
-        dispatch({type: PORTFOLIO_LIST_SUCCESS, payload: {projects: projectList, projectsLength: projectsAll.data.length}});
+        dispatch({type: PORTFOLIO_LIST_SUCCESS, payload: {projects: projectList, totalPages: totalPages}});
     } catch (error) {
         dispatch({
             type: PORTFOLIO_LIST_FAIL,
@@ -80,7 +89,7 @@ export const portfolioWidgetAction = (start, end) => async (dispatch) => {
             const image = await Axios.get(`/image/${project.imageProjectId}`);
             const category = await Axios.get(`/category/${project.categoryId}`);
             const user = await Axios.get(`/user/${project.architectId}`);
-            const parameter= await Axios.get(`/parameter/${project.parameterId}`);
+            const parameter = await Axios.get(`/parameter/${project.parameterId}`);
             const architectName = user.data.name + " " + user.data.family;
             console.log("Portfolio Widget image: ", image.data);
             console.log("Portfolio Widget categories: ", category.data);
@@ -111,7 +120,7 @@ export const portfolioDetailsAction = (projectId) => async (dispatch) => {
     try {
         const project = await Axios.get(`/portfolio/${projectId}`);
         const category = await Axios.get(`/category/${project.data.categoryId}`);
-        const parameter= await Axios.get(`/parameter/${project.data.parameterId}`);
+        const parameter = await Axios.get(`/parameter/${project.data.parameterId}`);
         const projectBody = new infoProjectBodyDto(project.data.id, project.data.title, category.data.id, category.data.name, project.data.architectId,
             project.data.parameterId, project.data.anons, project.data.block, project.data.text, project.data.address, project.data.status, parameter.data.price);
 
