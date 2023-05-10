@@ -31,26 +31,26 @@ const Project = (props) => {
 
     return (
         <div className="project">
-            <div className="top">
-                <ul className="breadcrumbs">
-                    <li className="breadcrumbs__item">
-                        <NavLink className="breadcrumbs__link" to="/">Home -></NavLink>
-                    </li>
-                    <li className="breadcrumbs__item">
-                        <NavLink className="breadcrumbs__link" to="/portfolio">Portfolio -></NavLink>
-                    </li>
-                    <li className="breadcrumbs__item">
-                        <span className="breadcrumbs__link">{project.title}</span>
-                    </li>
-                </ul>
-                <NavLink className="breadcrumbs__link" href="" rel="noreferrer" target="_blank">
-                    Address: {project.address}
-                </NavLink>
-            </div>
             {isLoadingProject && <LoadingBox></LoadingBox>}
             {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
-            <GalleryCarousel pageId={id} typeImage={typeImagePortfolio}/>
             <div className="container">
+                <div className="top">
+                    <ul className="top__breadcrumbs">
+                        <li className="top__breadcrumbs-item">
+                            <NavLink className="top__breadcrumbs-link" to="/">Home -></NavLink>
+                        </li>
+                        <li className="top__breadcrumbs__item">
+                            <NavLink className="top__breadcrumbs-link" to="/portfolio">Portfolio -></NavLink>
+                        </li>
+                        <li className="top__breadcrumbs-item">
+                            <span className="top__breadcrumbs-link">{project.title}</span>
+                        </li>
+                    </ul>
+                    <NavLink className="top__breadcrumbs-link" href="" rel="noreferrer" target="_blank">
+                        Address: {project.address}
+                    </NavLink>
+                </div>
+                <GalleryCarousel pageId={id} typeImage={typeImagePortfolio}/>
                 <div className="project__inner">
                     <h1 className="project__title">{project.title}</h1>
                     <span className="project__category">category:&nbsp;&nbsp;</span>
