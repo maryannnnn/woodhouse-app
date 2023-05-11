@@ -16,6 +16,7 @@ import Category from "../pages/category/Category";
 import CategoriesAll from "../pages/categoryall/CategoriesAll";
 import Architect from "../pages/architect/Architect";
 import ArchitectsAll from "../pages/architectsAll/ArchitectsAll";
+import {getCustomise} from "../shared/customise/api/customiseActions";
 
 const App = () => {
 
@@ -23,11 +24,10 @@ const App = () => {
 
   useEffect(() => {
     dispatch(menuListAction())
+    dispatch(getCustomise())
   }, [dispatch])
 
-  const menuList = useSelector(state => state.menuListReducer)
-  const { isLoadingMenu, errorMenu, menus } = menuList
-
+  const { isLoadingMenu, errorMenu, menus } = useSelector(state => state.menuListReducer)
   const menuListDto = new ArrayDto(menus, isLoadingMenu, errorMenu)
 
   return (

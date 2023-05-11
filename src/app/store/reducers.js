@@ -23,6 +23,7 @@ import {
 import {
   menuListReducer
 } from '../../shared/ui/menu/reducers/menuReducers';
+import {customiseReducer} from "../../shared/customise/reducers/customiseReducers";
 
 export const Reducers = {
   portfolioListReducer,
@@ -38,4 +39,5 @@ export const Reducers = {
   menuListReducer,
   imageCarouselReducer,
   imagePhotoReducer,
+  customiseReducer
 }

@@ -1,9 +1,7 @@
 import './parameter.scss'
-import {NavLink, useParams} from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux";
 import React, {useEffect} from "react";
 import {parameterDetailsAction} from "../actions/parameterActions";
-import {LoadingBox, MessageBox} from "../../../shared/ui/box/boxes";
 
 const Parameter = (props) => {
 

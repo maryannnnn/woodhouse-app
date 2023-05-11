@@ -2295,7 +2295,6 @@
       "pageId": 11,
       "order": 0
     }
-
   ],
   "user": [
     {
@@ -2435,7 +2434,27 @@
       "timestamp": "20.03.2023 20.12.09",
       "likes": 27,
       "parentId": 0,
-      "replies": [4, 7]
+      "replies": [
+        4,
+        7
+      ]
     }
-  ]
+  ],
+  "customise": {
+    "version":"1.0",
+    "data":{
+      "headers": {
+        "wooden_interiors": {
+          "title": "Wooden interiors",
+          "subtitle": "High Level Design",
+          "text": "We present you the best projects developed by our team of professionals with love and care for customers. The portfolio will allow you to choose the style, wood color, texture, design and arrangement of elements that interest you."
+        },
+        "warm_atmosphere": {
+          "title": "We create a warm atmosphere for your holiday",
+          "subtitle": "Best works",
+          "text": "The development and implementation of beautiful wood interiors has never been so accessible. Interiors made of wood of various species will make your home cozy and warm, delighting you and your guests."
+        }
+      }
+    }
+  }
 }
