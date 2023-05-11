@@ -3,9 +3,9 @@ import Header from "../../widgets/header/Header";
 import Trust from "../../widgets/trust/Trust";
 import Partner from "../../widgets/partners/Partner";
 import AnonsPortfolio from "../../widgets/anons/anons-portfolio/AnonsPortfolio";
+import React from "react";
 
 const Main = () => {
-  <Header />
   return (
     <div className="main">
       <Header />

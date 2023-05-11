@@ -8,27 +8,24 @@ import { headerDetailsAction } from '../../shared/ui/header-anons/actions/header
 const Header = () => {
 
   const dispatch = useDispatch();
-
   const headerMainDetail = useSelector((state) => state.headerZeroReducer);
   const { isLoadingHeader, errorHeader, header } = headerMainDetail;
-
   const id = 0
 
   useEffect(() => {
     dispatch(headerDetailsAction(id));
-  }, [dispatch, id]);
+  }, [dispatch]);
 
   const clickHandlerDesign = () => {
-
+   //open modal
   }
 
   return (
     <div className="header">
       <div className="container">
         <div className="header__inner">
-          {isLoadingHeader && <LoadingBox></LoadingBox>}
+          {isLoadingHeader && <LoadingBox/>}
           {errorHeader && <MessageBox variant="errorVariant">{errorHeader}</MessageBox>}
-          {console.log("header 0", header)}
           <div className="header__info">
             <h1 className="header__info-title">{header.title}</h1>
             <Button
