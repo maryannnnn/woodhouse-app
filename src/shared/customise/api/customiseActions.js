@@ -11,8 +11,8 @@ export const getCustomise = () => async (dispatch) => {
     });
     try {
         const currentCustomiseVersion = process.env.REACT_APP_CUSTOMISE_VERSION
-        const storageCustomise = localStorage.getItem('customise')
-        console.log('storageCustomise', storageCustomise)
+        const storageCustomise = JSON.parse(localStorage.getItem('customise'))
+
         if (storageCustomise?.version === currentCustomiseVersion) {
             dispatch({
                 type: CUSTOMISE_SUCCESS,
@@ -24,6 +24,7 @@ export const getCustomise = () => async (dispatch) => {
                 type: CUSTOMISE_SUCCESS,
                 payload: data.data
             })
+            localStorage.setItem('customise', JSON.stringify(data))
         }
     } catch (error) {
         dispatch({
