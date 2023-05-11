@@ -21,7 +21,6 @@ const HeaderAnons = () => {
     <>
       {isLoadingHeader && <LoadingBox></LoadingBox>}
       {errorHeader && <MessageBox variant="errorVariant">{errorHeader}</MessageBox>}
-      {console.log("header 1", header)}
       <div className="header-anons">
         <div className="header-anons__left">
           <h2 className="header-anons__left-title">{header.title}</h2>

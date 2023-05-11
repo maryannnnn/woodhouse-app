@@ -36,7 +36,6 @@ const Portfolio = () => {
             pageNumbers.push(i);
         }
         setPages(pageNumbers);
-        console.log("pageNumbers", pageNumbers)
     };
 
     return (
@@ -64,7 +63,6 @@ const Portfolio = () => {
                             <MessageBox variant="errorVariant">{errorPortfolio}</MessageBox>
                         ) : (
                             <>
-                                {console.log("Project List", projects)}
                                 {projects
                                     .filter(item =>
                                         item.title.toLowerCase().includes(filter.title.toLowerCase()) &&

@@ -17,7 +17,6 @@ export const headerListAction = () => async (dispatch) => {
     });
     try {
         const { data } = await Axios.get('/header')
-        console.log("data Header", data)
         dispatch({
             type: HEADER_LIST_SUCCESS,
             payload: data
@@ -46,7 +45,6 @@ export const headerDetailsAction = (headerId) => async (dispatch) => {
     }
     try {
         const { data } = await Axios.get(`/header/${headerId}`);
-        console.log("data Header", data)
         if (headerId === 0) {
             dispatch({
                 type: HEADER_ZERO_SUCCESS,

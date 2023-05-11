@@ -10,7 +10,6 @@ const MenuTopMain = (props) => {
 
   return (
     <ul className="menu">
-      {console.log("menus", ...menus)}
       {isLoading && <LoadingBox></LoadingBox>}
       {error && <MessageBox variant="errorVariant">{error}</MessageBox>}
       {menus.filter(item => (item.menuId === 0))
