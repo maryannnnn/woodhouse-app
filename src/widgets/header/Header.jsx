@@ -7,7 +7,7 @@ import {MessageBox, LoadingBox} from '../../shared/ui/box/boxes'
 const Header = () => {
 
     const {isLoadingCustomise, errorCustomise, customise} = useSelector(state => state.customiseReducer)
-    const headersIsCorrect = !errorCustomise && !isLoadingCustomise && customise?.headers
+    const headersAvailable= !errorCustomise && !isLoadingCustomise && customise?.headers
     const { headers } = customise || {}
 
     return (
@@ -16,7 +16,7 @@ const Header = () => {
                 <div className="header__inner">
                     {errorCustomise && <MessageBox variant="errorVariant">{errorCustomise}</MessageBox>}
                     {isLoadingCustomise && <LoadingBox/>}
-                    {headersIsCorrect &&
+                    {headersAvailable &&
                     <div className="header__info">
                         <h1 className="header__info-title">{headers.wooden_interiors.title}</h1>
                         <Button
