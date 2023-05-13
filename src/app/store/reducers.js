@@ -15,9 +15,6 @@ import {
   architectWidgetReducer,
   architectDetailsReducer
 } from '../../entities/architect/reducers/architectReducers';
-import {
-  menuListReducer
-} from '../../shared/ui/menu/reducers/menuReducers';
 import {customiseReducer} from "../../shared/customise/reducers/customiseReducers";
 
 export const Reducers = {
@@ -28,7 +25,6 @@ export const Reducers = {
   architectListReducer,
   architectWidgetReducer,
   architectDetailsReducer,
-  menuListReducer,
   imageCarouselReducer,
   imagePhotoReducer,
   customiseReducer

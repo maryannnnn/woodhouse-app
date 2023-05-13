@@ -14,11 +14,13 @@ export const getCustomise = () => async (dispatch) => {
         const storageCustomise = JSON.parse(localStorage.getItem('customise'))
 
         if (storageCustomise?.version === currentCustomiseVersion) {
+            console.log('кастомайз из локал стоража')
             dispatch({
                 type: CUSTOMISE_SUCCESS,
                 payload: storageCustomise.data
             });
         } else {
+            console.log('кастомайз с сервера')
             const {data} = await Axios.get('/customise')
             dispatch({
                 type: CUSTOMISE_SUCCESS,
