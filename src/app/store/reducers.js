@@ -16,11 +16,6 @@ import {
   architectDetailsReducer
 } from '../../entities/architect/reducers/architectReducers';
 import {
-  headerListReducer,
-  headerZeroReducer,
-  headerOneReducer
-} from '../../shared/ui/header-anons/reducers/headerReducers';
-import {
   menuListReducer
 } from '../../shared/ui/menu/reducers/menuReducers';
 import {customiseReducer} from "../../shared/customise/reducers/customiseReducers";
@@ -33,9 +28,6 @@ export const Reducers = {
   architectListReducer,
   architectWidgetReducer,
   architectDetailsReducer,
-  headerListReducer,
-  headerZeroReducer,
-  headerOneReducer,
   menuListReducer,
   imageCarouselReducer,
   imagePhotoReducer,
