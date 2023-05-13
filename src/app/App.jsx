@@ -21,11 +21,8 @@ const App = () => {
 
   const dispatch = useDispatch()
   const {isLoadingCustomise, errorCustomise, customise} = useSelector(state => state.customiseReducer)
-  let menuListDto
 
-  if (customise?.menu) {
-    menuListDto = new ArrayDto(customise.menu, isLoadingCustomise, errorCustomise)
-  }
+  const getMenuListDto = () => customise?.menu ? new ArrayDto(customise.menu, isLoadingCustomise, errorCustomise) : null
 
   useEffect(() => {
     dispatch(getCustomise())
@@ -34,7 +31,7 @@ const App = () => {
   return (
     <div className="wrapper">
       <BrowserRouter>
-        <Navigation menuListDto={menuListDto} />
+        <Navigation menuListDto={getMenuListDto()} />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/portfolio" element={<Portfolio />} />
@@ -47,7 +44,7 @@ const App = () => {
           <Route path="/post/:id" element={<Post />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
-        <Footer menuListDto={menuListDto} />
+        <Footer menuListDto={getMenuListDto()} />
       </BrowserRouter>
     </div>
   );
