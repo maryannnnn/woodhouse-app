@@ -1,5 +1,5 @@
 import './header.scss'
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useSelector} from 'react-redux';
 import Button from "../../shared/btn/Button";
 import {MessageBox, LoadingBox} from '../../shared/ui/box/boxes'

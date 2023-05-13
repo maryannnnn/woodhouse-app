@@ -1,37 +1,31 @@
 import './header-anons.scss'
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { MessageBox, LoadingBox } from '../box/boxes'
-import { headerDetailsAction } from './actions/headerActions';
+import React from 'react';
+import {useSelector} from 'react-redux';
+import {MessageBox, LoadingBox} from '../box/boxes'
 
 const HeaderAnons = () => {
 
-  const dispatch = useDispatch();
+    const {isLoadingCustomise, errorCustomise, customise} = useSelector(state => state.customiseReducer)
+    const headersAvailable = !errorCustomise && !isLoadingCustomise && customise?.headers
+    const {headers} = customise || {}
 
-  const headerBlockDetail = useSelector((state) => state.headerOneReducer);
-  const { isLoadingHeader, errorHeader, header } = headerBlockDetail;
-
-  const id = 1
-
-  useEffect(() => {
-    dispatch(headerDetailsAction(id));
-  }, [dispatch, id]);
-
-  return (
-    <>
-      {isLoadingHeader && <LoadingBox></LoadingBox>}
-      {errorHeader && <MessageBox variant="errorVariant">{errorHeader}</MessageBox>}
-      <div className="header-anons">
-        <div className="header-anons__left">
-          <h2 className="header-anons__left-title">{header.title}</h2>
-          <div className="header-anons__left-subtitle">{header.subtitle}</div>
-        </div>
-        <p className="header-anons__right">
-          {header.text}
-        </p>
-      </div>
-    </>
-  )
+    return (
+        <>
+            {isLoadingCustomise && <LoadingBox/>}
+            {errorCustomise && <MessageBox variant="errorVariant">{errorCustomise}</MessageBox>}
+            {headersAvailable &&
+            <div className="header-anons">
+                <div className="header-anons__left">
+                    <h2 className="header-anons__left-title">{headers.warm_atmosphere.title}</h2>
+                    <div className="header-anons__left-subtitle">{headers.warm_atmosphere.subtitle}</div>
+                </div>
+                <p className="header-anons__right">
+                    {headers.warm_atmosphere.text}
+                </p>
+            </div>
+            }
+        </>
+    )
 }
 
 export default HeaderAnons;
