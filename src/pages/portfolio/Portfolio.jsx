@@ -7,7 +7,6 @@ import PortfolioElement from "../../entities/portfolio/ui/PortfolioElement";
 import {NavLink} from "react-router-dom";
 import Pagination from "../../shared/paginagion/Pagination";
 import FilterPortfolio from "../../shared/filter-portfolio/FilterPortfolio";
-import HeaderAnons from "../../shared/ui/header-anons/HeaderAnons";
 
 const Portfolio = () => {
 
@@ -60,12 +59,11 @@ const Portfolio = () => {
                 <div className="portfolio__inner">
                     <div className="portfolio__inner-main">
                         {isLoadingPortfolio ? (
-                            <LoadingBox></LoadingBox>
+                            <LoadingBox />
                         ) : errorPortfolio ? (
                             <MessageBox variant="errorVariant">{errorPortfolio}</MessageBox>
                         ) : (
                             <>
-                                {console.log("Project List", projects)}
                                 {projects
                                     .filter(item =>
                                         item.title.toLowerCase().includes(filter.title.toLowerCase()) &&

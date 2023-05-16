@@ -9,7 +9,6 @@ const PortfolioElement = (props) => {
 
     return (
         <div className="portfolio-element">
-            {console.log("portfolioElement", props.element)}
             <NavLink
                 className="portfolio-element__link"
                 to={`/portfolio/${props.element.id}`}
