@@ -26,6 +26,7 @@ const PortfolioElement = (props) => {
             >
                 <h3 className="portfolio-element__title">{title}</h3>
                 <span className="portfolio-element__budget">budget&nbsp;{props.element.price}$</span>
+                <span className="portfolio-element__budget">,&nbsp;&nbsp;comments&nbsp;&nbsp;{props.element.numberComments}</span>
             </NavLink>
             <NavLink
                 className="portfolio-element__category-link"
@@ -38,9 +39,9 @@ const PortfolioElement = (props) => {
                 to={`/architect/${props.element.architectId}`}
             >
                 <span className="portfolio-element__architect">arch&nbsp;{props.element.architect},</span>
-                <span className="portfolio-element__architect">&nbsp;status&nbsp;{props.element.status}</span>
-
+                <span className="portfolio-element__architect">&nbsp;&nbsp;status&nbsp;{props.element.status}</span>
             </NavLink>
+
 
             <NavLink
                 className="portfolio-element__link"

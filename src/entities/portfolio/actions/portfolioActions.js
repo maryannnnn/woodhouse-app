@@ -22,7 +22,6 @@ export const portfolioListAction = ({
     }) => async (dispatch) => {
     dispatch({type: PORTFOLIO_LIST_REQUEST});
     try {
-        console.log('TYPE OF', typeof categoryId)
         let reqProjects, projectsAll, reqProjectsAll
         let statusStr = "", categoryStr = "", architectStr = ""
         if (status !== "All") {
@@ -48,9 +47,11 @@ export const portfolioListAction = ({
             const user = await Axios.get(`/user/${project.architectId}`);
             const parameter = await Axios.get(`/parameter/${project.parameterId}`);
             const architectName = user.data.name + " " + user.data.family;
+            const comments = await Axios.get(`/comments?postId=${project.id}&typePage=projectPortfolio`)
+            const numberComments = comments.data.length
 
             return new infoProjectDto(project.id, project.title, category.data.id, category.data.name, user.data.id, architectName,
-                project.anons, image.data.src, image.data.thumbnail, image.data.alt, project.status, parameter.data.price);
+                project.anons, numberComments, image.data.src, image.data.thumbnail, image.data.alt, project.status, parameter.data.price);
         });
 
         const projectList = await Promise.all(imagePromises);
@@ -78,9 +79,11 @@ export const portfolioWidgetAction = (start, end) => async (dispatch) => {
             const user = await Axios.get(`/user/${project.architectId}`);
             const parameter = await Axios.get(`/parameter/${project.parameterId}`);
             const architectName = user.data.name + " " + user.data.family;
+            const comments = await Axios.get(`/comments?postId=${project.id}&typePage=projectPortfolio`)
+            const numberComments = comments.data.length
 
             return new infoProjectDto(project.id, project.title, category.data.id, category.data.name, user.data.id, architectName,
-                project.anons, image.data.src, image.data.thumbnail, image.data.alt, project.status, parameter.data.price);
+                project.anons, numberComments, image.data.src, image.data.thumbnail, image.data.alt, project.status, parameter.data.price);
         });
 
         const projectWidget = await Promise.all(projectWidgetPromises);

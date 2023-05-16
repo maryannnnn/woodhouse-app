@@ -10,7 +10,6 @@ export const commentListAction = (postId, typePage) => async (dispatch) => {
     dispatch({type: COMMENT_LIST_REQUEST});
     try {
         const comments = await Axios.get(`/comments?postId=${postId}&typePage=${typePage}`);
-            // ?postId=${postId}&typePage=${typePage}&parentId=0
         console.log("comments: ", comments.data);
 
         const commentsPromises = comments.data.map(async (comment) => {
