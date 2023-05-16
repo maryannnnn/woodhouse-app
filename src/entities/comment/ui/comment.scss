@@ -1,0 +1,50 @@
+@import '../../../app/scss/mixins';
+@import '../../../app/scss/colors';
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  &__title {
+    @include title-3;
+  }
+  &__image {
+    width: 70px;
+    height: 77px;
+  }
+  &__user {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__body {
+    @include text-1;
+  }
+  &__profession {
+    @include title-7;
+    color: $orange;
+  }
+  &__submitted {
+    @include title-7;
+  }
+  &__likes {
+    @include title-7;
+    color: $dark-3;
+    text-align: right;
+    padding-right: 50px;
+  }
+}
+
+.comment.level-2 {
+  margin-left: 40px;
+}
+.comment.level-3 {
+  margin-left: 80px;
+}

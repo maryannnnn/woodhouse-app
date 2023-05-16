@@ -9,11 +9,13 @@ import BlockContentProject from '../../shared/block-content-project/BlockContent
 import GalleryPhoto from '../../shared/gallery-photo/GalleryPhoto';
 import GalleryImage from '../../shared/gallery-image/GalleryImage';
 import GalleryCarousel from '../../shared/gallery-carousel/GalleryCarousel';
+import CommentsPage from "../../features/comments-page/CommentsPage";
 
 const Project = (props) => {
     const dispatch = useDispatch();
     const {id} = useParams();
     const typeImagePortfolio = "projectPortfolio"
+    const typePage = "projectPortfolio"
     const typeImageDesign = "projectDesign"
 
     const portfolioDetail = useSelector((state) => state.portfolioDetailsReducer);
@@ -69,6 +71,7 @@ const Project = (props) => {
                             <GalleryPhoto pageId={id} typeImage={typeImageDesign}/>
                             <div className="project__content-main__info">{project.block}</div>
                             <div className="project__content-main__info">{project.text}</div>
+                            <CommentsPage postId={id} typePage={typePage} />
                             {/*<GalleryImage projectId={project.Id}/>*/}
                         </div>
                         <div className="project__content-blocks">
