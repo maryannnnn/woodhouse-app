@@ -36,6 +36,7 @@ const App = () => {
           <Route path="/" element={<Main />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:id" element={<Project />} />
+          //
           <Route path="/category" element={<CategoriesAll />} />
           <Route path="/category/:id" element={<Category />} />
           <Route path="/architect" element={<ArchitectsAll />} />
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/service/:id" element={<Service />} />
           <Route path="/post/:id" element={<Post />} />
           <Route path="/blog" element={<Blog />} />
+          //
         </Routes>
         <Footer menuListDto={getMenuListDto()} />
       </BrowserRouter>

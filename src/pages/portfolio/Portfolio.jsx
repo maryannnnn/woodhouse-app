@@ -10,8 +10,7 @@ import FilterPortfolio from "../../shared/filter-portfolio/FilterPortfolio";
 
 const Portfolio = () => {
 
-    const [pageNumber, setPageNumber] = useState(1);
-    const [pages, setPages] = useState([]);
+    const [PageNumber, setPageNumber] = useState(1);
     const [filter, setFilter] = useState({title: '', categoryId: 'All', architectId: 'All', price: [10, 40000], status: 'All', itemsPerPage: 9})
 
     const dispatch = useDispatch()
@@ -21,22 +20,14 @@ const Portfolio = () => {
 
     useEffect(() => {
         dispatch(portfolioListAction({
-            pageNumber,
+            PageNumber,
             itemsPerPage: filter.itemsPerPage,
             status: filter.status,
             categoryId: filter.categoryId,
             architectId: filter.architectId
         }))
-        generatePages(totalPages)
-    }, [dispatch, pageNumber, filter.itemsPerPage, filter.status, filter.categoryId, filter.architectId, totalPages])
+    }, [dispatch, PageNumber, filter.itemsPerPage, filter.status, filter.categoryId, filter.architectId, totalPages])
 
-    const generatePages = (totalPages) => {
-        const pageNumbers = [];
-        for (let i = 1; i <= totalPages; i++) {
-            pageNumbers.push(i);
-        }
-        setPages(pageNumbers);
-    };
 
     return (
         <div className="portfolio">
@@ -82,8 +73,7 @@ const Portfolio = () => {
                     </div>
                 </div>
                 <div>
-                    <Pagination totalPages={totalPages} pages={pages} currentPage={pageNumber}
-                                setPageNumber={setPageNumber}/>
+                    <Pagination totalPages={totalPages} currentNumber={PageNumber} setPageNumber={setPageNumber}/>
                 </div>
             </div>
         </div>
