@@ -22,7 +22,6 @@ const BodyAnons = () => {
     <div className="body-anons">
       {isLoadingProject && <LoadingBox></LoadingBox>}
       {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
-      {console.log("Project Widget", ...projects)}
       {projects
         .map(element =>
           <div key={element.id}>
