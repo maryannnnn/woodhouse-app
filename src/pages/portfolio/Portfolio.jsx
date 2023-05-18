@@ -10,7 +10,7 @@ import FilterPortfolio from "../../shared/filter-portfolio/FilterPortfolio";
 
 const Portfolio = () => {
 
-    const [PageNumber, setPageNumber] = useState(1);
+    const [pageNumber, setPageNumber] = useState(1);
     const [filter, setFilter] = useState({title: '', categoryId: 'All', architectId: 'All', price: [10, 40000], status: 'All', itemsPerPage: 9})
 
     const dispatch = useDispatch()
@@ -20,13 +20,13 @@ const Portfolio = () => {
 
     useEffect(() => {
         dispatch(portfolioListAction({
-            PageNumber,
+            pageNumber,
             itemsPerPage: filter.itemsPerPage,
             status: filter.status,
             categoryId: filter.categoryId,
             architectId: filter.architectId
         }))
-    }, [dispatch, PageNumber, filter.itemsPerPage, filter.status, filter.categoryId, filter.architectId, totalPages])
+    }, [dispatch, pageNumber, filter.itemsPerPage, filter.status, filter.categoryId, filter.architectId, totalPages])
 
 
     return (
@@ -73,7 +73,7 @@ const Portfolio = () => {
                     </div>
                 </div>
                 <div>
-                    <Pagination totalPages={totalPages} currentNumber={PageNumber} setPageNumber={setPageNumber}/>
+                    <Pagination totalPages={totalPages} currentPage={pageNumber} setPageNumber={setPageNumber}/>
                 </div>
             </div>
         </div>

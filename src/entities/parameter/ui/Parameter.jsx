@@ -21,8 +21,6 @@ const Parameter = (props) => {
                 {/*{isLoadingParameter && <LoadingBox></LoadingBox>}*/}
                 {/*{errorParameter && <MessageBox variant="errorVariant">{errorParameter}</MessageBox>}*/}
 
-                {console.log("parameterProject", parameter)}
-
                 <dl className="parameter__items">
                     <dt className="parameter__item">Customer:</dt>
                     <dd className="parameter__value">{parameter.customer}</dd>
