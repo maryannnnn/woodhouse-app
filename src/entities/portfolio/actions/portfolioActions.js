@@ -56,7 +56,6 @@ export const portfolioListAction = ({
 
         const projectList = await Promise.all(imagePromises);
 
-        console.log("Portfolio projectListFull: ", projectList);
         dispatch({type: PORTFOLIO_LIST_SUCCESS, payload: {projects: projectList, totalPages: totalPages}});
     } catch (error) {
         dispatch({

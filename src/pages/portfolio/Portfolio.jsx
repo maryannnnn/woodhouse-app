@@ -36,7 +36,6 @@ const Portfolio = () => {
             pageNumbers.push(i);
         }
         setPages(pageNumbers);
-        console.log("pageNumbers", pageNumbers)
     };
 
     return (
