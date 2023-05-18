@@ -40,25 +40,25 @@ const Portfolio = () => {
 
     return (
         <div className="portfolio">
-            <div className="top">
-                <ul className="breadcrumbs">
-                    <li className="breadcrumbs__item">
-                        <NavLink className="breadcrumbs__link" to="/">Home -></NavLink>
-                    </li>
-                    <li className="breadcrumbs__item">
-                        <NavLink className="breadcrumbs__link" to="/portfolio">Portfolio -></NavLink>
-                    </li>
-                    <li className="breadcrumbs__item">
-                        <span className="breadcrumbs__link">Portfolio</span>
-                    </li>
-                </ul>
-            </div>
             <div className="container">
+                <div className="portfolio__top">
+                    <ul className="breadcrumbs">
+                        <li className="breadcrumbs__item">
+                            <NavLink className="breadcrumbs__link" to="/">Home -></NavLink>
+                        </li>
+                        <li className="breadcrumbs__item">
+                            <NavLink className="breadcrumbs__link" to="/portfolio">Portfolio -></NavLink>
+                        </li>
+                        <li className="breadcrumbs__item">
+                            <span className="breadcrumbs__link">Portfolio</span>
+                        </li>
+                    </ul>
+                </div>
                 <h1 className="portfolio__title">Portfolio</h1>
                 <div className="portfolio__inner">
                     <div className="portfolio__inner-main">
                         {isLoadingPortfolio ? (
-                            <LoadingBox></LoadingBox>
+                            <LoadingBox />
                         ) : errorPortfolio ? (
                             <MessageBox variant="errorVariant">{errorPortfolio}</MessageBox>
                         ) : (

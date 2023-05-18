@@ -9,11 +9,13 @@ import BlockContentProject from '../../shared/block-content-project/BlockContent
 import GalleryPhoto from '../../shared/gallery-photo/GalleryPhoto';
 import GalleryImage from '../../shared/gallery-image/GalleryImage';
 import GalleryCarousel from '../../shared/gallery-carousel/GalleryCarousel';
+import CommentsPage from "../../features/comments-page/CommentsPage";
 
 const Project = (props) => {
     const dispatch = useDispatch();
     const {id} = useParams();
     const typeImagePortfolio = "projectPortfolio"
+    const typePage = "projectPortfolio"
     const typeImageDesign = "projectDesign"
 
     const portfolioDetail = useSelector((state) => state.portfolioDetailsReducer);
@@ -31,26 +33,26 @@ const Project = (props) => {
 
     return (
         <div className="project">
-            <div className="top">
-                <ul className="breadcrumbs">
-                    <li className="breadcrumbs__item">
-                        <NavLink className="breadcrumbs__link" to="/">Home -></NavLink>
-                    </li>
-                    <li className="breadcrumbs__item">
-                        <NavLink className="breadcrumbs__link" to="/portfolio">Portfolio -></NavLink>
-                    </li>
-                    <li className="breadcrumbs__item">
-                        <span className="breadcrumbs__link">{project.title}</span>
-                    </li>
-                </ul>
-                <NavLink className="breadcrumbs__link" href="" rel="noreferrer" target="_blank">
-                    Address: {project.address}
-                </NavLink>
-            </div>
             {isLoadingProject && <LoadingBox></LoadingBox>}
             {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
-            <GalleryCarousel pageId={id} typeImage={typeImagePortfolio}/>
             <div className="container">
+                <div className="top">
+                    <ul className="top__breadcrumbs">
+                        <li className="top__breadcrumbs-item">
+                            <NavLink className="top__breadcrumbs-link" to="/">Home -></NavLink>
+                        </li>
+                        <li className="top__breadcrumbs__item">
+                            <NavLink className="top__breadcrumbs-link" to="/portfolio">Portfolio -></NavLink>
+                        </li>
+                        <li className="top__breadcrumbs-item">
+                            <span className="top__breadcrumbs-link">{project.title}</span>
+                        </li>
+                    </ul>
+                    <NavLink className="top__breadcrumbs-link" href="" rel="noreferrer" target="_blank">
+                        Address: {project.address}
+                    </NavLink>
+                </div>
+                <GalleryCarousel pageId={id} typeImage={typeImagePortfolio}/>
                 <div className="project__inner">
                     <h1 className="project__title">{project.title}</h1>
                     <span className="project__category">category:&nbsp;&nbsp;</span>
@@ -69,6 +71,7 @@ const Project = (props) => {
                             <GalleryPhoto pageId={id} typeImage={typeImageDesign}/>
                             <div className="project__content-main__info">{project.block}</div>
                             <div className="project__content-main__info">{project.text}</div>
+                            <CommentsPage postId={id} typePage={typePage} />
                             {/*<GalleryImage projectId={project.Id}/>*/}
                         </div>
                         <div className="project__content-blocks">

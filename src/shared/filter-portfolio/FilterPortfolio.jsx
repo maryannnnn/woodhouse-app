@@ -3,6 +3,7 @@ import Input from "../input/Input";
 import Select from "../select/Select";
 import Slider from "rc-slider";
 import 'rc-slider/assets/index.css';
+import Button from "../btn/Button";
 
 const FilterPortfolio = ({filter, setFilter}) => {
 
@@ -28,6 +29,10 @@ const FilterPortfolio = ({filter, setFilter}) => {
 
     const changeItemsHandler = (e) => {
         setFilter({...filter, itemsPerPage: e.target.value});
+    }
+
+    const changeCancelHandler = () => {
+        setFilter({...filter, title: '', categoryId: 'All', architectId: 'All', price: [10, 40000], status: 'All'});
     }
 
     const selectOptionsItems = [
@@ -86,7 +91,6 @@ const FilterPortfolio = ({filter, setFilter}) => {
                     onAfterChange={changePriceHandler}
                     trackStyle={[trackStyle, trackStyle]}
                     handleStyle={[handleStyle, handleStyle]}
-
                 />
                 <div className="filter__price">
                     <span>{filter.price[0]}$</span>
@@ -129,6 +133,7 @@ const FilterPortfolio = ({filter, setFilter}) => {
                     options={selectOptionsItems}
                 />
             </div>
+            <Button type="submit" className="filter__button" onClick={changeCancelHandler} name="cancel" />
         </form>
     )
 }

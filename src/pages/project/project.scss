@@ -7,6 +7,8 @@
   justify-content: space-between;
   gap: 10px;
   color: $dark-1
+
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -54,21 +56,6 @@
   }
 }
 
-.breadcrumbs {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  @include title-7;
-  &__item {
-    padding: 0px 0px;
-    color: $dark-1;
-  }
-  &__link {
-    @include link-2;
-  }
-}
-
 .category__link {
   @include title-3;
   @include link-2;
@@ -84,5 +71,21 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 10px;
-  padding: 10px 30px;
+  padding: 20px 5px;
+
+  &__breadcrumbs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    @include title-7;
+
+    &-item {
+      color: $dark-1;
+    }
+
+    &-link {
+      @include link-2;
+    }
+  }
 }

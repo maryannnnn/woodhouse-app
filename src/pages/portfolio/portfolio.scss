@@ -5,9 +5,16 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  &__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px 5px;
+  }
   &__title {
     @include title-2;
-    padding: 0px 20px;
+    padding: 0px 5px;
     color: $dark-1;
   }
   &__inner {
@@ -22,15 +29,13 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 5px;
+      padding-bottom: 5px;
       width: 75vw;
     }
     &-blocks {
       display: flex;
       flex-direction: column;
-      //justify-content: space-between;
-      //align-items: center;
       gap: 10px;
       width: 25vw;
     }
@@ -44,7 +49,6 @@
   gap: 10px;
   @include title-7;
   &__item {
-    padding: 0px 0px;
     color: $dark-1;
   }
   &__link {
@@ -52,10 +56,3 @@
   }
 }
 
-.top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 10px 30px;
-}
