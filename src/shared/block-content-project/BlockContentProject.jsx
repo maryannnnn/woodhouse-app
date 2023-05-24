@@ -1,5 +1,6 @@
 import './block-content-project.scss'
 import Parameter from "../../entities/parameter/ui/Parameter";
+import React from "react";
 
 
 

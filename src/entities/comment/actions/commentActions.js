@@ -24,7 +24,6 @@ export const commentListAction = (postId, typePage) => async (dispatch) => {
 
         const commentsList = await Promise.all(commentsPromises);
 
-        console.log("comments List Full: ", commentsList);
         dispatch({type: COMMENT_LIST_SUCCESS, payload: commentsList});
     } catch (error) {
         dispatch({
