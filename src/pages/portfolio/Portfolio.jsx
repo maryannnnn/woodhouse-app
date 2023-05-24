@@ -7,6 +7,7 @@ import PortfolioElement from "../../entities/portfolio/ui/PortfolioElement";
 import {NavLink} from "react-router-dom";
 import Pagination from "../../shared/paginagion/Pagination";
 import FilterPortfolio from "../../shared/filter-portfolio/FilterPortfolio";
+import PortfolioBreadcrumbs from "./PortfolioBreadcrumbs";
 
 const Portfolio = () => {
 
@@ -33,17 +34,7 @@ const Portfolio = () => {
         <div className="portfolio">
             <div className="container">
                 <div className="portfolio__top">
-                    <ul className="breadcrumbs">
-                        <li className="breadcrumbs__item">
-                            <NavLink className="breadcrumbs__link" to="/">Home -></NavLink>
-                        </li>
-                        <li className="breadcrumbs__item">
-                            <NavLink className="breadcrumbs__link" to="/portfolio">Portfolio -></NavLink>
-                        </li>
-                        <li className="breadcrumbs__item">
-                            <span className="breadcrumbs__link">Portfolio</span>
-                        </li>
-                    </ul>
+                    <PortfolioBreadcrumbs/>
                 </div>
                 <h1 className="portfolio__title">Portfolio</h1>
                 <div className="portfolio__inner">

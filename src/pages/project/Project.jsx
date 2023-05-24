@@ -10,6 +10,7 @@ import GalleryPhoto from '../../shared/gallery-photo/GalleryPhoto';
 import GalleryImage from '../../shared/gallery-image/GalleryImage';
 import GalleryCarousel from '../../shared/gallery-carousel/GalleryCarousel';
 import CommentsPage from "../../features/comments-page/CommentsPage";
+import ProjectBreadcrumbs from "./ProjectBreadcrumbs";
 
 const Project = (props) => {
     const dispatch = useDispatch();
@@ -37,20 +38,7 @@ const Project = (props) => {
             {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
             <div className="container">
                 <div className="top">
-                    <ul className="top__breadcrumbs">
-                        <li className="top__breadcrumbs-item">
-                            <NavLink className="top__breadcrumbs-link" to="/">Home -></NavLink>
-                        </li>
-                        <li className="top__breadcrumbs__item">
-                            <NavLink className="top__breadcrumbs-link" to="/portfolio">Portfolio -></NavLink>
-                        </li>
-                        <li className="top__breadcrumbs-item">
-                            <span className="top__breadcrumbs-link">{project.title}</span>
-                        </li>
-                    </ul>
-                    <NavLink className="top__breadcrumbs-link" href="" rel="noreferrer" target="_blank">
-                        Address: {project.address}
-                    </NavLink>
+                  <ProjectBreadcrumbs project={project}/>
                 </div>
                 <GalleryCarousel pageId={id} typeImage={typeImagePortfolio}/>
                 <div className="project__inner">
