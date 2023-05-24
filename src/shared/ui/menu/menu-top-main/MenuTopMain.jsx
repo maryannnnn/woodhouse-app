@@ -8,8 +8,6 @@ const MenuTopMain = (props) => {
 
   return (
     <ul className="menu">
-      {/*{isLoading && <LoadingBox/>}*/}
-      {/*{error && <MessageBox variant="errorVariant">{error}</MessageBox>}*/}
       {menus.filter(item => (item.menuId === 0))
         .sort((a, b) => a.order - b.order)
         .map(item =>

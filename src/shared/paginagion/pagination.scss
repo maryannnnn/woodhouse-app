@@ -6,12 +6,25 @@
   gap: 10px;
   margin: 20px;
   &__item {
+    border: 0;
+
+    &-arrow {
+     background-color: $grey-6;
+    }
     &-active {
       @include button-2__active;
     }
-
-  }
-  &__link {
     @include button-2;
+
+    &:disabled{
+      background-color: $grey-7;
+      color: $grey-4;
+      cursor: initial;
+    }
   }
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
 }

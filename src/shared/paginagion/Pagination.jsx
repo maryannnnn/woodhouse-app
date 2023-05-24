@@ -1,43 +1,32 @@
 import './pagination.scss'
+import PaginationNumbers from "./PaginationItem";
+import React from "react";
 
-const Pagination = ({totalPages, pages, currentPage, setPageNumber}) => {
+const Pagination = ({totalPages, currentPage, setPageNumber}) => {
 
-    // page change handler
-    const handleClick = (pageNumber) => {
-        setPageNumber(pageNumber);
-    };
+    const pages = Array.from({length: totalPages}, (_, index) => index + 1);
 
-    // render list of pages
-    const renderPages = () => {
-        return pages.map((pageNumber) => {
-            return (
-                <li key={pageNumber} className={`pagination__item-${currentPage === pageNumber ? 'active' : ''}`}>
-                    <div className="pagination__link" onClick={() => handleClick(pageNumber)}>
-                        {pageNumber}
-                    </div>
-                </li>
-            );
-        });
-    };
-
-    // render component
     return (
-        <nav>
-            <ul className="pagination">
-                <li className="pagination__item" >
-                    <button className="pagination__link" disabled={currentPage === 1} onClick={() => handleClick(currentPage - 1)}>
-                        prev
-                    </button>
-                </li>
-                {renderPages()}
-                <li className="pagination__item">
-                    <button className="pagination__link"  disabled={currentPage === totalPages} onClick={() => handleClick(currentPage + 1)}>
-                        next
-                    </button>
-                </li>
-            </ul>
+        <nav className="pagination">
+            <button className="pagination__item pagination__item-arrow"
+                    disabled={currentPage === 1}
+                    onClick={() => setPageNumber(currentPage - 1)}>
+                prev
+            </button>
+
+            {pages.map((pageNumber) =>
+                (<ul>
+                    <PaginationNumbers pageNumber={pageNumber} setPageNumber={setPageNumber} currentPage={currentPage}/>
+                </ul>)
+            )}
+
+            <button className="pagination__item pagination__item-arrow"
+                    disabled={currentPage === totalPages}
+                    onClick={() => setPageNumber(currentPage + 1)}>
+                next
+            </button>
         </nav>
     );
 }
 
-export default Pagination;
+export default Pagination
