@@ -1,40 +1,38 @@
 import './parameter.scss'
-import {useDispatch, useSelector} from "react-redux";
-import React, {useEffect} from "react";
-import {parameterDetailsAction} from "../actions/parameterActions";
-import ParameterItem from "./ParameterItem";
+import React from "react";
+import ParameterPrice from "./ParameterItem";
 
-const Parameter = (props) => {
-
-    const dispatch = useDispatch();
-
-    const parameterDetail = useSelector((state) => state.parameterDetailsReducer);
-    const {parameter} = parameterDetail;
-
-    useEffect(() => {
-        dispatch(parameterDetailsAction(props.parameterId));
-    }, [dispatch, props.parameterId]);
+const Parameter = ({parameter}) => {
 
     return (
         <div className="parameter">
             <h3 className="parameter__title">Parameters of project</h3>
             <div className="parameter__content">
-                <ParameterItem type="value" title="Customer:" value={parameter.customer}/>
-                <ParameterItem type="value" title="Square:" value={parameter.square}/>
-                <ParameterItem type="value" title="Height:" value={parameter.height}/>
-                <ParameterItem type="value" title="Start Date:" value={parameter.startDate}/>
-                <ParameterItem type="value" title="End Date:" value={parameter.endDate}/>
-                <ParameterItem type="value" title="Time:" value={parameter.time}/>
-                <ParameterItem type="price" title="Floor:" value={parameter.floor}/>
-                <ParameterItem type="price" title="Walls:" value={parameter.walls}/>
-                <ParameterItem type="price" title="Ceiling:" value={parameter.ceiling}/>
-                <ParameterItem type="price" title="Furniture:" value={parameter.furniture}/>
-                <ParameterItem type="price" title="Plumbing:" value={parameter.plumbing}/>
-                <ParameterItem type="price" title="Doors:" value={parameter.doors}/>
-                <ParameterItem type="price" title="Decor:" value={parameter.decor}/>
-                <ParameterItem type="price" title="Lighting:" value={parameter.lighting}/>
-                <ParameterItem type="price" title="Technique:" value={parameter.technique}/>
-                <ParameterItem type="total" title="Technique:" value={parameter.price}/>
+                {parameter?.values &&
+                <>
+                    <ParameterPrice type="value" title="Customer:" value={parameter?.values.customer}/>
+                    <ParameterPrice type="value" title="Customer:" value={parameter?.values.customer}/>
+                    <ParameterPrice type="value" title="Square:" value={parameter?.values.square}/>
+                    <ParameterPrice type="value" title="Height:" value={parameter?.values.height}/>
+                    <ParameterPrice type="value" title="Start Date:" value={parameter?.values.startDate}/>
+                    <ParameterPrice type="value" title="End Date:" value={parameter?.values.endDate}/>
+                    <ParameterPrice type="value" title="Time:" value={parameter?.values.time}/>
+                </>}
+
+                {parameter?.prices &&
+                <>
+                    <ParameterPrice type="price" title="Floor:" value={parameter?.prices.floor}/>
+                    <ParameterPrice type="price" title="Walls:" value={parameter?.prices.walls}/>
+                    <ParameterPrice type="price" title="Ceiling:" value={parameter?.prices.ceiling}/>
+                    <ParameterPrice type="price" title="Furniture:" value={parameter?.prices.furniture}/>
+                    <ParameterPrice type="price" title="Plumbing:" value={parameter?.prices.plumbing}/>
+                    <ParameterPrice type="price" title="Doors:" value={parameter?.prices.doors}/>
+                    <ParameterPrice type="price" title="Decor:" value={parameter?.prices.decor}/>
+                    <ParameterPrice type="price" title="Lighting:" value={parameter?.prices.lighting}/>
+                    <ParameterPrice type="price" title="Technique:" value={parameter?.prices.technique}/>
+                    <ParameterPrice type="total" title="Total:" value={parameter?.prices.price}/>
+                </>}
+
             </div>
         </div>
     )

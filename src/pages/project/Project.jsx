@@ -11,6 +11,8 @@ import GalleryImage from '../../shared/gallery-image/GalleryImage';
 import GalleryCarousel from '../../shared/gallery-carousel/GalleryCarousel';
 import CommentsPage from "../../features/comments-page/CommentsPage";
 import ProjectBreadcrumbs from "./ProjectBreadcrumbs";
+import {parameterDetailsAction} from "../../entities/parameter/actions/parameterActions";
+import PolarAreaChartProject from "../../shared/charts/polar-area/PolarAreaChartProject";
 
 const Project = (props) => {
     const dispatch = useDispatch();
@@ -19,26 +21,28 @@ const Project = (props) => {
     const typePage = "projectPortfolio"
     const typeImageDesign = "projectDesign"
 
+    const parameterDetail = useSelector((state) => state.parameterDetailsReducer);
+    const {parameter} = parameterDetail;
+
     const portfolioDetail = useSelector((state) => state.portfolioDetailsReducer);
     const {isLoadingProject, errorProject, project} = portfolioDetail;
+
+    useEffect(() => {
+        dispatch(parameterDetailsAction(project.parameterId));
+    }, [dispatch, project.parameterId]);
 
     useEffect(() => {
         dispatch(portfolioDetailsAction(id));
     }, [dispatch, id]);
 
-    // const replaceStr = (str) => {
-    //     return str.replace(/\s/g, "+");
-    // };
-    //
-    // const addressMap = `https://www.google.com/maps?q=${replaceStr(project.address)}`;
 
     return (
         <div className="project">
-            {isLoadingProject && <LoadingBox></LoadingBox>}
+            {isLoadingProject && <LoadingBox/>}
             {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
             <div className="container">
                 <div className="top">
-                  <ProjectBreadcrumbs project={project}/>
+                    <ProjectBreadcrumbs project={project}/>
                 </div>
                 <GalleryCarousel pageId={id} typeImage={typeImagePortfolio}/>
                 <div className="project__inner">
@@ -59,12 +63,17 @@ const Project = (props) => {
                             <GalleryPhoto pageId={id} typeImage={typeImageDesign}/>
                             <div className="project__content-main__info">{project.block}</div>
                             <div className="project__content-main__info">{project.text}</div>
-                            <CommentsPage postId={id} typePage={typePage} />
+                            <CommentsPage postId={id} typePage={typePage}/>
                             {/*<GalleryImage projectId={project.Id}/>*/}
                         </div>
                         <div className="project__content-blocks">
                             <BlockArchitect architectId={project.architectId}/>
-                            <BlockContentProject parameterId={project.parameterId}/>
+                            <BlockContentProject parameter={parameter}/>
+                            <div className="polar-chart">
+                                {parameter?.prices &&
+                                    <PolarAreaChartProject prices={parameter?.prices}/>
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
