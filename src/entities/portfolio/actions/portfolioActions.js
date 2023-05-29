@@ -51,7 +51,7 @@ export const portfolioListAction = ({
             const numberComments = comments.data.length
 
             return new infoProjectDto(project.id, project.title, category.data.id, category.data.name, user.data.id, architectName,
-                project.anons, numberComments, image.data.src, image.data.thumbnail, image.data.alt, project.status, parameter.data.price);
+                project.anons, numberComments, image.data.src, image.data.thumbnail, image.data.alt, project.status, parameter.data.prices.price);
         });
 
         const projectList = await Promise.all(imagePromises);
@@ -106,7 +106,7 @@ export const portfolioDetailsAction = (projectId) => async (dispatch) => {
         const category = await Axios.get(`/category/${project.data.categoryId}`);
         const parameter = await Axios.get(`/parameter/${project.data.parameterId}`);
         const projectBody = new infoProjectBodyDto(project.data.id, project.data.title, category.data.id, category.data.name, project.data.architectId,
-            project.data.parameterId, project.data.anons, project.data.block, project.data.text, project.data.address, project.data.status, parameter.data.price);
+            project.data.parameterId, project.data.anons, project.data.block, project.data.text, project.data.address, project.data.status, parameter.data.prices.price);
 
         dispatch({type: PORTFOLIO_DETAILS_SUCCESS, payload: projectBody});
     } catch (error) {
