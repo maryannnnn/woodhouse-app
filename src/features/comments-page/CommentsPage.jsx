@@ -25,7 +25,6 @@ const CommentsPage = (props) => {
                 <MessageBox variant="errorVariant">{errorComment}</MessageBox>
             ) : (
                 <>
-                    {console.log("comments List", comments)}
                     {comments
                         .filter(item => item.parentId === 0)
                         .map(comment =>
