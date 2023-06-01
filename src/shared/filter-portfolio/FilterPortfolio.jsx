@@ -85,7 +85,7 @@ const FilterPortfolio = ({filter, setFilter}) => {
                 <Slider
                     range
                     min={0}
-                    max={40000}
+                    max={100000}
                     defaultValue={filter.price}
                     onChange={changePriceHandler}
                     onAfterChange={changePriceHandler}
