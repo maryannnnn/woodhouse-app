@@ -9,7 +9,7 @@ export const parameterDetailsAction = (parameterId) => async (dispatch) => {
   dispatch({ type: PARAMETER_DETAILS_REQUEST, payload: parameterId });
   try {
     const Parameter = await Axios.get(`/parameter/${parameterId}`);
-    console.log("data Parameter", Parameter.data)
+    //console.log("data Parameter", Parameter.data)
     dispatch({ type: PARAMETER_DETAILS_SUCCESS, payload: Parameter.data });
   } catch (error) {
     dispatch({

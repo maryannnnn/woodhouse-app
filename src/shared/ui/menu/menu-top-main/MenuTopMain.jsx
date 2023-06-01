@@ -1,12 +1,11 @@
 import './menu-top-main.scss'
 import './media.scss'
 import { NavLink } from "react-router-dom";
+import React from "react";
 
 const MenuTopMain = (props) => {
 
   const menus = props.menuListDto.array;
-  const isLoading = props.menuListDto.isLoading;
-  const error = props.menuListDto.error;
 
   return (
     <ul className="menu">

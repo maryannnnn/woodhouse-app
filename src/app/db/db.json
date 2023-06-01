@@ -196,317 +196,279 @@
   "parameter": [
     {
       "id": 0,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "20200",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "1400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "1100",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     },
     {
       "id": 1,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "30500",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "8400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "7400",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     },
     {
       "id": 2,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "24700",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "8400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "7400",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     },
     {
       "id": 3,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "19300",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "8400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "7400",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     },
     {
       "id": 4,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "37500",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "8400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "7400",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     },
     {
       "id": 5,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "27400",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "8400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "7400",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     },
     {
       "id": 6,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "26900",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "8400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "7400",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     },
     {
       "id": 7,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "35400",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "8400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "7400",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     },
     {
       "id": 8,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "28400",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "8400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "7400",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     },
     {
       "id": 9,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "21700",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "8400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "7400",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     },
     {
       "id": 10,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "36200",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "8400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "7400",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     },
     {
       "id": 11,
-      "customer": "Individual",
-      "square": "32 sq.m.",
-      "height": "3 m",
-      "floor": "3570",
-      "walls": "2560",
-      "ceiling": "1200",
-      "furniture": "8400",
-      "plumbing": "2300",
-      "doors": "2450",
-      "decor": "1500",
-      "lighting": "2700",
-      "technique": "7400",
-      "time": "3 weeks",
-      "price": "29800",
-      "startDate": "20.04.2023",
-      "endDate": "20.04.2023"
-    }
-  ],
-  "header": [
-    {
-      "id": 0,
-      "title": "Wooden interiors",
-      "subtitle": "High Level Design",
-      "text": "We present you the best projects developed by our team of professionals with love and care for customers. The portfolio will allow you to choose the style, wood color, texture, design and arrangement of elements that interest you."
-    },
-    {
-      "id": 1,
-      "title": "We create a warm atmosphere for your holiday",
-      "subtitle": "Best works",
-      "text": "The development and implementation of beautiful wood interiors has never been so accessible. Interiors made of wood of various species will make your home cozy and warm, delighting you and your guests."
-    }
-  ],
-  "menu": [
-    {
-      "id": 0,
-      "name": "Home",
-      "url": "/",
-      "menuId": 0,
-      "order": 0
-    },
-    {
-      "id": 1,
-      "name": "Portfolio",
-      "url": "/portfolio",
-      "menuId": 0,
-      "order": 1
-    },
-    {
-      "id": 2,
-      "name": "Service",
-      "url": "/service",
-      "menuId": 0,
-      "order": 2
-    },
-    {
-      "id": 3,
-      "name": "Blog",
-      "url": "/blog",
-      "menuId": 0,
-      "order": 3
-    },
-    {
-      "id": 4,
-      "name": "Contact",
-      "url": "/contact",
-      "menuId": 0,
-      "order": 4
-    },
-    {
-      "id": 0,
-      "name": "Design",
-      "url": "/design",
-      "menuId": 1,
-      "order": 0
-    },
-    {
-      "id": 1,
-      "name": "Development",
-      "url": "/development",
-      "menuId": 1,
-      "order": 1
-    },
-    {
-      "id": 2,
-      "name": "Delivery",
-      "url": "/delivery",
-      "menuId": 1,
-      "order": 2
-    },
-    {
-      "id": 3,
-      "name": "Renovation",
-      "url": "/renovation",
-      "menuId": 1,
-      "order": 3
-    },
-    {
-      "id": 4,
-      "name": "Master",
-      "url": "/master",
-      "menuId": 1,
-      "order": 4
+      "prices":{
+        "floor": "3570",
+        "walls": "2560",
+        "ceiling": "1200",
+        "furniture": "8400",
+        "plumbing": "2300",
+        "doors": "2450",
+        "decor": "1500",
+        "lighting": "2700",
+        "technique": "7400",
+        "price": "20200"
+      },
+      "values": {
+        "customer": "Individual",
+        "square": "32 sq.m.",
+        "height": "3 m",
+        "time": "3 weeks",
+        "startDate": "20.04.2023",
+        "endDate": "20.04.2023"
+      }
     }
   ],
   "image": [
@@ -2980,5 +2942,94 @@
       "parentId": 0,
       "children": []
     }
-  ]
+  ],
+  "customise": {
+    "version":"1.1",
+    "data":{
+      "menu": [
+        {
+          "id": 0,
+          "name": "Home",
+          "url": "/",
+          "menuId": 0,
+          "order": 0
+        },
+        {
+          "id": 1,
+          "name": "Portfolio",
+          "url": "/portfolio",
+          "menuId": 0,
+          "order": 1
+        },
+        {
+          "id": 2,
+          "name": "Service",
+          "url": "/service",
+          "menuId": 0,
+          "order": 2
+        },
+        {
+          "id": 3,
+          "name": "Blog",
+          "url": "/blog",
+          "menuId": 0,
+          "order": 3
+        },
+        {
+          "id": 4,
+          "name": "Contact",
+          "url": "/contact",
+          "menuId": 0,
+          "order": 4
+        },
+        {
+          "id": 0,
+          "name": "Design",
+          "url": "/design",
+          "menuId": 1,
+          "order": 0
+        },
+        {
+          "id": 1,
+          "name": "Development",
+          "url": "/development",
+          "menuId": 1,
+          "order": 1
+        },
+        {
+          "id": 2,
+          "name": "Delivery",
+          "url": "/delivery",
+          "menuId": 1,
+          "order": 2
+        },
+        {
+          "id": 3,
+          "name": "Renovation",
+          "url": "/renovation",
+          "menuId": 1,
+          "order": 3
+        },
+        {
+          "id": 4,
+          "name": "Master",
+          "url": "/master",
+          "menuId": 1,
+          "order": 4
+        }
+      ],
+      "headers": {
+        "wooden_interiors": {
+          "title": "Wooden interiors",
+          "subtitle": "High Level Design",
+          "text": "We present you the best projects developed by our team of professionals with love and care for customers. The portfolio will allow you to choose the style, wood color, texture, design and arrangement of elements that interest you."
+        },
+        "warm_atmosphere": {
+          "title": "We create a warm atmosphere for your holiday",
+          "subtitle": "Best works",
+          "text": "The development and implementation of beautiful wood interiors has never been so accessible. Interiors made of wood of various species will make your home cozy and warm, delighting you and your guests."
+        }
+      }
+    }
+  }
 }
