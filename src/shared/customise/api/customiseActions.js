@@ -11,16 +11,15 @@ export const getCustomise = () => async (dispatch) => {
         type: CUSTOMISE_REQUEST
     });
     try {
-        console.log('d1a')
-        const customiseUpdatedData = customiseUpdatedData()
-        if (customiseUpdatedData) {
-            console.log('кастомайз из локал стоража')
+        const customiseData = customiseUpdatedData()
+        if (customiseData) {
+            console.log('customise from local storage')
             dispatch({
                 type: CUSTOMISE_SUCCESS,
-                payload: customiseUpdatedData
+                payload: customiseData
             });
         } else {
-            console.log('кастомайз с сервера')
+            console.log('customise from server')
             const {data} = await Axios.get('/customise')
             dispatch({
                 type: CUSTOMISE_SUCCESS,
