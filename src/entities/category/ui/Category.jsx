@@ -2,7 +2,6 @@ import './category.scss'
 import {NavLink, useParams} from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux";
 import React, {useEffect} from "react";
-import {LoadingBox, MessageBox} from "../../../shared/ui/box/boxes";
 import PortfolioElement from "../../portfolio/ui/PortfolioElement";
 import {categoryDetailsAction} from "../actions/categoryActions";
 

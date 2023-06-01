@@ -20,7 +20,7 @@ export const imageWidgetAction = (start, end) => async (dispatch) => {
             projectWidget.push(projectTmp);
         });
 
-        console.log("Portfolio Widget projectWidget: ", projectWidget);
+
         dispatch({type: IMAGE_WIDGET_SUCCESS, payload: projectWidget});
     } catch (error) {
         dispatch({
@@ -154,20 +154,17 @@ export const imageWidgetAction = (start, end) => async (dispatch) => {
   try {
     const projectWidget = [];
     const projects = await Axios.get(`/portfolio?_start=${start}&_end=${end}`);
-    console.log("Portfolio Widget projects: ", projects.data);
 
     const imageRequests = projects.data.map(project => Axios.get(`/image?id=${project.imageProjectId}`));
     const imageResponses = await Promise.all(imageRequests);
 
     const images = imageResponses.map(response => response.data);
-    console.log("Portfolio Widget images: ", images);
 
     projects.data.forEach((project, index) => {
       const projectTmp = new infoProjectDto(project.id, project.title, project.category, images[index].src, images[index].alt);
       projectWidget.push(projectTmp);
     });
 
-    console.log("Portfolio Widget projectWidget: ", projectWidget);
     dispatch({type: IMAGE_WIDGET_SUCCESS, payload: projectWidget});
   } catch (error) {
     dispatch({

@@ -14,8 +14,7 @@ const Portfolio = () => {
 
     const dispatch = useDispatch()
     const [pageNumber, setPageNumber] = useState(1);
-    const [pages, setPages] = useState([]);
-    const [filter, setFilter] = useState({categoryId: 'All', architectId: 'All', status: 'All', itemsPerPage: 9})
+    const [filter, setFilter] = useState({title: '', categoryId: 'All', architectId: 'All', status: 'All', price: [10, 40000], itemsPerPage: 9})
    // const [filter, setFilter] = useState({title: '', categoryId: 'All', architectId: 'All', price: [10, 40000], status: 'All', itemsPerPage: 9})
     const {filteredProjects, isLoadingPortfolio, errorPortfolio} = useFilteredProjects(filter)
     const {totalPages} = useSelector(state => state.portfolioListReducer)
@@ -41,17 +40,9 @@ const Portfolio = () => {
                 <h1 className="portfolio__title">Portfolio</h1>
                 <div className="portfolio__inner">
                     <div className="portfolio__inner-main">
-                        {isLoadingPortfolio ? (
-                            <LoadingBox/>
-                        ) : errorPortfolio ? (
-                            <MessageBox variant="errorVariant">{errorPortfolio}</MessageBox>
-                        ) : (
-                            <>
                                 {filteredProjects.map(project =>
                                     <PortfolioElement element={project} key={project.id}/>
                                 )}
-                            </>
-                        )}
                     </div>
                     <div className="portfolio__inner-blocks">
                         <FilterPortfolio filter={filter} setFilter={setFilter}/>

@@ -4,20 +4,20 @@ import {
     CUSTOMISE_REQUEST,
     CUSTOMISE_SUCCESS
 } from "../consts";
+import {customiseUpdatedData} from "../utils";
 
 export const getCustomise = () => async (dispatch) => {
     dispatch({
         type: CUSTOMISE_REQUEST
     });
     try {
-        const currentCustomiseVersion = process.env.REACT_APP_CUSTOMISE_VERSION
-        const storageCustomise = JSON.parse(localStorage.getItem('customise'))
-
-        if (storageCustomise?.version === currentCustomiseVersion) {
+        console.log('d1a')
+        const customiseUpdatedData = customiseUpdatedData()
+        if (customiseUpdatedData) {
             console.log('кастомайз из локал стоража')
             dispatch({
                 type: CUSTOMISE_SUCCESS,
-                payload: storageCustomise.data
+                payload: customiseUpdatedData
             });
         } else {
             console.log('кастомайз с сервера')

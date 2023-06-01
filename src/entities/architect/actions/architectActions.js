@@ -67,7 +67,6 @@ export const architectDetailsAction = (userId) => async (dispatch) => {
     const userFull = new infoUserDto(architect.data.id, architect.data.name, architect.data.family, architect.data.nik,
         imageArchitect.data.src, imageArchitect.data.thumbnail, imageArchitect.data.alt,
         architect.data.anons, architect.data.info, architect.data.profession, architect.data.role);
-    console.log("userFull: ", userFull);
     dispatch({ type: ARCHITECT_DETAILS_SUCCESS, payload: {architect: userFull, architectProjects: architectProjectsListArray} });
   } catch (error) {
     dispatch({

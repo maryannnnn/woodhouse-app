@@ -11,23 +11,25 @@ const Footer = (props) => {
   return (
     <div className="footer">
       <div className="container">
+        {props?.menuListDto &&
         <div className="footer__inner">
           <div className="footer__company">
             <div className="footer__logo">
               <NavLink to="/" className="footer__logo-link">
-                <img className="footer__logo-img" src={Logo} alt="Logo" />
+                <img className="footer__logo-img" src={Logo} alt="Logo"/>
                 <div className="footer__logo-title">WoodHouse</div>
               </NavLink>
             </div>
-            <ContactCheckout />
+            <ContactCheckout/>
             <div className="footer__company-copyright">
               WoodHouse © 2022
             </div>
           </div>
-          <MenuFooterMain menuListDto={props.menuListDto} />
-          <MenuFooterService menuListDto={props.menuListDto} />
-          <SocialBlock />
+          <MenuFooterMain menuListDto={props.menuListDto}/>
+          <MenuFooterService menuListDto={props.menuListDto}/>
+          <SocialBlock/>
         </div>
+        }
       </div>
     </div>
   )

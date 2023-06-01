@@ -10,12 +10,12 @@ import Project from "../pages/project/Project";
 import Service from "../pages/service/Service";
 import Blog from "../pages/blog/Blog";
 import Post from "../pages/post/Post";
-import Category from "../pages/category/Category";
 import CategoriesAll from "../pages/categoryall/CategoriesAll";
 import Architect from "../pages/architect/Architect";
 import ArchitectsAll from "../pages/architectsAll/ArchitectsAll";
 import {getCustomise} from "../shared/customise/api/customiseActions";
 import {ArrayDto} from "./dto/arrayDto";
+import Category from "../entities/category/ui/Category";
 
 const App = () => {
 
@@ -27,11 +27,6 @@ const App = () => {
   useEffect(() => {
     dispatch(getCustomise())
   }, [dispatch])
-
-  const menuList = useSelector(state => state.menuListReducer)
-  const { isLoadingMenu, errorMenu, menus } = menuList
-
-  const menuListDto = new ArrayDto(menus, isLoadingMenu, errorMenu)
 
   return (
     <div className="wrapper">

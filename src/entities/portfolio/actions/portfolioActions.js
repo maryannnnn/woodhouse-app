@@ -43,9 +43,10 @@ export const portfolioListAction = ({
 
         const imagePromises = projects.data.map(async (project) => {
             const image = await Axios.get(`/image/${project.imageProjectId}`);
+            const parameter = await Axios.get(`/parameter/${project.parameterId}`);
 
             return new infoProjectDto(project.id, project.title, project.anons, image.data.src,
-                image.data.thumbnail, image.data.alt);
+                image.data.thumbnail, image.data.alt, parameter.data.prices.price);
 
             // return new infoProjectDto(project.id, project.title, category.data.id, category.data.name, user.data.id, architectName,
             //     project.anons, numberComments, image.data.src, image.data.thumbnail, image.data.alt, project.status, parameter.data.prices.price);
