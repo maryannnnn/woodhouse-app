@@ -14,7 +14,7 @@
   }
   &__title {
     @include title-2;
-    padding: 0px 5px;
+    padding: 0 5px;
     color: $dark-1;
   }
   &__inner {
@@ -28,7 +28,7 @@
     &-main {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      gap: 15px;
       padding-top: 5px;
       padding-bottom: 5px;
       width: 75vw;

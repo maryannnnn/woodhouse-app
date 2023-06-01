@@ -1,4 +1,5 @@
 import './portfolio.scss'
+import './media.scss'
 import {useDispatch, useSelector} from "react-redux";
 import React, {useEffect, useState} from "react";
 import {portfolioListAction} from "../../entities/portfolio/actions/portfolioActions";

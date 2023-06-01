@@ -7,8 +7,6 @@
   justify-content: space-between;
   gap: 10px;
   color: $dark-1
-
-
   &__inner {
     display: flex;
     flex-direction: column;
@@ -41,15 +39,12 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      //align-items: center;
       gap: 10px;
       width: 75vw;
     }
     &-blocks {
       display: flex;
       flex-direction: column;
-      //justify-content: space-between;
-      //align-items: center;
       gap: 10px;
       width: 25vw;
     }
@@ -85,6 +80,9 @@
     }
 
     &-link {
+      @include link-2;
+    }
+    &-address {
       @include link-2;
     }
   }
