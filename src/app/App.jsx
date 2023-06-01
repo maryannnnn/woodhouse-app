@@ -12,7 +12,7 @@ import Service from "../pages/service/Service";
 import Blog from "../pages/blog/Blog";
 import Post from "../pages/post/Post";
 import { ArrayDto } from './dto/arrayDto.js'
-import Category from "../pages/category/Category";
+import Category from "../entities/category/ui/Category";
 import CategoriesAll from "../pages/categoryall/CategoriesAll";
 import Architect from "../pages/architect/Architect";
 import ArchitectsAll from "../pages/architectsAll/ArchitectsAll";

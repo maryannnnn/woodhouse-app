@@ -1,4 +1,5 @@
 import './footer.scss'
+import './media.scss'
 import { NavLink } from "react-router-dom";
 import Logo from "../../app/assets/images/logo-2.png";
 import ContactCheckout from "../../shared/ui/contact-checkout/ContactCheckout";

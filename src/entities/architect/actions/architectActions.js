@@ -11,6 +11,7 @@ import {
   ARCHITECT_WIDGET_FAIL
 } from '../constants/architectConstants'
 import {infoUserDto} from "../../../app/dto/infoUserDto";
+import {infoProjectDto} from "../../../app/dto/infoProjectDto";
 
 export const architectListAction = () => async (dispatch) => {
     dispatch({type: ARCHITECT_LIST_REQUEST});
@@ -57,10 +58,20 @@ export const architectDetailsAction = (userId) => async (dispatch) => {
     const projectsUser = await Axios.get(`/portfolio?architectId=${userId}`);
     console.log("projectsUser: ", projectsUser.data);
 
-    const userFull = new infoUserDto(architect.data.id, architect.data.name, architect.data.family, architect.data.nik, imageArchitect.data.src, imageArchitect.data.thumbnail, imageArchitect.data.alt,
-        architect.data.anons, architect.data.info, architect.data.profession, architect.data.role, projectsUser.data);
+    const architectPromises = projectsUser.data.map(async (project) => {
+      const image = await Axios.get(`/image/${project.imageProjectId}`);
+      return new infoProjectDto(project.id, project.title, project.anons,
+          image.data.src, image.data.thumbnail, image.data.alt);
+    });
+
+    const architectProjectsList = await Promise.all(architectPromises);
+    const architectProjectsListArray = Object.values(architectProjectsList)
+
+    const userFull = new infoUserDto(architect.data.id, architect.data.name, architect.data.family, architect.data.nik,
+        imageArchitect.data.src, imageArchitect.data.thumbnail, imageArchitect.data.alt,
+        architect.data.anons, architect.data.info, architect.data.profession, architect.data.role);
     console.log("userFull: ", userFull);
-    dispatch({ type: ARCHITECT_DETAILS_SUCCESS, payload: userFull });
+    dispatch({ type: ARCHITECT_DETAILS_SUCCESS, payload: {architect: userFull, architectProjects: architectProjectsListArray} });
   } catch (error) {
     dispatch({
       type: ARCHITECT_DETAILS_FAIL,

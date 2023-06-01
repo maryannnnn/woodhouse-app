@@ -26,7 +26,6 @@ export const portfolioListReducer = (state = {
           ...state,
           projects: action.payload.projects,
           totalPages: action.payload.totalPages,
-          //   page: action.payload.page,
           isLoadingPortfolio: false
         }
         case PORTFOLIO_LIST_FAIL:

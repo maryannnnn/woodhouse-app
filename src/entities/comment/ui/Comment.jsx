@@ -23,7 +23,7 @@ const Comment = ({key, comment, comments, level}) => {
             </div>
             <div className="comment__body">{comment.body}</div>
             <div className="comment__likes">likes:&nbsp;{comment.likes}</div>
-            {console.log("comment.children", comment.children)}
+            {/*{console.log("comment.children", comment.children)}*/}
             {comment.children &&
             comments
                 .filter(item => item.parentId === comment.id)

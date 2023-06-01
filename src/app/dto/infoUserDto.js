@@ -1,5 +1,5 @@
 export class infoUserDto {
-    constructor(id, name, family, nik, image, thumbnail, alt, anons, info, profession, role, projects) {
+    constructor(id, name, family, nik, image, thumbnail, alt, anons, info, profession, role) {
         this.id = id;
         this.name = name;
         this.family = family;
@@ -11,6 +11,5 @@ export class infoUserDto {
         this.info = info;
         this.profession = profession;
         this.role = role;
-        this.projects = projects;
     }
 }

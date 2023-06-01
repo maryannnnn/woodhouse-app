@@ -1,4 +1,5 @@
 import './anons-body-portfolio.scss'
+import './media.scss'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PortfolioElement from "../../entities/portfolio/ui/PortfolioElement";
@@ -24,9 +25,9 @@ const BodyAnons = () => {
       {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
       {console.log("Project Widget", ...projects)}
       {projects
-        .map(element =>
-          <div key={element.id}>
-            <PortfolioElement element={element} />
+        .map(project =>
+          <div key={project.id}>
+            <PortfolioElement project={project} />
           </div>
         )}
     </div>

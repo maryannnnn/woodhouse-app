@@ -12,3 +12,11 @@ export const shortText = (str, maxLength) => {
     return str;
   }
 }
+
+export const generatePages = (totalPages, setPages) => {
+  const pageNumbers = [];
+  for (let i = 1; i <= totalPages; i++) {
+    pageNumbers.push(i);
+  }
+  setPages(pageNumbers);
+};

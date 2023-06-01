@@ -63,7 +63,10 @@ export const architectWidgetReducer = (state = {
 }
 
 export const architectDetailsReducer = (state = {
-  architect: {}, isLoadingArchitect: false
+  architect: {},
+  architectProjects: [],
+  isLoadingArchitect: false,
+  errorArchitect: ''
 }, action) => {
   switch (action.type) {
     case ARCHITECT_DETAILS_REQUEST:
@@ -72,7 +75,10 @@ export const architectDetailsReducer = (state = {
       };
     case ARCHITECT_DETAILS_SUCCESS:
       return {
-        ...state, isLoadingArchitect: false, architect: action.payload
+        ...state,
+        architect: action.payload.architect,
+        architectProjects: action.payload.architectProjects,
+        isLoadingArchitect: false
       };
     case ARCHITECT_DETAILS_FAIL:
       return {

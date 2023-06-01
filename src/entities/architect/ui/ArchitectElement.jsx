@@ -1,17 +1,16 @@
 import './architect-element.scss'
 import {NavLink} from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {architectDetailsAction} from "../actions/architectActions";
+import {LoadingBox, MessageBox} from "../../../shared/ui/box/boxes";
 
 const ArchitectElement = (props) => {
 
     const dispatch = useDispatch();
 
     const architectDetail = useSelector((state) => state.architectDetailsReducer);
-    const {isLoadingArchitect, errorArchitect, architect} = architectDetail;
-
-    const projects = architect.projects
+    const {isLoadingArchitect, errorArchitect, architect, architectProjects} = architectDetail;
 
     useEffect(() => {
         dispatch(architectDetailsAction(props.userId));
@@ -29,11 +28,11 @@ const ArchitectElement = (props) => {
                 className="architect__link"
                 to={`/architect/${architect.id}`}
             >
-            <img
-                className="architect__img"
-                src={architect.thumbnail}
-                alt={architect.profession}
-            />
+                <img
+                    className="architect__img"
+                    src={architect.thumbnail}
+                    alt={architect.profession}
+                />
             </NavLink>
             <NavLink
                 className="architect__link"
@@ -46,19 +45,14 @@ const ArchitectElement = (props) => {
             </div>
             <div className="projects">
                 <h4 className="projects__name">Projects of {architect.name} {architect.family}</h4>
-                {Array.isArray(projects) && projects.length !== 0 ? (
-                    <div className="projects__items">
-                        {projects.map(item => (
-                            <NavLink className="projects__link" key={item.id} to={`/portfolio/${item.id}`}>
-                                <span className="projects__title">{item.title}</span>
-                            </NavLink>
-                        ))
-                        }
-                    </div>
-                ) : (
-                    <p>No projects available.</p>
-                )
-                }
+                <div className="projects__items">
+                            {architectProjects.map(project => (
+                                <NavLink className="projects__link" key={project.id} to={`/portfolio/${project.id}`}>
+                                    <span className="projects__title">{project.title}</span>
+                                </NavLink>
+                            ))
+                            }
+                </div>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './navigation.scss'
+import './media.scss'
 import Logo from '../../app/assets/images/logo-2.png'
 import SocialBlockMin from "../../shared/ui/social/social-block-min/SocialBlockMin";
 import MenuTopMain from "../../shared/ui/menu/menu-top-main/MenuTopMain";

@@ -19,20 +19,11 @@ const CommentsPage = (props) => {
     return (
         <div className="comments">
             <h2 className="comments__title">Comments</h2>
-            {isLoadingComment ? (
-                <LoadingBox />
-            ) : errorComment ? (
-                <MessageBox variant="errorVariant">{errorComment}</MessageBox>
-            ) : (
-                <>
-                    {console.log("comments List", comments)}
                     {comments
                         .filter(item => item.parentId === 0)
                         .map(comment =>
                         <Comment key={comment.id} comment={comment} comments={comments} level={0}/>
                     )}
-                </>
-            )}
         </div>
     )
 }

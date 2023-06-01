@@ -1,4 +1,5 @@
 import './button.scss'
+import './media.scss'
 
 const Button = (props) => {
     return (

@@ -11,30 +11,21 @@ import GalleryImage from '../../shared/gallery-image/GalleryImage';
 import GalleryCarousel from '../../shared/gallery-carousel/GalleryCarousel';
 import CommentsPage from "../../features/comments-page/CommentsPage";
 
-const Project = (props) => {
+const Project = () => {
     const dispatch = useDispatch();
     const {id} = useParams();
     const typeImagePortfolio = "projectPortfolio"
     const typePage = "projectPortfolio"
     const typeImageDesign = "projectDesign"
 
-    const portfolioDetail = useSelector((state) => state.portfolioDetailsReducer);
-    const {isLoadingProject, errorProject, project} = portfolioDetail;
+    const {isLoadingProject, errorProject, project} = useSelector((state) => state.portfolioDetailsReducer);
 
     useEffect(() => {
         dispatch(portfolioDetailsAction(id));
     }, [dispatch, id]);
 
-    // const replaceStr = (str) => {
-    //     return str.replace(/\s/g, "+");
-    // };
-    //
-    // const addressMap = `https://www.google.com/maps?q=${replaceStr(project.address)}`;
-
     return (
         <div className="project">
-            {isLoadingProject && <LoadingBox></LoadingBox>}
-            {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
             <div className="container">
                 <div className="top">
                     <ul className="top__breadcrumbs">

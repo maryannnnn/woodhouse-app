@@ -1,7 +1,7 @@
 import './header-anons.scss'
+import './media.scss'
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { MessageBox, LoadingBox } from '../box/boxes'
 import { headerDetailsAction } from './actions/headerActions';
 
 const HeaderAnons = () => {
@@ -19,9 +19,6 @@ const HeaderAnons = () => {
 
   return (
     <>
-      {isLoadingHeader && <LoadingBox></LoadingBox>}
-      {errorHeader && <MessageBox variant="errorVariant">{errorHeader}</MessageBox>}
-      {console.log("header 1", header)}
       <div className="header-anons">
         <div className="header-anons__left">
           <h2 className="header-anons__left-title">{header.title}</h2>

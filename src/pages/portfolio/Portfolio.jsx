@@ -7,17 +7,17 @@ import PortfolioElement from "../../entities/portfolio/ui/PortfolioElement";
 import {NavLink} from "react-router-dom";
 import Pagination from "../../shared/paginagion/Pagination";
 import FilterPortfolio from "../../shared/filter-portfolio/FilterPortfolio";
+import {generatePages} from "../../app/utilities/service";
 
 const Portfolio = () => {
 
     const [pageNumber, setPageNumber] = useState(1);
     const [pages, setPages] = useState([]);
-    const [filter, setFilter] = useState({title: '', categoryId: 'All', architectId: 'All', price: [10, 40000], status: 'All', itemsPerPage: 9})
+    const [filter, setFilter] = useState({categoryId: 'All', architectId: 'All', status: 'All', itemsPerPage: 9})
 
     const dispatch = useDispatch()
 
-    const projectList = useSelector(state => state.portfolioListReducer)
-    const {isLoadingPortfolio, errorPortfolio, projects, totalPages} = projectList
+    const {isLoadingPortfolio, errorPortfolio, projects, totalPages} = useSelector(state => state.portfolioListReducer)
 
     useEffect(() => {
         dispatch(portfolioListAction({
@@ -27,17 +27,8 @@ const Portfolio = () => {
             categoryId: filter.categoryId,
             architectId: filter.architectId
         }))
-        generatePages(totalPages)
+        generatePages(totalPages, setPages)
     }, [dispatch, pageNumber, filter.itemsPerPage, filter.status, filter.categoryId, filter.architectId, totalPages])
-
-    const generatePages = (totalPages) => {
-        const pageNumbers = [];
-        for (let i = 1; i <= totalPages; i++) {
-            pageNumbers.push(i);
-        }
-        setPages(pageNumbers);
-        console.log("pageNumbers", pageNumbers)
-    };
 
     return (
         <div className="portfolio">
@@ -58,25 +49,11 @@ const Portfolio = () => {
                 <h1 className="portfolio__title">Portfolio</h1>
                 <div className="portfolio__inner">
                     <div className="portfolio__inner-main">
-                        {isLoadingPortfolio ? (
-                            <LoadingBox />
-                        ) : errorPortfolio ? (
-                            <MessageBox variant="errorVariant">{errorPortfolio}</MessageBox>
-                        ) : (
-                            <>
-                                {projects
-                                    .filter(item =>
-                                        item.title.toLowerCase().includes(filter.title.toLowerCase()) &&
-                                        (item.price >= filter.price[0] ) &&
-                                        (item.price <= filter.price[1] )
-                                    )
-                                    .map(element =>
-                                        <div key={element.id}>
-                                            <PortfolioElement element={element}/>
+                                {projects.map((project) =>
+                                        <div key={project.id}>
+                                            <PortfolioElement project={project}/>
                                         </div>
                                     )}
-                            </>
-                        )}
                     </div>
                     <div className="portfolio__inner-blocks">
                         <FilterPortfolio filter={filter} setFilter={setFilter} />

@@ -1,8 +1,8 @@
 import './header.scss'
+import './media.scss'
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from "../../shared/btn/Button";
-import { MessageBox, LoadingBox } from '../../shared/ui/box/boxes'
 import { headerDetailsAction } from '../../shared/ui/header-anons/actions/headerActions';
 
 const Header = () => {
@@ -26,9 +26,6 @@ const Header = () => {
     <div className="header">
       <div className="container">
         <div className="header__inner">
-          {isLoadingHeader && <LoadingBox></LoadingBox>}
-          {errorHeader && <MessageBox variant="errorVariant">{errorHeader}</MessageBox>}
-          {console.log("header 0", header)}
           <div className="header__info">
             <h1 className="header__info-title">{header.title}</h1>
             <Button

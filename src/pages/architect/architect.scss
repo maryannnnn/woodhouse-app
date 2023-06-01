@@ -1,0 +1,110 @@
+@import '../../app/scss/mixins';
+@import '../../app/scss/colors';
+
+.architect {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    gap: 20px
+  }
+
+  &__img {
+    width: 100px;
+    height: auto;
+    padding-top: 15px;
+  }
+
+  &__link {
+    @include title-3;
+    color: $dark-1;
+    padding-top: 10px;
+  }
+
+  &__title {
+    @include title-2;
+    padding-bottom: 10px;
+  }
+
+  &__name {
+    @include title-3;
+    padding-bottom: 10px;
+  }
+
+  &__profession {
+    @include title-4;
+    color: $dark-1;
+    padding-bottom: 10px;
+  }
+
+  &__anons {
+    @include text-1;
+    color: $dark-1;
+    padding-top: 15px;
+  }
+
+  &__text {
+    @include text-1;
+    color: $dark-1;
+    padding-top: 15px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    @include text-3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &-main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      width: 75vw;
+    }
+
+    &-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 25vw;
+    }
+  }
+}
+
+.architect__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px 5px;
+}
+
+.architect__breadcrumbs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  @include title-7;
+
+  &-item {
+    color: $dark-1;
+  }
+
+  &-link {
+    @include link-2;
+  }
+}

@@ -19,8 +19,6 @@ const GalleryCarousel = (props) => {
         <>
             {images.length !== 0 ? (
                 <>
-                    {isLoadingImage && <LoadingBox></LoadingBox>}
-                    {errorImage && <MessageBox variant="errorVariant">{errorImage}</MessageBox>}
                     <Carousel>
                         {images.map(img => (
                             <div key={img.id}>

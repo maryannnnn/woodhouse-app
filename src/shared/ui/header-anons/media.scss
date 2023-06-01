@@ -1,0 +1,31 @@
+@import '../../../app/scss/mixins';
+@import '../../../app/scss/colors';
+
+@media screen and (max-width: 767px) {
+  .header-anons {
+    flex-direction: column;
+    padding-top: 400px;
+    padding-right: 10px;
+    padding-left: 10px;
+    &__left {
+      flex-basis: auto;
+      &-title {
+        color: $dark-1;
+      }
+      &-subtitle {
+        margin-top: 20px;
+      }
+    }
+    &__right {
+      flex-basis: auto;
+      color: $dark-1;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header-anons {
+    gap: 0 50px;
+    padding: 75px 50px;
+  }
+}
