@@ -1,6 +1,7 @@
 import './header.scss'
+import './media.scss'
 import React from 'react';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import Button from "../../shared/btn/Button";
 import {MessageBox, LoadingBox} from '../../shared/ui/box/boxes'
 

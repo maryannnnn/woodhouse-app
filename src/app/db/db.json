@@ -206,7 +206,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "1100",
-        "price": "20200"
+        "price": "20545"
       },
       "values": {
         "customer": "Individual",
@@ -229,7 +229,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "7400",
-        "price": "20200"
+        "price": "65789"
       },
       "values": {
         "customer": "Individual",
@@ -252,7 +252,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "7400",
-        "price": "20200"
+        "price": "45744"
       },
       "values": {
         "customer": "Individual",
@@ -275,7 +275,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "7400",
-        "price": "20200"
+        "price": "56733"
       },
       "values": {
         "customer": "Individual",
@@ -298,7 +298,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "7400",
-        "price": "20200"
+        "price": "66744"
       },
       "values": {
         "customer": "Individual",
@@ -321,7 +321,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "7400",
-        "price": "20200"
+        "price": "34564"
       },
       "values": {
         "customer": "Individual",
@@ -344,7 +344,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "7400",
-        "price": "20200"
+        "price": "67555"
       },
       "values": {
         "customer": "Individual",
@@ -367,7 +367,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "7400",
-        "price": "20200"
+        "price": "88907"
       },
       "values": {
         "customer": "Individual",
@@ -390,7 +390,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "7400",
-        "price": "20200"
+        "price": "87444"
       },
       "values": {
         "customer": "Individual",
@@ -413,7 +413,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "7400",
-        "price": "20200"
+        "price": "67444"
       },
       "values": {
         "customer": "Individual",
@@ -436,7 +436,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "7400",
-        "price": "20200"
+        "price": "66777"
       },
       "values": {
         "customer": "Individual",
@@ -459,7 +459,7 @@
         "decor": "1500",
         "lighting": "2700",
         "technique": "7400",
-        "price": "20200"
+        "price": "78555"
       },
       "values": {
         "customer": "Individual",
@@ -913,7 +913,7 @@
       "alt": "Adam Williams",
       "original": "",
       "preview": "",
-      "src": "",
+      "src": "/uploads/user/1/middle/1.jpg",
       "thumbnail": "/uploads/user/1/thumbnail/1.jpg",
       "width": 1,
       "height": 1,
@@ -928,7 +928,7 @@
       "alt": "Emily Davis",
       "original": "",
       "preview": "",
-      "src": "",
+      "src": "/uploads/user/2/middle/2.jpg",
       "thumbnail": "/uploads/user/2/thumbnail/2.jpg",
       "width": 1,
       "height": 1,
@@ -943,7 +943,7 @@
       "alt": "Jessica Kim ",
       "original": "",
       "preview": "",
-      "src": "",
+      "src": "/uploads/user/3/middle/3.jpg",
       "thumbnail": "/uploads/user/3/thumbnail/3.jpg",
       "width": 1,
       "height": 1,
@@ -958,7 +958,7 @@
       "alt": "Michael Johnson",
       "original": "",
       "preview": "",
-      "src": "",
+      "src": "/uploads/user/4/middle/4.jpg",
       "thumbnail": "/uploads/user/4/thumbnail/4.jpg",
       "width": 1,
       "height": 1,
@@ -973,7 +973,7 @@
       "alt": "Samantha Rodriguez",
       "original": "",
       "preview": "",
-      "src": "",
+      "src": "/uploads/user/5/middle/5.jpg",
       "thumbnail": "/uploads/user/5/thumbnail/5.jpg",
       "width": 1,
       "height": 1,
@@ -2623,7 +2623,7 @@
       "id": 0,
       "name": "Minimalism",
       "description": "This interior style is characterized by clean lines, simple shapes and soothing color schemes. It often uses natural materials such as wood, leather and cotton, and furniture and accessories usually feature minimal decor and ornaments.",
-      "imageId": 0,
+      "imageId": 35,
       "parentId": 0,
       "createdAt": "20.03.23",
       "updatedAt": "20.03.23"

@@ -1,6 +1,7 @@
 import './header-anons.scss'
+import './media.scss'
 import React from 'react';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import {MessageBox, LoadingBox} from '../box/boxes'
 
 const HeaderAnons = () => {

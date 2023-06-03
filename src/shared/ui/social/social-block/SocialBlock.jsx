@@ -1,4 +1,5 @@
 import './socil-block.scss'
+import './media.scss'
 import SocialBlockMin from "../social-block-min/SocialBlockMin";
 
 const SocialBlock = () => {

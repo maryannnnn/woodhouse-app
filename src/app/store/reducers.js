@@ -17,6 +17,7 @@ import {
 } from '../../entities/architect/reducers/architectReducers';
 import {commentListReducer} from "../../entities/comment/reducers/commentReducers";
 import {customiseReducer} from "../../shared/customise/reducers/customiseReducers";
+import {categoryDetailsReducer} from '../../entities/category/reducers/categoryReducers'
 
 export const Reducers = {
   portfolioListReducer,
@@ -29,5 +30,6 @@ export const Reducers = {
   imageCarouselReducer,
   imagePhotoReducer,
   commentListReducer,
-  customiseReducer
+  customiseReducer,
+  categoryDetailsReducer
 }

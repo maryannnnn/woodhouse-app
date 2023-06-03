@@ -43,15 +43,10 @@ export const portfolioListAction = ({
 
         const imagePromises = projects.data.map(async (project) => {
             const image = await Axios.get(`/image/${project.imageProjectId}`);
-            const category = await Axios.get(`/category/${project.categoryId}`);
-            const user = await Axios.get(`/user/${project.architectId}`);
             const parameter = await Axios.get(`/parameter/${project.parameterId}`);
-            const architectName = user.data.name + " " + user.data.family;
-            const comments = await Axios.get(`/comments?postId=${project.id}&typePage=projectPortfolio`)
-            const numberComments = comments.data.length
 
-            return new infoProjectDto(project.id, project.title, category.data.id, category.data.name, user.data.id, architectName,
-                project.anons, numberComments, image.data.src, image.data.thumbnail, image.data.alt, project.status, parameter.data.prices.price);
+            return new infoProjectDto(project.id, project.title, project.anons, image.data.src,
+                image.data.thumbnail, image.data.alt, parameter.data.prices.price);
         });
 
         const projectList = await Promise.all(imagePromises);
@@ -74,15 +69,10 @@ export const portfolioWidgetAction = (start, end) => async (dispatch) => {
 
         const projectWidgetPromises = projects.data.map(async (project) => {
             const image = await Axios.get(`/image/${project.imageProjectId}`);
-            const category = await Axios.get(`/category/${project.categoryId}`);
-            const user = await Axios.get(`/user/${project.architectId}`);
             const parameter = await Axios.get(`/parameter/${project.parameterId}`);
-            const architectName = user.data.name + " " + user.data.family;
-            const comments = await Axios.get(`/comments?postId=${project.id}&typePage=projectPortfolio`)
-            const numberComments = comments.data.length
 
-            return new infoProjectDto(project.id, project.title, category.data.id, category.data.name, user.data.id, architectName,
-                project.anons, numberComments, image.data.src, image.data.thumbnail, image.data.alt, project.status, parameter.data.price);
+            return new infoProjectDto(project.id, project.title, project.anons, image.data.src,
+                image.data.thumbnail, image.data.alt, parameter.data.prices.price);
         });
 
         const projectWidget = await Promise.all(projectWidgetPromises);

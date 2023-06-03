@@ -16,19 +16,6 @@ const GalleryPhoto = (props) => {
         dispatch(imagePhotoAction(props.pageId, props.typeImage));
     }, [dispatch, props.pageId, props.typeImage]);
 
-    // const generatePhoto = (photos) => {
-    //     const photos = []
-    //     images.map(item => {
-    //         photos.push({
-    //             title: item.title,
-    //             src: item.original,
-    //             width: item.width,
-    //             height: item.height
-    //         })
-    //     })
-    //     return photos
-    // }
-
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -46,8 +33,6 @@ const GalleryPhoto = (props) => {
         <>
             {images.length !== 0 ? (
                 <>
-                    {isLoadingImage && <LoadingBox></LoadingBox>}
-                    {errorImage && <MessageBox variant="errorVariant">{errorImage}</MessageBox>}
                     <Gallery photos={images} onClick={openLightbox}/>
                     <ModalGateway>
                         {viewerIsOpen ? (
@@ -63,7 +48,8 @@ const GalleryPhoto = (props) => {
                             </Modal>
                         ) : null}
                     </ModalGateway>
-                </>) : (
+                </>
+            ) : (
                 <p>No images available.</p>
             )}
         </>

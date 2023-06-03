@@ -1,4 +1,5 @@
 import './project.scss'
+import './madia.scss'
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {NavLink, useParams} from 'react-router-dom';
@@ -14,7 +15,7 @@ import ProjectBreadcrumbs from "./ProjectBreadcrumbs";
 import {parameterDetailsAction} from "../../entities/parameter/actions/parameterActions";
 import PolarAreaChartProject from "../../shared/charts/polar-area/PolarAreaChartProject";
 
-const Project = (props) => {
+const Project = () => {
     const dispatch = useDispatch();
     const {id} = useParams();
     const typeImagePortfolio = "projectPortfolio"

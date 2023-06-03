@@ -1,4 +1,5 @@
 import './trust.scss'
+import './media.scss'
 import ContactCheckout from "../../shared/ui/contact-checkout/ContactCheckout";
 
 const Trust = () => {
