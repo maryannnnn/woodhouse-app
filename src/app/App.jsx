@@ -10,12 +10,12 @@ import Project from "../pages/project/Project";
 import Service from "../pages/service/Service";
 import Blog from "../pages/blog/Blog";
 import Post from "../pages/post/Post";
-import Category from "../pages/category/Category";
 import CategoriesAll from "../pages/categoryall/CategoriesAll";
 import Architect from "../pages/architect/Architect";
 import ArchitectsAll from "../pages/architectsAll/ArchitectsAll";
 import {getCustomise} from "../shared/customise/api/customiseActions";
 import {ArrayDto} from "./dto/arrayDto";
+import Category from "../entities/category/ui/Category";
 
 const App = () => {
 
@@ -36,7 +36,6 @@ const App = () => {
           <Route path="/" element={<Main />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:id" element={<Project />} />
-          //
           <Route path="/category" element={<CategoriesAll />} />
           <Route path="/category/:id" element={<Category />} />
           <Route path="/architect" element={<ArchitectsAll />} />
@@ -44,7 +43,6 @@ const App = () => {
           <Route path="/service/:id" element={<Service />} />
           <Route path="/post/:id" element={<Post />} />
           <Route path="/blog" element={<Blog />} />
-          //
         </Routes>
         <Footer menuListDto={getMenuListDto()} />
       </BrowserRouter>

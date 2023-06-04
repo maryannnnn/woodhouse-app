@@ -4,23 +4,22 @@ import {
     CUSTOMISE_REQUEST,
     CUSTOMISE_SUCCESS
 } from "../consts";
+import {customiseUpdatedData} from "../utils";
 
 export const getCustomise = () => async (dispatch) => {
     dispatch({
         type: CUSTOMISE_REQUEST
     });
     try {
-        const currentCustomiseVersion = process.env.REACT_APP_CUSTOMISE_VERSION
-        const storageCustomise = JSON.parse(localStorage.getItem('customise'))
-
-        if (storageCustomise?.version === currentCustomiseVersion) {
-            console.log('кастомайз из локал стоража')
+        const customiseData = customiseUpdatedData()
+        if (customiseData) {
+            console.log('customise from local storage')
             dispatch({
                 type: CUSTOMISE_SUCCESS,
-                payload: storageCustomise.data
+                payload: customiseData
             });
         } else {
-            console.log('кастомайз с сервера')
+            console.log('customise from server')
             const {data} = await Axios.get('/customise')
             dispatch({
                 type: CUSTOMISE_SUCCESS,

@@ -1,4 +1,5 @@
 import './menu-footer-main.scss'
+import './media.scss'
 import { NavLink } from "react-router-dom";
 import { MessageBox, LoadingBox } from '../../box/boxes'
 

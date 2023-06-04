@@ -2,8 +2,6 @@ name: GitHub Actions
 on:
   push:
     branches: [ maryan ]
-  pull_request:
-    branches: [ maryan ]
 jobs:
   init:
     runs-on: ubuntu-latest
