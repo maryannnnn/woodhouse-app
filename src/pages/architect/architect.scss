@@ -11,11 +11,11 @@
   &__info {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     padding-left: 20px;
     padding-bottom: 30px;
-    gap: 20px
+    gap: 30px
   }
 
   &__img {
@@ -50,6 +50,7 @@
     @include text-1;
     color: $dark-1;
     padding-top: 15px;
+    width: 600px;
   }
 
   &__text {
