@@ -10,9 +10,9 @@ const MenuFooterService = (props) => {
 
   return (
     <div className="menu-footer">
-      <h3 className="menu-footer__title">Service</h3>
+      <h3 className="menu-footer__title">Category</h3>
       <div className="menu-footer__elements">
-        {isLoading && <LoadingBox></LoadingBox>}
+        {isLoading && <LoadingBox />}
         {error && <MessageBox variant="errorVariant">{error}</MessageBox>}
         {menus.filter(item => item.menuId === 1)
           .sort((a, b) => a.order - b.order)

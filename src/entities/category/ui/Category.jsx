@@ -1,4 +1,5 @@
 import './category.scss'
+import './media.scss'
 import {NavLink, useParams} from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux";
 import React, {useEffect} from "react";

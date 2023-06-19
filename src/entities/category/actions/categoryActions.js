@@ -16,8 +16,10 @@ export const categoryDetailsAction = (categoryId) => async (dispatch) => {
 
     const categoryPromises = categoryProjects.data.map(async (project) => {
       const image = await Axios.get(`/image/${project.imageProjectId}`);
+      const parameter = await Axios.get(`/parameter/${project.parameterId}`);
+
       return new infoProjectDto(project.id, project.title, project.anons,
-          image.data.src, image.data.thumbnail, image.data.alt);
+          image.data.src, image.data.thumbnail, image.data.alt, parameter.data.prices.price);
     });
 
     const categoryProjectsList = await Promise.all(categoryPromises);
