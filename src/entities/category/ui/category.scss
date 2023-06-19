@@ -11,8 +11,7 @@
   &__info {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+   justify-content: flex-start;
     padding-left: 20px;
     padding-bottom: 30px;
     gap: 20px
@@ -39,6 +38,7 @@
     @include text-1;
     color: $dark-1;
     padding-top: 15px;
+    width: 600px;
   }
 
   &__inner {

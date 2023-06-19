@@ -1,8 +1,8 @@
 import './architect.scss'
+import './media.scss'
 import {NavLink, useParams} from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux";
 import React, {useEffect} from "react";
-import {LoadingBox, MessageBox} from "../../shared/ui/box/boxes";
 import PortfolioElement from "../../entities/portfolio/ui/PortfolioElement";
 import {architectDetailsAction} from "../../entities/architect/actions/architectActions";
 

@@ -2963,59 +2963,52 @@
         },
         {
           "id": 2,
-          "name": "Service",
-          "url": "/service",
+          "name": "Modern",
+          "url": "/category/1",
           "menuId": 0,
           "order": 2
         },
         {
           "id": 3,
-          "name": "Blog",
-          "url": "/blog",
+          "name": "Minimalism",
+          "url": "/category/0",
           "menuId": 0,
           "order": 3
         },
         {
           "id": 4,
-          "name": "Contact",
-          "url": "/contact",
+          "name": "Eclectic",
+          "url": "category/2",
           "menuId": 0,
           "order": 4
         },
         {
           "id": 0,
-          "name": "Design",
-          "url": "/design",
+          "name": "Modern",
+          "url": "/category/1",
           "menuId": 1,
           "order": 0
         },
         {
           "id": 1,
-          "name": "Development",
-          "url": "/development",
+          "name": "Minimalism",
+          "url": "/category/0",
           "menuId": 1,
           "order": 1
         },
         {
           "id": 2,
-          "name": "Delivery",
-          "url": "/delivery",
+          "name": "Eclectic",
+          "url": "category/2",
           "menuId": 1,
           "order": 2
         },
         {
           "id": 3,
-          "name": "Renovation",
-          "url": "/renovation",
+          "name": "Scandinavian",
+          "url": "/category/3",
           "menuId": 1,
           "order": 3
-        },
-        {
-          "id": 4,
-          "name": "Master",
-          "url": "/master",
-          "menuId": 1,
-          "order": 4
         }
       ],
       "headers": {

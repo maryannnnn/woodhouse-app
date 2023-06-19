@@ -21,7 +21,7 @@ const BodyAnons = () => {
 
   return (
     <div className="body-anons">
-      {isLoadingProject && <LoadingBox></LoadingBox>}
+      {isLoadingProject && <LoadingBox/>}
       {errorProject && <MessageBox variant="errorVariant">{errorProject}</MessageBox>}
       {projects
         .map(project =>
