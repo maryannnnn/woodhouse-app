@@ -5,12 +5,11 @@ import Logo from '../../app/assets/images/logo-2.png'
 import SocialBlockMin from "../../shared/ui/social/social-block-min/SocialBlockMin";
 import MenuTopMain from "../../shared/ui/menu/menu-top-main/MenuTopMain";
 
-const Navigation = (props) => {
 
+const Navigation = () => {
 
     return (
         <div className="navbar">
-            {props.menuListDto &&
             <div className="container">
                 <div className="navbar__inner">
                     <div className="navbar__logo">
@@ -19,11 +18,10 @@ const Navigation = (props) => {
                             <div className="navbar__logo-title">WoodHouse</div>
                         </NavLink>
                     </div>
-                    <MenuTopMain menuListDto={props.menuListDto}/>
+                    <MenuTopMain />
                     <SocialBlockMin/>
                 </div>
             </div>
-            }
         </div>
     )
 }

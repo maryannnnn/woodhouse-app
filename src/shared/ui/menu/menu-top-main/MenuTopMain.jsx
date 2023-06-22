@@ -2,14 +2,16 @@ import './menu-top-main.scss'
 import './media.scss'
 import { NavLink } from "react-router-dom";
 import React from "react";
+import {useSelector} from "react-redux";
 
-const MenuTopMain = (props) => {
+const MenuTopMain = () => {
 
-  const menus = props.menuListDto.array;
+  const {isLoadingCustomise, errorCustomise, customise} = useSelector(state => state.customiseReducer)
+  const menu = customise?.menu ?customise.menu : null;
 
   return (
     <ul className="menu">
-      {menus.filter(item => (item.menuId === 0))
+      {menu?.filter(item => (item.menuId === 0))
         .sort((a, b) => a.order - b.order)
         .map(item =>
           <li className="menu-item" key={item.id}>
