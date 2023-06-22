@@ -7,6 +7,8 @@ import SocialBlock from "../../shared/ui/social/social-block/SocialBlock";
 import MenuFooterService from "../../shared/ui/menu/menu-footer-service/MenuFooterService";
 import MenuFooterMain from "../../shared/ui/menu/menu-footer-main/MenuFooterMain";
 import {useSelector} from "react-redux";
+import React from "react";
+import {LoadingBox, MessageBox} from "../../shared/ui/box/boxes";
 
 const Footer = () => {
 
@@ -16,6 +18,8 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="container">
+                {isLoadingCustomise && <LoadingBox/>}
+                {errorCustomise && <MessageBox variant="errorVariant">{errorCustomise}</MessageBox>}
                 {menu &&
                 <div className="footer__inner">
                     <div className="footer__company">
