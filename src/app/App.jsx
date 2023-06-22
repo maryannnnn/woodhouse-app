@@ -14,15 +14,11 @@ import CategoriesAll from "../pages/categoryall/CategoriesAll";
 import Architect from "../pages/architect/Architect";
 import ArchitectsAll from "../pages/architectsAll/ArchitectsAll";
 import {getCustomise} from "../shared/customise/api/customiseActions";
-import {ArrayDto} from "./dto/arrayDto";
 import Category from "../entities/category/ui/Category";
 
 const App = () => {
 
   const dispatch = useDispatch()
-  const {isLoadingCustomise, errorCustomise, customise} = useSelector(state => state.customiseReducer)
-
-  const getMenuListDto = () => customise?.menu ? new ArrayDto(customise.menu, isLoadingCustomise, errorCustomise) : null
 
   useEffect(() => {
     dispatch(getCustomise())
@@ -31,7 +27,7 @@ const App = () => {
   return (
     <div className="wrapper">
       <BrowserRouter>
-        <Navigation menuListDto={getMenuListDto()} />
+        <Navigation />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/portfolio" element={<Portfolio />} />
@@ -44,7 +40,7 @@ const App = () => {
           <Route path="/post/:id" element={<Post />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
-        <Footer menuListDto={getMenuListDto()} />
+        <Footer />
       </BrowserRouter>
     </div>
   );
