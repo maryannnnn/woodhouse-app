@@ -7,17 +7,16 @@ import SocialBlock from "../../shared/ui/social/social-block/SocialBlock";
 import MenuFooterService from "../../shared/ui/menu/menu-footer-service/MenuFooterService";
 import MenuFooterMain from "../../shared/ui/menu/menu-footer-main/MenuFooterMain";
 import {useSelector} from "react-redux";
-import {ArrayDto} from "../../app/dto/arrayDto";
 
 const Footer = () => {
 
     const {isLoadingCustomise, errorCustomise, customise} = useSelector(state => state.customiseReducer)
-    const getMenuListDto = () => customise?.menu ? new ArrayDto(customise.menu, isLoadingCustomise, errorCustomise) : null
+    const menu = customise?.menu ?customise.menu : null;
 
     return (
         <div className="footer">
             <div className="container">
-                {getMenuListDto() &&
+                {menu &&
                 <div className="footer__inner">
                     <div className="footer__company">
                         <div className="footer__logo">
@@ -31,8 +30,8 @@ const Footer = () => {
                             WoodHouse © 2022
                         </div>
                     </div>
-                    <MenuFooterMain menuListDto={getMenuListDto()}/>
-                    <MenuFooterService menuListDto={getMenuListDto()}/>
+                    <MenuFooterMain menu={menu}/>
+                    <MenuFooterService menu={menu}/>
                     <SocialBlock/>
                 </div>
                 }
