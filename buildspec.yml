@@ -18,5 +18,5 @@ phases:
       - echo "✅ Build Front-end passed successfully."
 artifacts:
   files:
-     - '**/*'
-     base-directory: build 
+    - '*/'
+  base-directory: build
