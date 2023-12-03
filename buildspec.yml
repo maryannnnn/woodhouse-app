@@ -5,7 +5,6 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - cd client
       - npm ci
       - echo "📦 installing Front-end packages..."
       - echo "✅ Packages Front-end installed successfully."
