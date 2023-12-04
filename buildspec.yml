@@ -10,7 +10,7 @@ phases:
       - echo "✅ Packages Front-end installed successfully."
   build:
     commands:
-      - npm run build -- --ignore-scripts
+      - npm run build --force
       - echo "⚙️ Testing..."
       - echo "✅ Tests passed successfully."
       - echo "🚧 Starting Front-end compiling packages..."
