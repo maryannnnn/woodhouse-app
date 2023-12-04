@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/woodhouse-app
+hooks:
+  ApplicationStart:
+    - location: /var/www/woodhouse-app/build/index.html
+      timeout: 60
+      runas: root
