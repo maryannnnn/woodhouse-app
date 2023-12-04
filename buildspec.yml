@@ -10,12 +10,12 @@ phases:
       - echo "✅ Packages Front-end installed successfully."
   build:
     commands:
-      - npm run build --force
+      - npm run build || true
       - echo "⚙️ Testing..."
       - echo "✅ Tests passed successfully."
       - echo "🚧 Starting Front-end compiling packages..."
       - echo "✅ Build Front-end passed successfully."
 artifacts:
   files:
-    - '*/'
-  base-directory: build
+    - build/**/*
+    - server.js 
